@@ -1,0 +1,41 @@
+.container{
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  margin-top: 30px;
+}
+.container > div:first-child{
+  background-color: yellow;
+  height: 25%;
+}
+.container > div:last-child{
+  display: flex;
+  width: 100%;
+  border: 5px solid black;
+  height: 75%;
+}
+
+.container > div:last-child{
+  border: 5px solid blue;
+}
+.container > div:last-child > div:first-child{
+  flex-basis: 60%;
+  background-color: antiquewhite;
+}
+.container > div:last-child > div:last-child{
+  flex-basis: 40%;
+}
+
+
+.container > div :last-child > div:nth-child(2){
+  background-color: red;
+  height: 33.4%;
+}
+.container > div :last-child > div:first-child{
+  background-color: magenta;
+  height: 33.3%;
+}
+.container > div :last-child > div:last-child{
+  background-color: aqua;
+  height: 33.3%;
+}

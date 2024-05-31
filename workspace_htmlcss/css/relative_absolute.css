@@ -1,0 +1,22 @@
+.img-div{
+  background-color: lightgray;
+  position: relative;
+}
+.img-div img{
+  border: 2px solid orange;
+  /* border-radius -> 모서리 선 원형으로 만듬 */
+  border-radius: 50%;
+  position: absolute;
+}
+
+.img-div img:nth-child(1){
+  z-index: 1;
+}
+.img-div img:nth-child(2){
+  left: 40px;
+  z-index: 2;
+}
+.img-div img:nth-child(3){
+  left: 80px;
+  z-index: 1;
+}

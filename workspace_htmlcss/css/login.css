@@ -1,0 +1,71 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vw;
+}
+.container{
+  padding: 10px;
+  box-shadow: 0px 0px 4px lightgrey;
+  width: 900px;
+}
+h1{
+  margin: 15px;
+  box-shadow: 0px 01px 0px lightgrey;
+}
+li > a{
+  background-color: orange;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  
+}
+.bax{
+  border-radius: 5px;
+  background-color: rgb(238, 238, 238);
+  box-shadow: 0px 0px 10px btgrey;
+  /* box-shadow
+    첫번째 : X축으로 그림자 이동
+    두번째 : Y축으로 그림자 이동
+    세번째 : 그림자의 퍼짐 정도
+  */
+  margin-right: 10px;
+}
+.main{
+  display: flex;
+  margin: 15px;
+}
+.fa-solid{
+  color: greenyellow;
+  
+}
+.main > div:first-child{
+  flex-basis: 60%;
+}
+.main > div:last-child{
+  flex-basis: 40%;
+}
+.b1{
+  font-weight: bold
+}
+/* b1 = input "textbox" */
+.b1{
+  width: 400px;
+  height: 25px;
+}
+.c1{
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  color: white;
+  font-weight: bold;
+}
+ul > .li2{
+  color: green;
+  text-align: center;
+}
+li > a{
+  display: block;
+  text-align: center;
+}

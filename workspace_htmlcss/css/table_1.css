@@ -1,0 +1,28 @@
+table{
+  width: 700px;
+  margin: 20px auto;
+  text-align: center;
+  
+}
+
+thead > tr{
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  background-color: skyblue;
+}
+tr{
+border-bottom: 1px solid black;
+}
+td{
+  padding: 6;
+}
+tbody > tr >td:nth-child(2){
+  text-align: left;
+}
+/* nth-child() : 홀수 : odd 짝수 : even */
+tbody > tr:nth-child(2n){
+  background-color: #eeeeee;
+}
+tbody > tr:hover{
+  background-color: #dddddd;
+}

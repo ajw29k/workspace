@@ -1,0 +1,40 @@
+ul{
+  list-style-type: none;
+  background-color: white;
+  text-align: center;
+}
+li{
+  list-style-type: none;
+  display: inline-block;
+
+}
+
+
+ul > li{
+
+  display: inline-block;
+  
+  margin: 20px;
+  font-weight: bold;
+}
+.b1{
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.a1{
+  color: blueviolet;
+}
+.a2{
+  color: green;
+}
+.b2{
+  background-color: black;
+  color: white;
+  margin: 0px;
+}
+.df{
+  text-align: right;
+}
+.qqw{
+  text-align: center;
+}

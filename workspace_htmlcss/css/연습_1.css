@@ -1,0 +1,71 @@
+body{
+  height: 100vh;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  width: 360px;
+  box-shadow: 0px 0px 16px black;
+  border-radius: 15px;
+}
+
+.content{
+  position: relative;
+}
+.content > img{
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+}
+.fa-heart{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.main div{
+  margin: 6px;
+}
+h1{
+  color: red;
+}
+
+.main_1{
+  display: flex;
+  justify-content: space-around;
+  float: left ;
+}
+.main_2 > div{
+  display: flex;
+}
+.main_2 > div > div:nth-child(2){
+  text-align: right;
+  margin: 10px;
+  
+}
+button{
+  background-color: lightgreen;
+  border-radius: 6px;
+  font-size: 1.2rem;
+}
+img{
+  width: 100%;
+}
+.main_3 div:nth-child(1){
+  
+}
+.main_3 div:nth-child(2){
+  height: 10px;
+}
+.main_3 div:nth-child(3){
+
+}
+.main_3 div:nth-child(4){
+
+}
+
+.pp{
+  display: flex;
+  flex-flow:column-reverse ;
+}

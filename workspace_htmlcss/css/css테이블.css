@@ -1,0 +1,19 @@
+table .red_font{
+  color: red;
+}
+.title-tr > td>span{
+  color: red;
+
+}
+
+
+
+table >tdoby>tr>td:first-child{
+  text-align: center;
+  width: 900;
+  margin: 5px;
+}
+.btn-div{
+  text-align: center;
+  margin: 10px;
+}
