@@ -1,0 +1,32 @@
+body{
+  height: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+  
+}
+img{
+  width: 50px;
+  float: left;
+  border-radius: 50%;
+  
+}
+.c1{
+  padding: 10px;
+}
+body > div >div{
+  background-color: white;
+  margin: 10px 0px;
+}
+.container{
+  display: flex;
+  width: 300px;
+  border-radius: 6px;
+}
+.c1 div:first-child{
+  font-weight: bold;
+}
+div> .q2:hover{
+  scale: 1.5;
+}

@@ -1,0 +1,42 @@
+table{
+  
+  font-size: 14px;
+  border: 1px solid black;
+  border-collapse: collapse  ;
+  margin: auto;
+  width: 100%;
+}
+tr,td{
+  border: 1px solid;
+  padding-left: 10px;
+
+}
+span{
+  color: red;
+}
+.a1{
+  color: black;
+  font-weight: bold;
+}
+.margin_1{
+  margin: auto;
+}
+.d1{
+  text-align: right;
+  font-size: small
+}
+.d4{
+  width: 50px;
+}
+tr>:first-child{
+  background-color: rgba(219, 219, 219, 0.329);
+}
+.d5{
+  width: 250px;
+}
+.d2{
+  width: 50px;
+}
+.acb{
+  background-color: aliceblue;
+}

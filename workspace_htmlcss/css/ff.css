@@ -1,0 +1,26 @@
+table{
+  border: 1px solid black;
+  text-align: center;
+  background-color: greenyellow;
+  
+}
+tr,td{
+  border: 1px solid ;
+
+}
+.head{
+  background-color: green;
+
+}
+.a1{
+  background-color: skyblue;
+}
+.a2{
+  background-color: blue;
+}
+.a3{
+  background-color: blueviolet;
+}
+.a4{
+  background-color: orange;
+}

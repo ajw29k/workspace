@@ -1,0 +1,18 @@
+.header{
+  width: 100vw;
+  height: 80px;
+  background-color: black;
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.hearder > div{
+  border: 5px solid yellow;
+}
+ul{
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+}

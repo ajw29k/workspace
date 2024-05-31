@@ -1,0 +1,11 @@
+body{
+  padding: 20px;
+}
+
+input{
+  margin: 16px;
+}
+
+input[type="text"]{
+  width: 300px;
+}

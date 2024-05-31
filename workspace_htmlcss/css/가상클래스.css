@@ -1,0 +1,76 @@
+.container1{
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  margin: 30px;
+}
+/*
+   width:300px 안에 가운데정렬
+   justify-content: center;
+   align-items: center;
+  
+*/
+
+.container1 > div{
+  width: 80px;
+  height: 80px;
+  background-color: crimson;
+  border: 1px solid black;
+  color: white;
+  font-size: 2rem;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+/* 변환 : 전체 1초동안 */
+  transition: all 1s;
+}
+
+.d1:hover{
+  width: 120px;
+  height: 120px;
+}
+.d2:hover{
+  background-color: black;
+  color: white;
+}
+.d3:hover{
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+/* ------------------------- */
+
+input{
+  margin-left: 30px;
+  width: 200px;
+  padding: 10px 4px;
+  border-radius: 8px ;
+  border: 1px solid lightgreen;
+  outline: none;
+  transition: all 1s;
+  font-weight: bold;
+}
+
+input:focus{
+  width: 300px;
+  border: 3px solid green;
+}
+/* ----------------------------- */
+
+ul{
+  margin-left: 30px ;
+}
+/* before : 선택자 앞에 인라인 요소 추가 */
+.li-1:before{
+  content: "NEW";
+  color: white;
+  background-color: blue;
+  border-radius: 6px;
+  padding: 2px 6px;
+  margin-right: 6px;
+}
+/* after : 선택자 뒤에 인라인 요소 추가 */
+.li-1:after{
+  content: "css";
+}

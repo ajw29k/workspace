@@ -1,0 +1,52 @@
+.a1{
+  font-size: 1.5rem;
+  padding-left: 15%;
+}
+/* 글자 크기, 안쪽여백(왼쪽) */
+table{
+  margin: auto;
+  width: 1900px;
+  color: white;
+  background-color: rgb(54, 54, 54)
+}
+/* 바깥여백, 블록 크기, 글자색, 배경색 */
+li{
+  list-style-type: none;
+  display: inline-block;
+  font-weight: bold;
+  justify-content: flex-end;
+  justify-content: space-between;
+  justify-content: end;
+}
+/* ● < 없애기, 블록 > 인라인 블록으로 바꿈 */
+ul{
+  text-align: right;
+  padding-right: 15%;
+}
+.a2{
+  text-align: center;
+}
+/* div > li에 가운데정렬 안들어가서 따로 입력 */
+.b1{
+  font-size: 0.7rem;
+}
+
+div > li{
+  margin-left: 20px;
+  font-weight: bold;
+  
+}
+/* 여백값, 글자 굵기 */
+.a3{
+  color: blueviolet;
+}
+.a4{
+  color: green;
+}
+
+
+.i1{
+    background-repeat: repeat ;
+    text-align: center;
+  }
+  /* 배경화면 사이즈에 맞게 맞추기(repeat), 가운데 정렬 */

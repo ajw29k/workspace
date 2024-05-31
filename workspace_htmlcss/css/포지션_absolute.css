@@ -1,0 +1,22 @@
+body{
+  margin: 0px;
+}
+div{
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+}
+.d1{
+  background-color: blueviolet;
+}
+.d2{
+  background-color: rgb(69, 29, 248);
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.d3{
+  background-color: rgb(94, 224, 8);
+}
