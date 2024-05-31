@@ -22,6 +22,6 @@ public class 연산자_2 {
 
         num -= 10; //num = num -10;
         num *= 3; //num = num * 3;
-
+        
     }
 }
