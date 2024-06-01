@@ -14,9 +14,7 @@ public class Test_1 {
         System.out.println("정수를 입력하세여");
         c = sc.nextInt();
 
-        if (){
 
-        }
 
 
     }
