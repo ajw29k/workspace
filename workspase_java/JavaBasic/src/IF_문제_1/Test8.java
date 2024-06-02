@@ -53,4 +53,5 @@ public class Test8 {
         }
         System.out.println(max +">" + mid + ">" + min);
     }
+
 }
