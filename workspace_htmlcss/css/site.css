@@ -1,0 +1,50 @@
+body{
+  width: 1200px;
+  
+}
+.header{
+  background-color: darkblue;
+  height: 100px;
+  display: flex;
+  padding: 30px;
+  
+}
+.header{
+  
+}
+ul{
+  display: flex;
+  background-color: rgb(4, 4, 117);
+
+}
+li{
+
+  margin: 10px 20px;
+  color: white;
+  padding: 0 15px;
+}
+.header span{
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+}
+.header >div > button{
+  text-align: right;
+}
+.body > div > div:nth-child(2){
+}
+.body{
+  display: grid ;
+  grid-template-columns : repeat(3 , 1fr);
+  border: 1px solid red;
+}
+.body1{
+  display: flex;
+  
+}
+.mid{
+  position: relative;
+}
+.mid > div:nth-child(2){
+  position: absolute;
+}

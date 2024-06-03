@@ -1,0 +1,129 @@
+.container{
+  width: 1200px;
+  margin: auto;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: darkblue;
+  color: white;
+  height: 100px;
+}
+.header > h1{
+  margin-left: 40px;
+}
+.header > ul{
+  display: flex;
+  background-color: rgb(4, 4, 117);
+  width: 650px;
+  padding: 15px 0px;
+  justify-content: space-around
+}
+.header > ul a{
+  color: white;
+  text-decoration: none;
+}
+img{
+
+  display: block;
+}
+.banner{
+  position: relative;
+}
+.banner > img{
+  width: 100%;
+}
+.banner > div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  width: 400px;
+  background-color: rgba(0 , 0, 0, 0.3);
+  text-align: center;
+  padding: 20px 30px;
+
+  transform: translate(-50%,-50%);
+}
+.banner h2{
+  margin-bottom: 12px;
+}
+.content{
+  display: flex;
+  height: 200px;
+
+}
+.content > div{
+  width: 400px;
+}
+.content img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+
+}
+.board{
+  background-color: azure;
+  padding: 16px;
+}
+.board a{
+  color: black;
+  text-decoration: none;
+}
+.board >h2 {
+  margin-bottom: 10px;
+}
+.board li{
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.banner-div{
+  position: relative;
+}
+.banner-div > div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  width: 80%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.banner-div span{
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+.banner-div h2{
+  margin-bottom: 20px;
+}
+.footer{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  background-color: #e7e7e7;
+}
+.footer > h2{
+  width: 20%;
+  color: gray;
+  margin-left: 30px;
+}
+.footer > div{
+  width: 80%;
+  text-align: center;
+}
+.footer ul{
+  display: flex;
+  width: 650px;
+  margin: auto;
+  justify-content: space-around;
+  margin-bottom: 10px ;
+}
+.footer a{
+  color: black;
+  text-decoration: none
+  
+}
