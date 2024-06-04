@@ -1,6 +1,6 @@
 package 다섯_반복문.While;
 
-public class Test11 {
+public class Test6 {
     public static void main(String[] args) {
         int i = 1;
         int num = 0;
