@@ -1,4 +1,4 @@
-package 일곱_메서드;
+package 일곱_메서드.문제;
 
 public class Test_1_4_6 {
     public static void main(String[] args) {

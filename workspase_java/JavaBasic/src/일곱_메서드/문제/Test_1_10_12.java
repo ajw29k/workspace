@@ -1,4 +1,4 @@
-package 일곱_메서드;
+package 일곱_메서드.문제;
 
 import java.util.Scanner;
 

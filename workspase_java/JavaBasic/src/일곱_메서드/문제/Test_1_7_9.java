@@ -1,6 +1,4 @@
-package 일곱_메서드;
-
-import java.util.Scanner;
+package 일곱_메서드.문제;
 
 public class Test_1_7_9 {
     public static void main(String[] args) {
