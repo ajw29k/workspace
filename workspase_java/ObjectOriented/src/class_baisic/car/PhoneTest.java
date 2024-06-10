@@ -6,7 +6,7 @@ public class PhoneTest {
         Phone phone = new Phone();
 
 
-//        phone.price =1000;
+        phone.price =1000;
 
         phone.setPrice(-1000);
 
