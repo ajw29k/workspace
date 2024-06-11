@@ -11,5 +11,8 @@ package 출력문;// 이것은 자바 주석입니다.
 public class Exam1 {
     public static void main(String[] args){
         System.out.println("hello~");
+
+
+
     }
 }
