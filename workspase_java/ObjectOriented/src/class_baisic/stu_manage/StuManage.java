@@ -43,15 +43,29 @@ public class StuManage {
     }
     //학생정보변경(연락처) 메서드
     public void changeInfo(){
-        System.out.println("정보변경실행");
+        System.out.println("학생의 연락처를 변경합니다");
+        String b = sc.next();
+        while (true) {
+            System.out.print("변경 학생 : ");
+            String b = sc.next();
+            for (int i = 0; i < idx; i++) {
+                if (stus[i].getName().equals(b)) {
+
+                    System.out.println("변경완료되었습니다.");
+                    break;
+                }
+            }
+            System.out.println("해당하는 학생이 존재하지 않습니다. 다시 입력하세요.");
+        }
     }
     //학생정보출력 메서드
     public void print(){
-        System.out.print("정보를 열람할 학생 : ");
-        String a = sc.next();
         for (int i=0; i < idx; i++){
             while (true) {
+                System.out.print("정보를 열람할 학생 : ");
+                String a = sc.next();
                 if (stus[i].getName().equals(a)) {
+                    System.out.println("요청하신 학생의 정보입니다.");
                     stus[i].showInfo();
                     break;
                 }
