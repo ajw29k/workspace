@@ -47,10 +47,11 @@ public class StuManage {
         String b = sc.next();
         while (true) {
             System.out.print("변경 학생 : ");
-            String b = sc.next();
+            //String b = sc.next();
             for (int i = 0; i < idx; i++) {
                 if (stus[i].getName().equals(b)) {
-
+                    String c = sc.next();
+                    stus[i].setTel(c);
                     System.out.println("변경완료되었습니다.");
                     break;
                 }
