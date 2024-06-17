@@ -11,6 +11,7 @@ public class List_1 {
         //ArrayList<String> list1 = new ArrayList<>(); 문법<>
 
         List<String> list1 = new ArrayList<>();
+        //리스트에 데이터 저장
         list1.add("java");
         list1.add("c++");
         list1.add("python");
