@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="/Score" method="post" >
+    [[${scoreVO.name}]] 학생의 성적을 입력합니다.  <br>
+    
+    학년 <input type="text" name="dd"> <br>
+    연락처 
+    <select name="tel1">
+      <option value="">010</option>
+      <option value="">011</option>
+      <option value="">016</option>
+    </select>
+    <input type="text" name="tel2"> <br>
+    성별 
+    <input type="radio" name="gender">남
+    <input type="radio" name="gender">여 <br>
+  
+    <input type="submit" value="확인">  
+    <input type="hidden" name="name" th:value="${scoreVO.name}">
+  </form>
+  <form action="/program">
+    <input type="submit" value="뒤로가기">
+  </form>
+</body>
+</html>

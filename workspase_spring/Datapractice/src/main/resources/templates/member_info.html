@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body >
+  <form action="/reg_member" method="get" >
+  <table border="1" style="text-align: center; border-collapse: collapse; background-color: rgb(99, 113, 236);">
+    <tr>
+    <td>아이디</td>
+    <td>[[${member.id}]]</td>
+    <td>이름</td>
+    <td>[[${member.name}]]</td>
+  </tr>
+  <tr>
+    <td>연락처</td>
+    <td>[[${member.tel}]]</td>
+    <td>이메일</td>
+    <td>[[${member.tel}]]</td>
+  </tr>
+  <tr>
+    <td>생일</td>
+    <td colspan="3">[[${member.tod}]]</td>
+  </tr>
+</table>
+  
+  <input type="submit" value="뒤로가기">
+</form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="/result" method="post">
+  <table>
+    <tr>
+      <td>자기소개    </td>
+      <td><textarea cols="50" rows="5" name="intro"></textarea></td>
+    </tr>
+    <tr>
+     <td>성별</td>
+     <td>
+      <!-- name속성이 필요!!(intellij에 결과값이 뜸 안적으면 on으로 뜸) -->
+      <input type="radio" name="gender" checked value="male"> 남
+      <input type="radio" name="gender" value="female"> 여
+    </td>
+  </tr>
+  <tr>
+    <td>취미</td>
+    <td>
+        <!-- name속성이 필요!! -->
+        <input type="checkbox" checked name="hobby" value="독서"> 독서
+        <input type="checkbox" name="hobby" value="게임"> 게임
+        <input type="checkbox" name="hobby" value="운동"> 운동
+
+      </td>
+    </tr>
+    <tr>
+      <td>가입경로</td>
+      <td>
+      <select name="path">
+        <option value="a">1. 인터넷</option>
+        <option value="b">2. 지인추천</option>
+        <option value="c">3. 신문</option>
+      </select>
+      </td>
+    </tr>
+</table>
+<input type="submit" value="제출">
+</form>
+</body>
+</html>
