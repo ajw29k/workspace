@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>주문서</h1>
+  <p>
+    주문정보 <br>
+    [[${orderVO.chicken}]]
+    ([[${orderVO.mari}]]마리) <br>
+    추가사항 :  
+    <th:block th:each="add : ${orderVO.add}">
+      [[${add}]]
+    </th:block>
+    <br>                           <!-- $(#arrays.length(array)}  배열의 길이 구하기 -->
+    주문금액 : [[${orderVO.mari * 10000 + #arrays.length(orderVO.add) * 1000}]]원 <br>
+    요청사항 : [[${orderVO.roll}]]
+  </p>
+
+
+
+  배달배달 <br>
+  주문자 : [[${deliveryVO.name}]] <br>
+  연락처 : [[${deliveryVO.tell}]] <br>
+  배달주소 : [[${deliveryVO.adr}]]
+</body>
+</html>

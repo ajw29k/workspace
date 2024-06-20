@@ -6,18 +6,18 @@
   <title>Document</title>
 </head>
 <body>
-  [[${scoreVO.getName}]] 학생의 성적을 입력합니다.  <br>
+  [[${scoreVO.name}]] 학생의 성적을 입력합니다.  <br>
   <form action="/programAll" method="post">
-    국어 <input type="text" name="korScore">  <br>
-    영어 <input type="text" name="engScore">  <br>
-    수학 <input type="text" name="mathScore"> <br>
-    <input type="submit" value="확인">
+    국어 <input type="text" name="korScore" >  <br>
+    영어 <input type="text" name="engScore" >  <br>
+    수학 <input type="text" name="mathScore" > <br>
     <input type="hidden" name="name" th:value="${scoreVO.name}">
     <input type="hidden" neme="age" th:value="${scoreVO.dd}">
     <input type="hidden" name="tel1" th:value="${scoreVO.tel1}">
     <input type="hidden" name="tel2" th:value="${scoreVO.tel2}">
     <input type="hidden" name="gender" th:value="${scoreVO.gender}">
     
+    <input type="submit" value="확인">
   </form>
 
 </body>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>배달정보</h1>
+  <form action="/info" method="post">
+  주문자 <br>
+  <input type="text" name="name"> <br>
+  연락처 <br>
+  <input type="text" name="tell"><br>
+  배달 주소 <br>
+  <input type="text" name="adr"><br>
+  <input type="hidden" name="chicken" th:value="${orderVO.chicken}">
+  <input type="hidden" name="mari" th:value="${orderVO.mari}">
+  
+  <th:block th:each="add : ${orderVO.add}">
+    <input type="hidden" name="add" th:value="${add}">
+  </th:block>
+  
+  <input type="hidden" name="roll" th:value="${orderVO.roll}">
+  <input type="submit" value="주문">
+  </form>
+</body>
+</html>

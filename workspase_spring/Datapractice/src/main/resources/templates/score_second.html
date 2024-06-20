@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>학생 성적 입력 프로그램</h1>
+  <p>[[${score_1VO.name}]] 학생의 기본 정보를 입력합니다</p>
+  <form action="/score_third" method="post">
+    학년 <input type="text" name="year"><br>
+    연락처
+    <select name="tel"><!-- select안의 value 값을 가져옴 -->
+      <option value="010">010</option>
+      <option value="011">011</option>
+    </select>
+    <input type="text" name="tel"><br>
+    성별<!-- radio도 같은 value값을 가져옴 -->
+    <input type="radio" name="gender" value="남자">남
+    <input type="radio" name="gender" value="여자">여 <br>
+    <input type="submit" value="확인">
+    <input type="button" value="뒤로가기">
+    <input type="hidden" name="name" th:value="${score_1VO.name}">
+  </form>
+</body>
+</html>

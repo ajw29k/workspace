@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="a">
+  <input type="button" value="값 읽기" onclick="readValue()">
+  <input type="button" value="값 세팅" onclick="setValue()">
+
+
+  <script>
+    function readValue(){
+      const tag = document.querySelector('#a'); //input태그에 id접근
+      console.log(tag.type);//text 속성값에 접근
+      console.log(tag.id);//a
+
+      alert(tag.value);
+    }
+    //id가 a 태그를 선택하겠습니다
+    function setValue(){
+      const a = document.querySelector('#a');
+      a.value = 30;//input태그 value값에 30을 입력
+      
+    }
+  </script>
+  
+</body>
+</html>

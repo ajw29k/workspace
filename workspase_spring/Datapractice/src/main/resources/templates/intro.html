@@ -11,15 +11,15 @@
     
     학년 <input type="text" name="dd"> <br>
     연락처 
-    <select name="tel1">
-      <option value="">010</option>
-      <option value="">011</option>
-      <option value="">016</option>
+    <select name="tel1" >
+      <option value="010">010</option>
+      <option value="011">011</option>
+      <option value="016">016</option>
     </select>
     <input type="text" name="tel2"> <br>
     성별 
-    <input type="radio" name="gender">남
-    <input type="radio" name="gender">여 <br>
+    <input type="radio" name="gender" value="male">남
+    <input type="radio" name="gender" value="fmale">여 <br>
   
     <input type="submit" value="확인">  
     <input type="hidden" name="name" th:value="${scoreVO.name}">

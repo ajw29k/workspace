@@ -9,6 +9,11 @@ public class ScoreVO {
     private int korScore;
     private int engScore;
     private int mathScore;
+
+    public void setAvg(double avg) {
+        this.avg = avg;
+    }
+
     double avg = 0;
 
     public double getAvg(){
@@ -93,10 +98,13 @@ public class ScoreVO {
         return "ScoreVO{" +
                 "name='" + name + '\'' +
                 ", dd='" + dd + '\'' +
-                ", tel='" + tel1 + '\'' +
+                ", tel1='" + tel1 + '\'' +
+                ", tel2='" + tel2 + '\'' +
+                ", gender='" + gender + '\'' +
                 ", korScore=" + korScore +
                 ", engScore=" + engScore +
                 ", mathScore=" + mathScore +
+                ", avg=" + avg +
                 '}';
     }
 }
