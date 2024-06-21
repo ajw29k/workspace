@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="/board_detail.css">
+</head>
+<body>
+  <div class="container">
+    <div>
+      <table>
+        <tr>
+          <td>글번호</td>
+          <td>
+            [[${board.boardNum}]]
+          </td>
+          <td>작성자</td>
+          <td>[[${board.writer}]]</td>
+          <td>작성일</td>
+          <td>[[${board.createDate}]]</td>
+        </tr>
+        <tr>
+          <td>제목</td>
+          <td colspan="5">[[${board.title}]]</td>
+        </tr>
+        <tr>
+          <td>내용</td>
+          <td colspan="5">[[${board.content}]]</td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <!-- 현재 상세보기하고 있는 게시글을 삭제하고 게시글 목록 페이지로 이동 -->
+      <a href="/list"><input type="button" value="뒤로가기"></a>
+      <input type="button" value="삭제" th:onclick="goDelite([[${board.boardNum}]])">
+      <!-- <a href="">글 삭제</a> -->
+
+    </div>
+  </div>
+  <script>
+    //삭제하기 버튼 클릭시 실행
+    function goDelite(boardNum){
+      //confirm 실행 후 확인을 클릭하면 true 리턴, 취소를 클릭하면 false를 리턴
+      const result = confirm('정말 삭제하시겠어요?');
+      
+      //확인을 클릭했을 때만 삭제를 위해 자바로 이동
+      if(result){
+        // location.href = '/delete?boardNum=' + boardNum; // /delete?boardNum=3
+        location.href = `/delete?boardNum=${boardNum}`;
+      }
+
+    }
+  </script>
+</body>
+</html>
