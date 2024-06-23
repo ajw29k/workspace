@@ -1,0 +1,23 @@
+File - Settings - Build,Ex~~ - Build Tools - Gradle
+Build and Run에서 Intelij로 전부 변경
+Gradle JVM : 17 변경
+
+Build,Ex~~ - 
+Build Project automatically 체크
+
+Editor - File Encodings
+Project Encoding,Default encoding을 UTF-8로 변경
+밑에체크박스 활성
+
+
+resources - application에
+#port 변경
+server.port=8080
+
+#thymleaf cashe false
+spring.thymeleaf.cache=false
+spring.devtools.livereload.enabled=true
+spring.devtools.restart.enabled=true
+
+build.gradle에
+compileOnly("org.springframework.boot:spring-boot-devtools") //html새로고침

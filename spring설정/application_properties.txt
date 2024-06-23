@@ -5,7 +5,7 @@ server.port=8080
 spring.thymeleaf.cache=false
 spring.devtools.livereload.enabled=true
 spring.devtools.restart.enabled=true
-//여기까지 application.properties에
+//여기까지 resources - application.properties에
 
 #데이터베이스 접속 정보
 #spring.datasource.driverClassName=org.mariadb.jdbc.Driver
