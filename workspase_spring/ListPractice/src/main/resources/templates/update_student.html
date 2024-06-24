@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="/updateStu" method="post">
+    <table>
+      <tr>
+        <td>학번</td>
+        <!-- model.addattribute("student") -->
+         <input type="hidden" name="num" th:value="${student.num}">
+        <td>[[${student.num}]]</td>
+        <td>이름</td>
+        <td><input type="text" name="name" th:value="${student.name}"> </td>
+      </tr>
+      <tr>
+        <td>국어점수</td>
+        <td><input type="text" name="korScore" th:value="${student.korScore}"> </td>
+        <td>영어점수</td>
+        <td><input type="text" name="engScore" th:value="${student.engScore}"> </td>
+      </tr>
+      <tr>
+        <td>자기소개</td>
+        <td colspan="3" ><textarea name="content">[[${student.content}]]</textarea></td>
+      </tr>
+    </table>
+  
+    <!-- button태그 속성에 항상 type=button을 해야 한다! -->
+    <button onclick="one()">뒤로가기</button>
+    <button type="submit">학생수정</button>
+  
+  </form>
+  <script>
+    function one(){
+      location.href='/stu_list';
+    }
+    function two(){
+      location.href='/stu_list';
+    }
+  </script>
+</body>
+</html>

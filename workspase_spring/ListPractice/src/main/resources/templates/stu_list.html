@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <td>학번</td>
+        <td>학생명</td>
+        <td>국어점수</td>
+        <td>영어점수</td>
+        <td>총점</td>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 등록된 학생이 없으면 -->
+      <th:bloack th:if="${#lists.isEmpty(stuList)}">
+        <tr>
+          <td colspan="5">등록된 학생이 없습니다.</td>
+        </tr>
+      </th:bloack>
+      <!-- 등록된 학생이 있으면 -->
+      <th:bloack th:unless="${#lists.isEmpty(stuList)}">
+        <tr th:each="stu : ${stuList}">
+            <!--/* 등록된 학생수만큼 반복해서 행을 생성 */-->
+          <td>[[${stu.num}]]</td>
+          <td>
+            <a th:href="@{/getname(name=${stu.num})}">[[${stu.name}]]</a>
+          </td>
+          <td>[[${stu.korScore}]]</td>
+          <td>[[${stu.engScore}]]</td>
+          <!-- ${}안에서 연산가능 //-->
+          <td>[[${stu.korScore+ stu.engScore}]]</td>
+        </tr>
+      </th:bloack>
+
+    </tbody>
+  </table>
+  <input type="button" value="학생등록" onclick="reg_student()">
+  <script>
+    function reg_student(){
+      location.href = '/reg_student';
+
+    }
+  </script>
+</body>
+</html>

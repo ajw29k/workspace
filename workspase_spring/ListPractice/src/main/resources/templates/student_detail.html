@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <table>
+    <tr>
+      <td>학번</td>
+      <td>[[${student.num}]]</td>
+      <td>이름</td>
+      <td>[[${student.name}]]</td>
+    </tr>
+    <tr>
+      <td>국어점수</td>
+      <td>[[${student.korScore}]]</td>
+      <td>영어점수</td>
+      <td>[[${student.engScore}]]</td>
+    </tr>
+    <tr>
+      <td>자기소개</td>
+      <td colspan="3">[[${student.content}]]</td>
+    </tr>
+  </table>
+  <!-- button태그 속성에 항상 type=button을 해야 한다! -->
+  <button onclick="one()">뒤로가기</button>
+  <button th:onclick="two([[${student.num}]])">학생수정</button>
+  <button th:onclick="thr([[${student.num}]])">학생삭제</button>
+
+  <script>
+    function one(){
+      //뒤로 가기 = history.back(-1) 
+      //한페이지 뒤로가기, 추가하면 추가한거는 나오지않음 새로고침 필요!
+
+      location.href='/stu_list'; // 지정한 페이지로 넘어가기 , 추가로 생성하면 추가한거 까지 나옴
+    }
+    //학생 수정
+    function two(stuNum){
+      location.href=`/goin?stuNum=${stuNum}`;
+      
+    }
+    //학생 삭제
+    function thr(stuNum){
+      const a = confirm('삭제할까요');
+      if(a){
+        //              /remove페이지에 @RequestParam(name="stuNum")
+        location.href=`/remove?stuNum=${stuNum}`;
+      }
+      
+    }
+  </script>
+</body>
+</html>
