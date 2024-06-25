@@ -50,7 +50,8 @@ public class StudentController {
 
         //내가 클릭한 학생 한명을 검색(학번을 알면 된다)
         StudentVO student = studentService.regGet(num);
-       //학생 상세 정보 데이터를 html로 전달
+
+        //학생 상세 정보 데이터를 html로 전달
         model.addAttribute("student", student);
         return "student_detail";
     }
@@ -88,7 +89,7 @@ public class StudentController {
 
         //3번
 
-        return "redirect:/getname?stuNum" + studentVO.getNum();
+        return "redirect:/getname?name=" + studentVO.getNum();
     }
 
 }
