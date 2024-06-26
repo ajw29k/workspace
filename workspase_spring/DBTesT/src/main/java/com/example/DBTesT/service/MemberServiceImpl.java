@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 //TEST_MEMBER 테이블에 데이터를 조작하는 DB
+
+//MemberService memberService =new
 @Service("memberService")
 public class MemberServiceImpl implements MemberService{
 
@@ -15,8 +17,8 @@ public class MemberServiceImpl implements MemberService{
     //데이터 수정(UPDATE) : sqlSession.update();"쿼리가 있는 mapper의  mapper파일의 namesapce.쿼리 id");
     //데이터 조회(SELECT) : sqlSession.selectOne();"쿼리가 있는 mapper의  mapper파일의 namesapce.쿼리 id")
     //                    sqlSession.selectList();"쿼리가 있는 mapper의  mapper파일의 namesapce.쿼리 id")
-    @Autowired
 
+    @Autowired
     private SqlSessionTemplate sqlsession;
 
     //TEST_MEMEBER 테이블에 데이터 1개 삽입
