@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <table border="1">
+    <thead>
+      <tr>
+        <td>학번</td>
+        <td>학생명</td>
+        <td>국어점수</td>
+        <td>영어점수</td>
+        <td>총점</td>
+      </tr>
+    </thead>
+    <tbody>
+      <th:block th:if="${#lists.isEmpty(stulist)}">
+        <tr>
+          <td colspan="5">조회된 학생이 없습니다.</td>
+        </tr>
+      </th:block>
+      
+      <th:block th:unless="${#lists.isEmpty(stulist)}">
+          <tr th:each="stu : ${stulist}">
+            <td>[[${stu.stuNum}]]</td>
+            <td>[[${stu.stuName}]]</td>
+            <td>[[${stu.korScore}]]</td>
+            <td>[[${stu.engScore}]]</td>
+            <td>[[${stu.korScore + stu.engScore}]]</td>
+          </tr>
+      </th:block>
+    
+
+    </tbody>
+  </table>
+  <input type="button" value="학생등록" onclick="aaa()">
+
+  <script>
+    function aaa(){
+      location.href = '/regStu';
+    }
+  </script>
+</body>
+</html>

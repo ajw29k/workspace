@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service("memberService")
 public class MemberServiceImpl implements MemberService{
     @Autowired
+
     private SqlSessionTemplate sqlSession;
     //회원 정보 등록
     @Override
