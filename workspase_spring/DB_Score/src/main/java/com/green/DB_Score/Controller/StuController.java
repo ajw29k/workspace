@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -31,9 +32,22 @@ public class StuController {
     }
     //입력완료 후 정보목록페이지
     @PostMapping("/reg")
-    public String reg(){
-
+    public String reg(StuInfoVO stuInfoVO){
+        stuService.insert(stuInfoVO);
         return "redirect:/stulist";
+    }
+
+    //학생이름 클릭시 상세페이지로 이동
+    @GetMapping("/detail")
+    //public String detail(StuInfoVO stuInfoVO){
+    public String detail(@RequestParam(name = "stuNum") int stuNum, Model model){
+
+        //클릭한 학생 정보를 디비에서 조회
+        //stuService.detail(stuInfoVO.getStuNum()); 밑에꺼랑 같음
+        StuInfoVO stuInfoVO =  stuService.detail(stuNum);
+        model.addAttribute("student", stuInfoVO);
+
+        return "stu_detail";
     }
 
 

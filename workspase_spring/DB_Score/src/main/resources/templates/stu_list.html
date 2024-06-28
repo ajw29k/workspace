@@ -10,7 +10,7 @@
     <thead>
       <tr>
         <td>학번</td>
-        <td>학생명</td>
+        <td>학생명</a></td>
         <td>국어점수</td>
         <td>영어점수</td>
         <td>총점</td>
@@ -26,7 +26,7 @@
       <th:block th:unless="${#lists.isEmpty(stulist)}">
           <tr th:each="stu : ${stulist}">
             <td>[[${stu.stuNum}]]</td>
-            <td>[[${stu.stuName}]]</td>
+            <td><a th:href="@{/detail(stuNum=${stu.stuNum})}">[[${stu.stuName}]]</a></td>
             <td>[[${stu.korScore}]]</td>
             <td>[[${stu.engScore}]]</td>
             <td>[[${stu.korScore + stu.engScore}]]</td>

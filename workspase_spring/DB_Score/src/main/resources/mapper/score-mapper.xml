@@ -18,12 +18,12 @@
             FROM SCORE_INFO;
         </select>
     <!--학생 입력 하기-->
-        <insert id="insert">
+    <insert id="insert" >
         INSERT INTO SCORE_INFO
             (STU_NUM
             ,STU_NAME
             ,KOR_SCORE
-            ,ENT_SCORE
+            ,ENG_SCORE
             ,INTRO)
         VALUES(
             #{stuNum}
@@ -32,7 +32,19 @@
             ,#{engScore}
             ,#{intro}
             );
-        </insert>
+    </insert>
+    <!--score라는 resultMap에 있는 데이터를 java로 가져오기-->
+    <select id="student" resultMap="score">
+        SELECT
+            STU_NUM
+            ,STU_NAME
+            ,KOR_SCORE
+            ,ENG_SCORE
+            ,INTRO
+        from SCORE_INFO
+        WHERE STU_NUM =#{stuNum};
+    </select>
+
 
 </mapper>
 

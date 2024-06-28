@@ -10,7 +10,10 @@ public interface Stuservice {
     List<StuInfoVO> select();
 
     //학생 입력
+    void insert(StuInfoVO stuInfoVO);
 
+    //선택한 학생 정보
+    StuInfoVO detail(int stuNum);
 
 
 }
