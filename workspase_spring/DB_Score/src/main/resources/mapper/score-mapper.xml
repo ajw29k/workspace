@@ -45,6 +45,19 @@
         WHERE STU_NUM =#{stuNum};
     </select>
 
+    <delete id="godelete">
+        DELETE FROM SCORE_INFO
+        WHERE STU_NUM = #{stuNum}
+    </delete>
+    <update id="goupdate">
+        UPDATE SCORE_INFO
+        SET
+            STU_NAME = #{stuName}
+            ,KOR_SCORE = #{korScore}
+            ,ENG_SCORE = #{engScore}
+            ,INTRO = #{intro}
+        WHERE STU_NEUM = #{stunum}
+    </update>
 
 </mapper>
 

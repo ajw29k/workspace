@@ -50,5 +50,31 @@ public class StuController {
         return "stu_detail";
     }
 
+    //학생삭제
+    @GetMapping("/delete")
+    public String delete(@RequestParam(name = "stuNum") int stuNum){
+        stuService.deleteStudent(stuNum);
+        return "redirect:/stulist";
+    }
+
+    //학생수정할 수 있는 페이지로 이동
+    @GetMapping("/updateForm")
+    public String updateForm(@RequestParam(name = "stuNum") int stuNum, Model model){
+
+        //정보를 수정할 학생을 조회
+        StuInfoVO stu = stuService.detail(stuNum);
+        model.addAttribute("stu",stu);
+        return "update_student";
+    }
+
+    //학생 정보 수정 , 상세 페이지 이동
+    @PostMapping("/updateStudent")
+    public String updateStudent(StuInfoVO stuInfoVO){
+        stuService.updatestudent(stuInfoVO);
+
+        return "redirect:/detail" + stuInfoVO.getStuNum();
+    }
+
+
 
 }

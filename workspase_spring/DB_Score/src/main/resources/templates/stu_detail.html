@@ -25,9 +25,17 @@
     </tr>
   </table>
     <button type="button" onclick="abc()">돌아가기</button>
+    <button type="button" th:onclick="godelete([[${student.stuNum}]])">삭제하기</button>
+    <input type="button" value="수정하기" th:onclick="goupdate([[${student.stuNum}]])">
     <script>
       function abc(){
         location.href = "redirect:/stulist";
+      }
+      function godelete(stuNum){// 페이지이동할문자 ? =가져올 데이터 
+        location.href =`/delete?stuNum=$(stuNum)`
+      }
+      function goupdate(stuNum){
+        location.href = `/updateForm?stuNum=$(stuNum)`
       }
     </script>
 </body>

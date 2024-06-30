@@ -32,6 +32,16 @@ public class StuServiceImpl implements Stuservice{
         return stuInfoVO;
     }
 
+    @Override
+    public void deleteStudent(int stuNum) {
+          sqlSession.delete("dbMapper.godelete",stuNum);
+    }
+
+    @Override
+    public void updatestudent(StuInfoVO stuInfoVO) {
+        sqlSession.update("dbMapper.goupdate" , stuInfoVO);
+    }
+
     //선택한 학생의 정보
 //    @Override
 //    public void detail(StuInfoVO stuInfoVO) {

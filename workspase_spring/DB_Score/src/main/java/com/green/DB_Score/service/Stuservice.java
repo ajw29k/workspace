@@ -15,5 +15,11 @@ public interface Stuservice {
     //선택한 학생 정보
     StuInfoVO detail(int stuNum);
 
+    //학생삭제
+    void deleteStudent(int stuNum);
+
+    //학생 수정
+    void updatestudent(StuInfoVO stuInfoVO);
+
 
 }
