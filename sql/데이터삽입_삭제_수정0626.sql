@@ -2,7 +2,7 @@ CREATE TABLE TEST_MEMBER(
 	MEM_NUM INT PRIMARY KEY -- 중복 불가, NULL불가
 	, MEM_NAME VARCHAR(50) 
 	, MEM_AGE INT
-	, MEM_ADDR VARCHAR(50)study_db
+	, MEM_ADDR VARCHAR(50)
 );
 
 SELECT * FROM test_member;
@@ -55,10 +55,13 @@ WHERE MEM_NUM = 10;
 
 -- 데이터 삭제 DELETE
 -- DELETE FROM 테이블명 [WHERE 조건]
-DELETE FROM test_member;
+DELETE FROM test_member
+WHERE MEM_NUM =0;
 
 DELETE FROM test_member
 WHERE MEM_AGE <= 40;
 
 SELECT * FROM test_member;
 ROLLBACK;
+
+COMMIT;

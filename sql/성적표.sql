@@ -1,0 +1,18 @@
+CREATE TABLE SCORE_INFO (
+	STU_NUM INT PRIMARY KEY
+	, STU_NAME VARCHAR(50)
+	, KOR_SCORE INT
+	, ENG_SCORE INT
+	, INTRO VARCHAR(100)
+);
+
+SELECT * FROM SCORE_INFO;
+SELECT
+            STU_NUM
+            ,STU_NAME
+            ,KOR_SCORE
+            ,ENG_SCORE
+            ,INTRO
+            FROM SCORE_INFO;
+
+

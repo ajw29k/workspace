@@ -39,9 +39,9 @@ public class StuController {
 
     //학생이름 클릭시 상세페이지로 이동
     @GetMapping("/detail")
-    //public String detail(StuInfoVO stuInfoVO){
-    public String detail(@RequestParam(name = "stuNum") int stuNum, Model model){
 
+    public String detail(@RequestParam(name = "stuNum") int stuNum, Model model){
+        //public String detail(StuInfoVO stuInfoVO){
         //클릭한 학생 정보를 디비에서 조회
         //stuService.detail(stuInfoVO.getStuNum()); 밑에꺼랑 같음
         StuInfoVO stuInfoVO =  stuService.detail(stuNum);
