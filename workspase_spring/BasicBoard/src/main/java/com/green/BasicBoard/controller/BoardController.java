@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -48,9 +49,18 @@ public class BoardController {
     //stuService.detail(stuInfoVO.getStuNum()); 밑에꺼랑 같음
     @GetMapping("/detail")
     public String detail(BoardVO boardVO ,Model model){
-        BoardVO boardV = boardService.detail(boardVO.getBoardNum());
-        model.addAttribute("board" , boardV);
+        BoardVO boardVo =boardService.detail(boardVO.getBoardNum());
+        boardService.updateReadCnt(boardVo.getBoardNum());
+        model.addAttribute("board" , boardVo);
+        //조회수 증가
+
         return "board_detail";
+    }
+
+    @GetMapping("/delete")
+    public String godelete(@RequestParam(name = "boardNum") int boardNum){
+        boardService.godelete(boardNum);
+        return "redirect:/boardlist";
     }
 
 

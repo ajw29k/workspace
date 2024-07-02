@@ -28,14 +28,25 @@
       <td colspan="2">[[${board.content}]] </td>
     </tr>
   </table>
-  <button type="button" onclick="list()">목록가기</button>
+  <button type="button" onclick="list1()">목록가기1</button>
+  <button type="button" onclick="list2()">목록가기2</button>
   <input type="button" value="수정">
-  <input type="button" value="삭제">
+  <input type="button" value="삭제" th:onclick="godelete([[${board.boardNum}]])">
   
   <script>
-    function list(){
-      location.href = 'redirect:/boardlist';
+    function list1(){
+      history.back(-1)
+    }
+    function list2(){
+      location.href = '/boardlist';
+    }
+    function godelete(boardNum){
+      location.href = `/delete?boardNum=${boardNum}`;
+    }
+    function goupdate(){
+      location.href = '/boardlist';
     }
   </script>
+  
 </body>
 </html>

@@ -16,8 +16,9 @@ public interface BoardService {
     //게시글 상세조회
     BoardVO detail(int boardNum);
     //게시글 삭제
-
+    void godelete(int boardNum);
     //게시글 수정
 
     //조회수 증가
+    void updateReadCnt(int boardNum);
 }
