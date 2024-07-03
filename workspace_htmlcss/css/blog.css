@@ -1,5 +1,5 @@
 body{
-  width: 100%;
+  width: 100vw;
 }
 .container{
   width: 100vw;
@@ -18,10 +18,25 @@ body{
 }
 a{
   text-decoration: none;
+  
+}
+.search{
+  position: relative;
+}
+.search i{
+  position: absolute;
+  top: 2px ;
+  right: 3px;
+  color: orange;
+}
+li a{
   color: black;
+  font-weight: bold;
 }
 
-
+li a:hover{
+  color: orange;
+}
 
 
 li{
@@ -32,6 +47,7 @@ li{
 .const{
   width: 100%;
   display: flex;
+  padding: 15px;
 }
 
 .img{
@@ -57,16 +73,21 @@ li{
   margin: 10px 0;
 }
 
-.img div:nth-child(2) > a > button{
+.img div:nth-child(2) a > button{
   padding: 5px 10px 5px 10px;
   font-size: 1.1rem;
   background-color: orange;
   color: #fff;
   border: none;
+  
+}
+.img div:nth-child(2) a{
+  color: white;
+  padding: 15px;
 }
 
 .imgbox{
-   width: 100%; 
+   width: 100vw; 
   background-image: url(./slide1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -75,12 +96,61 @@ li{
 }
 .img div:nth-child(2) button{
   margin-top: 20px ;
+  padding: 10px 20px;
 }
 
 .body{
   display: flex;
+  text-align: center;
+  margin: 0px auto;
+  margin-top: 20px;
+  width: 50%;
 }
+
 .content{
   text-align: center;
+  margin: 40px 0px;
+}
 
+.content > div:first-child{
+  font-size: 1.5rem;
+}
+
+.content img{
+  width: 250px;
+  margin-top: 5px;
+}
+.img > div > button{
+  background-color: orange;
+  border: none;
+  font-weight: bold;
+}
+.body i{
+  color: orange;
+  border: 10px solid orange;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  padding: 15px;
+  
+}
+.body >div{
+  margin-right: 10px;
+}
+.body >div:last-child{
+  margin-left: 0px;
+}
+.body > div > div:nth-child(2){
+  margin-top: 30px;
+  font-weight: bold;
+}
+.body p{
+  font-size: 0.8rem;
+}
+
+.last{
+  display: flex;
+  justify-content: center;
+}
+.last > div{
+  margin: 20px;
 }

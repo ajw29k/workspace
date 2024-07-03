@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+</head>
+<body>
+<input type="button" value="행추가" onclick="abc()">
+<input type="button" value="제목줄을 제외한 모든행 삭제" onclick="deleteall()">
+
+
+  <table border="1" style="width: 500px;">
+    <thead>
+      <tr name="i">
+        <td>이름</td>
+        <td>나이</td>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  
+  <script>
+    function abc(){
+      //추가할 태그
+      const btn = `
+        <tr >
+          <td><input type="text"></td>
+          <td>
+            <input type="text">
+            <input type="button" value="삭제" onclick ="aaa(this)">
+          </td>
+        </tr>`;
+      //생성할 위치
+      const tbodyTag = document.querySelector('table > tbody');
+
+      //
+      tbodyTag.insertAdjacentHTML('beforeend',btn);
+    }
+
+    function deleteall(){
+      const tbodyTag = document.querySelector('table > tbody');
+      tbodyTag.innerHTML = '';//선택한 태그 안에 지우기(tbody는 안지워짐)
+      // tbodyTag.remove(); //선택한 태그도 지워버림 (tbody도 지워짐)
+    }
+    function aaa(selectedTag){
+      //매개변수로 전달되는 this : 현재 이벤트가 발생한 태그
+      console.log(selectedTag);
+      //내가 클릭한 삭제버튼
+      selectedTag.closest('tr').remove();
+      // const aaa = document.querySelector('table > tbody > tr');
+      // aaa.remove(this);
+      
+      
+
+    }
+
+  </script>
+</body>
+</html>

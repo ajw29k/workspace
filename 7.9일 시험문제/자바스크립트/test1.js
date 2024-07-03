@@ -28,8 +28,17 @@ const item_list = [
 ];
 
 //1. '자바마켓'에서 팔고 있는 상품들의 상품명과 가격을 각각 출력하여라.
+for(let i = 0 ; i < item_list.length; i++){
+  if(item_list[i].brand == 'java마켓'){
+    console.log(item_list[i].item_name);
+    console.log(item_list[i].price);
+  }
+}
+
 
 
 //2. 시험 당일 공개
 
 //3. 시험 당일 공개
+
+
