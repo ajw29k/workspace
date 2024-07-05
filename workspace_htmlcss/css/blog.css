@@ -150,7 +150,21 @@ li{
 .last{
   display: flex;
   justify-content: center;
+  margin: auto;
 }
 .last > div{
-  margin: 20px;
+}
+
+
+.last1{
+  margin: 0px 15px;
+  position: relative;
+
+}
+.last1 > div:nth-child(2){
+  width: 100%;
+  background-color: rgba(0, 0,0, 0.5);
+  position: absolute;
+  bottom: 10px;
+  color: white;
 }
