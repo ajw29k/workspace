@@ -10,10 +10,7 @@ function App() {
   return (
     <div className="App">
       <List list={list} setList = {setList}/>
-      <div>
-        <input type='text' value={}></input>
-
-      </div>
+      <Add list={list} setList = {setList}/>
       
       
         

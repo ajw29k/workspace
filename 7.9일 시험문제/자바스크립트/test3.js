@@ -13,9 +13,9 @@ function setTable(){
     }
     tabla += `</tr>`
   }
-
-
+  
   const aa = document.querySelector('.table-div')
+  
   aa.innerHTML='';
   const bb = `
   <table>

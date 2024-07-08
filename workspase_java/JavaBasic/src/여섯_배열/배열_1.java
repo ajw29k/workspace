@@ -10,7 +10,9 @@ public class 배열_1 {
         int[] arr1;
         String[] arr2;
         double[] arr3;
-
+        //01<= randon <=10
+        double rand = Math.random() *10+1;
+        System.out.println(rand);
         //베열 생성
         arr1 = new int[3]; //정수를 저장할 공간 3개를 생성
 
