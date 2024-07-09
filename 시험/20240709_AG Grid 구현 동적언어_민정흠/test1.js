@@ -70,10 +70,10 @@ function addItem(){
   const size1 = [];
   // console.log(size.value)
   for(let i = 0; i < size.length; i++){
-    console.log(item_list.size)
+    console.log(item_list.size.values)
 
     if(size[i].checked){
-     console.log(i) 
+      
     }
   }
   

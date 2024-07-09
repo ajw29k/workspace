@@ -1,0 +1,39 @@
+body{
+  width: 100vw;
+}
+h2{
+  width: 1200px;
+  margin: auto;
+}
+table span{
+  color: red;
+}
+.head span{
+  color: red;
+  
+}
+
+table{
+  border: 1px solid black;
+  margin: 20px auto;
+  width: 1200px;
+
+}
+
+
+tr,td{
+  border: 1px solid black;
+  padding: 5px;
+  
+}
+.aa{
+  width: 70px;
+}
+.bb{
+  width: 40px;
+}
+.head{
+  display: flex;
+  justify-content: center;
+  
+}
