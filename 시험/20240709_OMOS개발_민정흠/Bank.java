@@ -35,19 +35,20 @@ public class Bank {
     // 고객 정보를 리턴하는 메서드를 정의하시오.
     // 만약 매개변수로 전달된 계좌번호와 일치하는 고객이 없다면 null을 리턴하시오.
 
-    public List<Account> getClient(String accNum, String name) {
-        List<Account> list = new ArrayList<>();
-
+    public Client getClient(String accNum, String name) {
+        Client client = new Client();
+        client.getAccInfo();
+        client.getName();
         if(accNum.equals(accNum)&&name.equals(name))
             {
-                return list.get();
+                return client;
 
             }
         else
 
             {
             }
-        return list;
+        return null;
 
 
     }

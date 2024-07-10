@@ -1,4 +1,5 @@
 package test;
+//1. 매개변수로 전달되는 계좌번호 및 회원이름과 동일한 정보를 가진
 
 //고객 정보
 public class Client {
