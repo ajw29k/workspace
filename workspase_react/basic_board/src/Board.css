@@ -1,0 +1,7 @@
+table{
+  border: 1px solid black;
+  margin: auto;
+  width: 40%;
+  margin-top: 30px;
+  border-collapse: collapse;
+}

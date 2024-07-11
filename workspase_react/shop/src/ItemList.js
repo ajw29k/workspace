@@ -1,20 +1,16 @@
-import axios from "axios";
 import Item from "./Item";
 
-function ItemList({item}){
-  axios.get('/test4')
-  .then((res) => {
-    item.item_list = res.data;
-    console.log(res.data);
-  });
-  
+function ItemList({item_list}){
+
+  console.log(item_list)
   return(
     <div className='book'>
       
         {
-          item.map((item, e) => {
+          item_list.map((item, e) => {
             return(
-              <Item key={e} arr={item}/>
+              <Item key={e} item={item} />
+              
             )
           })
         }

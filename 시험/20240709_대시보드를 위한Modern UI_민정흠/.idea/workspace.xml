@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c564ea2b-628d-4afe-ac06-7f77ea1ab808" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../workspase_spring/AxiosTest/src/main/java/com/green/AxiosTest/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../7.9일 시험문제/자바스크립트/test1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../7.9일 시험문제/자바스크립트/test1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../workspase_spring/BasicBoard.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20240709_OMOS개발_민정흠/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20240709_OMOS개발_민정흠/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20240709_OMOS개발_민정흠/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20240709_OMOS개발_민정흠/Client.java" afterDir="false" />
-    </list>
+    <list default="true" id="c564ea2b-628d-4afe-ac06-7f77ea1ab808" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,14 +19,14 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/01-STUDY/dev/workspace/시험/20240709_OMOS개발_민정흠"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/01-STUDY/dev/workspace/시험/20240709_OMOS개발_민정흠&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

@@ -1,49 +1,38 @@
-import logo from './logo.svg';
+import { Link, Route, Router, Routes } from 'react-router-dom';
 import './App.css';
 import data from './deta';
 import ItemList from './ItemList';
-import axios from 'axios';
-import { useState } from 'react';
+import Detail from './Detail';
 
 function App() {
   //상품 목록 데이터
-  let item_list = [];
-  // axios.get('/test1')
-  //   .then((response) => {
-  //     console.log(response.data);
-  //   });
-
-  // axios.get('/test2')
-  //   .then((res) => {
-  //     console.log(res.data);
-  //   });
-
-   let arr = []; 
-  // axios.get('/test3')
-  //   .then((res) => {
-  //     console.log(res.data);
-  //     arr = res.data;
-
-  //   });
-
-    axios.get('/test4')
-    .then((res) => {
-      item_list = res.data;
-      console.log(res.data);
-    });
-
+  const item_list = data;
+ 
   return (
     <div className="App">
       <div className='header'>
-        Book Shop
+        <Link to={'/'}>Book Shop</Link><br></br>
+        <Link to={'/list'}>상품목록</Link><br></br>
+
+        <Link to={'/detail/1'}>상품상세</Link>
+        
+        
       </div>
       <div className='banner'>
         <img src={process.env.PUBLIC_URL + '/header.jpg'} />
-
-      </div>
+      </div> 
       
-      <ItemList item={item_list}/>
-      <Test name ={'홍길동'} age = {20}/>
+      {/* 이동할 수 있는 페이지의 url들 */}
+      <Routes>
+        <Route path='/' element={<div>메인페이지</div>} />
+        <Route path='/list' element = {<ItemList item_list={item_list}/>} />
+        <Route path='/detail/:id' element={<Detail item_list={item_list}  />} num={`/:id`} />
+        <Route path='*' element={<div>잘못된 페이지입니다.</div>} />
+      </Routes>        
+
+
+      {/* <ItemList item_list={item_list}/> */}
+      
     </div>
   );
 }
