@@ -78,7 +78,7 @@ function App() {
       {
         isShow ? <Detail /> : null
       }
-
+{}
        
     </div>
   );
@@ -121,6 +121,3 @@ function Board(props){
 
 
 export default App;
-
-
-

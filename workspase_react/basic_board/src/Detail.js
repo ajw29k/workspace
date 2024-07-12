@@ -1,8 +1,10 @@
 import { useNavigate, useParams } from "react-router-dom";
 
+// 상세보기
 const Detail = ({list})=>{
 
 const {id} = useParams();
+console.log(id)
 const navigate =useNavigate();
 
 
@@ -38,8 +40,9 @@ const navigate =useNavigate();
               <button type="button" onClick={() => {
                 navigate(-1)
               }}>뒤로가기</button>
-              <button type="button" onClick={() => {
-                navigate('/delete')
+              <button type="button" onClick={(e) => {if(id == list1.boardNum){
+                console.log('ddd')
+                navigate('/')}
               }}>글삭제</button>
              </>
               

@@ -1,7 +1,12 @@
-
+thead{
+  background-color: cornflowerblue;
+}
+tbody{
+  background-color: lightcyan;
+}
 
 tr,td{
-  border: 1px solid black;
+  border-bottom: 1px double ;
   border-collapse: collapse;
   
 }

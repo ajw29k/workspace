@@ -3,8 +3,8 @@ import Writers from "./Writers";
 import './Board.css';
 
 const Board = ({list}) =>{
-  console.log(list)
   const navigate = useNavigate();
+  // 목록리스트
   return(
     <>
       <table>

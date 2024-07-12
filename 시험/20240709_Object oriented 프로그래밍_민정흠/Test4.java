@@ -53,10 +53,29 @@ public class Test4 {
                 System.out.println("박수"+bb+"번");
         }
 
+    //풀이
+        int num = sc.nextInt();
+        //백의 자리 숫자
+        int huns = num / 100;
 
+        //십의자리
+        int tens = (num %100) /10;
 
+        //일의 자리
+        int ones = num % 10;
+        System.out.println(huns+"  " + tens + " " + ones);
 
+        int clapCnt=0;
 
+        if (huns % 3 == 0 && huns !=0){
+            clapCnt++;
+        }
+        if (tens % 3 == 0 && tens !=0){
+            clapCnt++;
+        }
+        if (ones % 3 == 0 && ones !=0){
+            clapCnt++;
+        }
 
 
     }
