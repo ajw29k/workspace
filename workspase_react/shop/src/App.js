@@ -58,3 +58,10 @@ const Test = ({name,age}) => {
 // }
 
 export default App;
+
+
+//useEffect
+//컴포넌트의 라이프싸이클(생애주기) 사이에 필요한 기능을 추가
+// mount  (태어날때)  : 최초에 컴포넌트가 생성
+// update (살아있을때): 컴포넌트가 재랜더링 되는 상태
+// unmount(죽었을때)  : 컴포넌트가 사라질 때

@@ -40,9 +40,16 @@ const navigate =useNavigate();
               <button type="button" onClick={() => {
                 navigate(-1)
               }}>뒤로가기</button>
-              <button type="button" onClick={(e) => {if(id == list1.boardNum){
-                console.log('ddd')
-                navigate('/')}
+              <button type="button" onClick={(e) => {
+                list.forEach((board, i) => {
+                  if(board.boardNum == id){
+                    list.splice(i,1)
+                  }
+                })
+                navigate('/')
+                //삭제할 글번호
+                // arr(어디부터, 몇개 지울꺼)ty
+                //게시글 목록
               }}>글삭제</button>
              </>
               

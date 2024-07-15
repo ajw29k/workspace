@@ -36,27 +36,36 @@ public class Bank {
     // 만약 매개변수로 전달된 계좌번호와 일치하는 고객이 없다면 null을 리턴하시오.
 
     public Client getClient(String accNum, String name) {
-        Client client = new Client();
-        client.getAccInfo();
-        client.getName();
-        if(accNum.equals(accNum)&&name.equals(name))
-            {
-                return client;
+        Client resultClient = null;
 
+        for(Client c : clientList){
+            if (c.getAccInfo().getAccNUmber().equals(accNum)&& c.getName().equals(name)){
+                resultClient = c;
             }
-        else
 
-            {
-            }
-        return null;
+        }
 
+        return resultClient;
 
     }
 
 
     //2. 매개변수로 전달되는 예금액을 초과하는 예금액을 가진 회원들의 목록을 리턴하는
     //메서드를 정의하시오.
+    public List<Client> getClientList(int balance){
+        //조건이 만족할 회원들의 목록 생성
+        List<Client> resutList = new ArrayList<>();
 
+        //클라이언트목록에서 하나씩 빼서 조건이 맞는지 확인
+        for (Client c : clientList){
+            if (c.getAccInfo().getBalance() > balance){
+                //true 일경우 추가
+                resutList.add(c);
+            }
+        }
+
+        return resutList;
+    }
 
 
     // * 위 메서드를 호출하는 main 메서드를 가진 클래스는 구현할 필요 없습니다.
