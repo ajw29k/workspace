@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+<mapper namespace="stuMapper">
+    <resultMap id="stu" type="com.green.ReactStudent.vo.StuInfoVO">
+        <result column="STU_NUM" property="stuNum" />
+        <result column="STU_NAME" property="stuName" />
+        <result column="KOR_SCORE" property="korScore" />
+        <result column="ENG_SCORE" property="engScore" />
+        <result column="MATH_SCORE" property="mathScore" />
+        <result column="STU_AGE" property="stuAge" />
+        <result column="STU_TELL" property="stuTell" />
+        <result column="STU_ADDR" property="stuAddr" />
+    </resultMap>
+<!--    번호 학생 국어 영어 수학 평균-->
+	<select id="stuList" resultMap="stu">
+        SELECT STU_NUM
+            , STU_NAME
+            , KOR_SCORE
+            , ENG_SCORE
+            , MATH_SCORE
+        FROM REACT_STUDENT
+    </select>
+
+    <select id="studentInfo" resultMap="stu">
+        SELECT STU_NUM
+            , STU_NAME
+            , KOR_SCORE
+            , ENG_SCORE
+            , MATH_SCORE
+            , STU_AGE
+            , STU_TELL
+            , STU_ADDR
+        FROM REACT_STUDENT
+        WHERE STU_NUM = #{stuNum}
+    </select>
+</mapper>
+

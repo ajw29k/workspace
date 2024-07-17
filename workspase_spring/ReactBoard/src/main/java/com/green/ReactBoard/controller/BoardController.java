@@ -17,24 +17,37 @@ import java.util.List;
 public class BoardController {
     @Resource(name = "boardService")
     private BoardService boardService;
-
+    //글 목록 조회
     @GetMapping("/boardList")
     public List<BoardVO> getBoardList(){
 
         return boardService.getBoardList(); //html 파일이 아님
     }
-
+    //글 등록
     @PostMapping("/writeForm")
     public void getWrite(@RequestBody BoardVO boardVO){
+        boardService.getBoardInsert(boardVO);
         System.out.println(boardVO);
 
 
 
     }
-
+    //상세정보
     @GetMapping("/boardDetail/{boardNum}")
-    public BoardVO  detail(@PathVariable("boardNum") int boardNum){
+    public BoardVO detail(@PathVariable("boardNum") int boardNum){
         return boardService.getBoardDetail(boardNum);
 
+    }
+
+    //삭제
+    @GetMapping("/delete/{boardNum}")
+    public void delete(@PathVariable("boardNum") int boardNum){
+        boardService.delete(boardNum);
+    }
+
+    //수정
+    @PostMapping("/update/{boardNum}")
+    public void update(BoardVO boardVO){
+        boardService.update(boardVO);
     }
 }

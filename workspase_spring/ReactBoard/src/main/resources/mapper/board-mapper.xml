@@ -44,6 +44,17 @@
 
     </select>
 
+    <delete id="numDelete">
+        DELETE FROM REACT_BOARD
+        WHERE BOARD_NUM = #{boardNum}
+    </delete>
+    <update id="numUpdate">
+        UPDATE REACT_BOARD SET
+            BOARD_TITLE = #{boardTitle},
+            BOARD_CONTENT = #{boardContent}
+        WHERE BOARD_NUM = #{boardNum}
+    </update>
+
 </mapper>
 
 

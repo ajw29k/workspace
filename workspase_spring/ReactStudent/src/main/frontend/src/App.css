@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.App >ul{
+  display: flex;
+  margin: 0 auto;
+  width: 70%;
+  justify-content: space-around;
+  height: 50PX;
+  align-items: center;
+  background-color: aquamarine;
+  
+}
+
+.App > ul > li{
+  margin: 0px 30px;
+  width: 150px;
+  
+  
+}
+.App > ul span:hover{
+  font-size: 24px;
+  color: red;
+  font-weight: bold;
+}
+ul span{
+  cursor: pointer;
+
+}
+.content{
+  width: 70%;
+  border: 1px solid black;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+table,tr,td{
+  margin: auto;
+}

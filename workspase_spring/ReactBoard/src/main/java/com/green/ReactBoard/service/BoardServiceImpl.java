@@ -32,4 +32,14 @@ public class BoardServiceImpl implements BoardService{
         sqlSession.selectOne("boardMapper.getBoardDetail",boardNum);
         return sqlSession.selectOne("boardMapper.getBoardDetail",boardNum);
     }
+
+    @Override
+    public void delete(int boardNum) {
+        sqlSession.delete("boardMapper.numDelete",boardNum);
+    }
+
+    @Override
+    public void update(BoardVO boardVO) {
+        sqlSession.update("boardMapper.numUpdate",boardVO);
+    }
 }
