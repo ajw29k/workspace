@@ -9,7 +9,7 @@ public class StuInfoVO {
     private int korScore;
     private int engScore;
     private int mathScore;
-    private int age;
+    private int stuAge;
     private String stuTell;
     private String stuAddr;
 

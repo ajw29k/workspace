@@ -40,3 +40,15 @@ ul span{
 table,tr,td{
   margin: auto;
 }
+
+span {
+  cursor: pointer;
+
+}
+span:hover{
+  font-weight: bold;
+}
+
+table > thead > tr{
+  border-top: 1px solid black;
+}

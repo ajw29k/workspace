@@ -54,7 +54,7 @@ const Student = () => {
             <td>수학점수</td>
             <td>{use.mathScore}</td>
             <td>평균</td>
-            <td>{(use.mathScore+use.korScore+use.engScore)/3}</td>
+            <td>{Math.round((use.mathScore+use.korScore+use.engScore)/3*100)/100}</td>
           </tr>
         </thead>
       </table>

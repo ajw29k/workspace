@@ -10,9 +10,14 @@ public interface StuService {
 
     //학생 상세정보 조회
     StuInfoVO student(int stuNum);
+
     //학생등록
+    void stuInsert(StuInfoVO stuInfoVO);
 
     //학생 삭제
+    List<StuInfoVO> delStuList();
+    void stuDelete(int stuNum);
 
     //성적관리
+    void goUpdate(StuInfoVO stuInfoVO);
 }

@@ -1,3 +1,4 @@
+import './stuList.css';
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -36,14 +37,14 @@ const navigate = useNavigate();
             stuData.map((stu,i) => {
               return(
               <tr key={i}>
-                <td>{stu.stuNum}</td>
+                <td>{i+1}</td>
                 <td><span onClick={() => {
                   navigate(`/student/${stu.stuNum}`)
                 }}>{stu.stuName}</span></td>
                 <td>{stu.korScore}</td>
                 <td>{stu.engScore}</td>
                 <td>{stu.mathScore}</td>
-                <td>{(stu.korScore+stu.engScore+stu.mathScore)/3}</td>
+                <td>{Math.round((stu.korScore+stu.engScore+stu.mathScore)/3*100)/100 }</td>
               </tr>
               )
             })

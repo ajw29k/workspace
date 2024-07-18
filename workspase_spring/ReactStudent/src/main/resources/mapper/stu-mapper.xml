@@ -35,5 +35,37 @@
         FROM REACT_STUDENT
         WHERE STU_NUM = #{stuNum}
     </select>
+    <insert id="stuInsert">
+        INSERT INTO REACT_STUDENT (
+            STU_NAME
+            ,STU_AGE
+            ,STU_TELL
+            ,STU_ADDR
+            ,KOR_SCORE
+            ,ENG_SCORE
+            ,MATH_SCORE
+        )
+        VALUES(
+            #{stuName}
+            ,#{stuAge}
+            ,#{stuTell}
+            ,#{stuAddr}
+            ,0
+            ,0
+            ,0
+        )
+    </insert>
+    <delete id="stuDelete">
+        DELETE FROM REACT_STUDENT
+        WHERE STU_NUM = #{stuNum}
+    </delete>
+
+    <update id="stuUpdate">
+        UPDATE REACT_STUDENT
+        SET KOR_SCORE = #{korScore}
+            ,ENG_SCORE = #{engScore}
+            ,MATH_SCORE = #{mathScore}
+        WHERE STU_NUM = #{stuNum}
+    </update>
 </mapper>
 

@@ -22,4 +22,26 @@ public class StuServiceImpl implements StuService{
 
         return sqlSession.selectOne("stuMapper.studentInfo",stuNum);
     }
+
+    @Override
+    public void stuInsert(StuInfoVO stuInfoVO) {
+        sqlSession.insert("stuMapper.stuInsert",stuInfoVO);
+    }
+
+    @Override
+    public List<StuInfoVO> delStuList() {
+        return sqlSession.selectList("stuMapper.studentInfo");
+    }
+
+    @Override
+    public void stuDelete(int stuNum) {
+        sqlSession.delete("stuMapper.stuDelete",stuNum);
+    }
+
+    @Override
+    public void goUpdate(StuInfoVO stuInfoVO) {
+        sqlSession.update("stuMapper.stuUpdate",stuInfoVO);
+    }
+
+
 }
