@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+<mapper namespace="itemMapper">
+	<resultMap id="item" type="com.green.ReactOder.vo.ItemVO">
+        <result column="ITEM_NUM" property="itemNum" />
+        <result column="ITEM_NAME" property="itemName" />
+        <result column="ITEM_PRICE" property="itemPrice" />
+        <result column="SELLER" property="seller" />
+        <result column="ITEM_INTRO" property="itemIntro" />
+        <result column="REG_DATE" property="regDate" />
+    </resultMap>
+    <resultMap id="order" type="com.green.ReactOder.vo.OrderVO">
+        <result column="ORDER_NUM" property="orderNum" />
+        <result column="BUY_ITEM_NAME" property="buyItemName" />
+        <result column="BUY_ITEM_PRICE" property="buyItemPrice" />
+        <result column="BUYER" property="buyer" />
+        <result column="BUY_CNT" property="buyCnt" />
+        <result column="BUY_PRICE" property="buyPrice" />
+        <result column="BUY_DATE" property="buyDate" />
+    </resultMap>
+    <select id="itemList" resultMap="item">
+        SELECT ITEM_NUM
+        ,ITEM_NAME
+        ,ITEM_PRICE
+        ,SELLER
+        ,ITEM_INTRO
+        ,REG_DATE
+        FROM item_info
+    </select>
+    <select id="orderList" resultMap="order">
+        SELECT ORDER_NUM
+        ,BUY_ITEM_NAME
+        ,BUY_ITEM_PRICE
+        ,BUYER
+        ,BUY_CNT
+        ,BUY_PRICE
+        ,BUY_DATE
+        FROM ORDER_INFO
+    </select>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

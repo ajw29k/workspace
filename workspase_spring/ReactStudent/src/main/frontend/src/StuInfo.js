@@ -1,14 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { getStuList } from "./apis";
 
 const StuInfo = () => {
   const [score, setScore] = useState([])
   const navigate = useNavigate();
   
   useEffect(() => {
-    axios
-    .get('/stuDelete')
+    getStuList()
     .then((res) => {
       setScore(res.data)
     })
@@ -35,7 +35,7 @@ const StuInfo = () => {
                     
                   <td>
                     <button type="button" onClick={() => {
-                      navigate(`/stuScore`)
+                      navigate(`/stuScore/${stu.stuNum}`)
                     }}>입력</button>
                   </td>
                 </tr>

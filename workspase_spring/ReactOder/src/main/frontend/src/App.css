@@ -1,0 +1,24 @@
+.App {
+  width: 100vw;
+}
+.App-header > ul{
+  display: flex;
+  width: 50%;
+  height: 50px;
+  margin: auto;
+  margin-top: 20px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: cornflowerblue;
+  border-radius: 8px;
+}
+ul span{
+  cursor: pointer;
+}
+ul span:hover{
+  color: white;
+}
+.content{
+  width: 50%;
+  margin: 0 auto;
+}

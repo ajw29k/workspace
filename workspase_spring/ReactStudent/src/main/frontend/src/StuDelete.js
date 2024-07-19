@@ -27,8 +27,21 @@ const StuDelete = () => {
           stuList.splice(i,1)
         }
       })
+
+      // stuList.filter((stu) => {stu.stuNum == stuNum});
+
+      const arr = [1,2,3,4,5,6,7,8];
+      const result = arr.filter( num => {return num > 5 });
+      console.log(result)
+      
+
       setStuList([...stuList]);
     })
+
+
+
+
+
     .catch((error) => {
       console.log(error)
     })

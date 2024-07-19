@@ -8,11 +8,8 @@ import StuDelete from './StuDelete';
 import StuInfo from './StuInfo';
 import Student from './Student';
 import { StuScore } from './StuScore';
-
 function App() {
   const navigate = useNavigate();
-
-
 
   return (
     <div>
@@ -38,7 +35,7 @@ function App() {
             <Route path='/stuInfo' element = {<StuInfo />} />
 
             {/* 성적 관리(점수등록) */}
-            <Route path='/stuScore' element = {<StuScore />} />
+            <Route path='/stuScore/:stuNum' element = {<StuScore />} />
           </Routes>
         </div>
       </div>

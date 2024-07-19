@@ -1,0 +1,23 @@
+.aa{
+  margin: 0 auto;
+  
+}
+.aa > div:first-child{
+  font-size: 0.8rem;
+  margin: 10px auto;
+}
+
+.aa > table{
+  border: white;
+  
+}
+.aa > table > thead{
+  background-color: rgb(124, 124, 250);
+  color: white;
+}
+.aa > table > tbody{
+  background-color: rgb(206, 226, 255);
+}
+.aa > table > tbody > tr:nth-child(even){
+  background-color: rgb(197, 197, 255);
+}
