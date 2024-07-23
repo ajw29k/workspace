@@ -1,0 +1,23 @@
+body{
+  background-color: #bfbfcf;
+}
+.main{
+  margin: auto;
+  
+}
+.main table{
+  width: 80%;
+  margin: auto;
+  
+}
+.main thead{
+  background-color: rgb(51, 152, 240);
+  border-bottom: 2px solid white;
+  color: white;
+  font-weight: bold;
+
+}
+
+.main tbody{
+  background-color: rgb(202, 228, 250);
+}

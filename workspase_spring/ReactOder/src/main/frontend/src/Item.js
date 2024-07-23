@@ -6,19 +6,14 @@ import { useParams } from 'react-router-dom'
 
 const Item = () => {
   const [itemList, setItemList] =useState([])
-  const {itemNum} =useParams();
-  console.log(itemNum)
   useEffect(() => {
-    axios
-    .get('/itemList')
-    .then((res) => {
-      setItemList(res.data)
-      console.log(res.data)
+    axios.get('itemList').then((E) => {
+      setItemList(E)
+    }).catch((e) => {
+      console.log(e)
     })
-    .catch((error) => {
-      console.log(error)
-    })
-  },[])
+  })
+  
 
   return (
     <div className='container'>
@@ -29,17 +24,16 @@ const Item = () => {
       <div>
         <table>
           <tbody>
-            {itemList.map((item,i) => {
-              if(itemNum == item.itemNum){
-                return(
+              {setItemList       }
+                
                   <>
                     <tr>
                       <td>상품번호</td>
-                      <td><input type='text' readOnly value={item.itemNum}/></td>
+                      <td><input type='text' readOnly value={''}/></td>
                     </tr>
                     <tr>
                       <td>상품명</td>
-                      <td><input type='text' value={item.itemNum} /></td>
+                      <td><input type='text' value={''} /></td>
                     </tr>
                     <tr>
                       <td>상품가격</td>
@@ -58,10 +52,11 @@ const Item = () => {
                       <td><textarea></textarea></td>
                     </tr>
                   </>
-                )
-              }
-            })
-            }
+                
+              
+            
+          
+        
           </tbody>
         </table>
       </div>

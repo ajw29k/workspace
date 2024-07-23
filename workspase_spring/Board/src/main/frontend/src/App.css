@@ -1,0 +1,84 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.header > div > ul{
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px auto;
+  width: 70%;
+}
+.header > div > ul > li{
+  padding: 0 15px;
+}
+li > span{
+  cursor: pointer;
+  font-weight: bold;
+
+}
+.option{
+  text-align: right;
+  width: 90%;
+}
+.content{
+  margin: auto;
+  margin-top: 20px;
+}
+
+/* ////////////////////// */
+/* 공통 컴포넌트 */
+
+.btn{
+  background-color: #9DE5FF;
+  border-radius: 8px;
+  width: 100px;
+  color: rgb(46, 43, 226);
+  cursor: pointer;
+  border: none;
+  padding: 4px 10px;
+  margin: 10px;
+}
+.btn:active{
+  background-color: #ACA8FF;
+  position: relative;
+  top: 2px;
+  left: 3px;
+}
+
+/* btn클래스가 적용된 태그가 disabled 속성이 있다면... */
+.btn:disabled{
+  background-color: #dddddd;
+}
+
+h1{
+  text-align: center;
+}
+
+.inp{
+  width: 70%;
+  border-radius: 6px;
+  border: 1px solid #999999;
+
+  padding: 4px;
+  outline: none;
+}
+.inp1{
+  width: 40%;
+  border-radius: 6px;
+  border: 1px solid #999999;
+
+  padding: 4px;
+  outline: none;
+}
+
+.inp:focus{
+  outline: 1px solid #ACA8FF ;
+  border: 1px solid #ACA8FF;
+  
+}
+.inp1:focus{
+  outline: 1px solid #ACA8FF ;
+  border: 1px solid #ACA8FF;
+  
+}
