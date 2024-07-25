@@ -1,6 +1,6 @@
 package com.green.Board.controller;
 
-import com.green.Board.service.MemberServiceImpl;
+import com.green.Board.service.MemberService;
 import com.green.Board.vo.MemberVO;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
@@ -12,19 +12,20 @@ import java.util.List;
 @RequestMapping("/member")
 public class MemberController {
     @Resource(name = "memberService")
-    private MemberServiceImpl memberService;
+    private MemberService memberService;
+
     //회원 리스트
     @GetMapping("/list")
     public List<MemberVO> getMemberList(){
         return memberService.getMemberList();
     }
+
     //회원 ID 중복??
     @GetMapping("/checkId/{inputId}")
     public boolean isDuplicateId(@PathVariable("inputId") String inputId){
         log.info("java");
         // ture -> 중복된 id가 있음 사용불가
         // false-> id 사용 가능
-
         return memberService.isDuplicateId(inputId);
     }
 
@@ -40,8 +41,9 @@ public class MemberController {
 
     //로그인 페이지
     @PostMapping("/login")
-    public void login(@RequestBody MemberVO memberVO){
-        memberService.login(memberVO);
+    public MemberVO login(@RequestBody MemberVO memberVO){
+        MemberVO member = memberService.login(memberVO);
+        return member;
 
     }
 }

@@ -10,6 +10,14 @@
         <result column="MEM_ID"         property="memId"/>
         <result column="BOARD_NUM"      property="boardNum"/>
     </resultMap>
+    <select id="replyList" resultMap="reply">
+        select REPLY_CONTENT
+        ,REPLY_DATE
+        ,MEM_ID
+        ,BOARD_NUM
+        from BOARD_REPLY
+        where board_num =#{boardNum}
+    </select>
 </mapper>
 
 

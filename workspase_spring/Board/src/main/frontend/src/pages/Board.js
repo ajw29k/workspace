@@ -3,10 +3,9 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import * as boardApi from '../apis/boardApi';
 
-const Board = () => {
+const Board = ({loginInfo}) => {
   //조회된 게시글 목록을 저장할 변수
   const [list, setList] = useState([]);
-
   
   const navigate = useNavigate();
 
@@ -16,19 +15,20 @@ const Board = () => {
     .then((res) => {
       console.log(res.data)
       setList(res.data)
-      console.log(setList)
     })
     .catch((e) => {
       console.log(e)
     })
   },[])
 
+  
   return (
     <div className='main'>
       <h1>자유게시판</h1>
       <div className='option'>
         <select>
           <option>제목</option>
+          <option>작성자</option>
         </select>
         <input type='text' />
         <button type='butteon'>검색</button>
@@ -51,9 +51,11 @@ const Board = () => {
         <tbody>
           {list.map((board , i) => {
             return(
-              <tr>
-                <td>{i+1}</td>
-                <td>{board.title}</td>
+              <tr key={i}>
+                <td>{list.length-i}</td>
+                <td><span onClick={() => {
+                  navigate(`/detail/${board.boardNum}`)
+                }}>{board.title}</span></td>
                 <td>{board.memId}</td>
                 <td>{board.createDate}</td>
               </tr>
@@ -62,9 +64,15 @@ const Board = () => {
           
         </tbody>
       </table>
-      <button className='btn' type='button' onClick={() => {
-        navigate('/write')
-      }}> 글쓰기</button>
+      {
+        loginInfo.memId == null ? 
+        <></>
+        : 
+        <button className='btn' type='button' onClick={() => {
+          navigate('/write')
+        }}> 글쓰기</button>
+      }
+      
     </div>
   )
 }

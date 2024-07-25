@@ -13,3 +13,5 @@ export const getStuDetail = (stuNum) => {
   const respone = axios.get(`student/${stuNum}`);
   return respone ;
 }
+
+

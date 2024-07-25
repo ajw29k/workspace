@@ -17,8 +17,42 @@
         </select>
 
     <insert id="boardInsert">
-        insert into
+        INSERT INTO board (
+        TITLE
+        ,CONTENT
+        ,MEM_ID
+        ) VALUES (
+        #{title},
+        #{content},
+        #{memId}
+        )
     </insert>
+
+    <update id="boardUpdate">
+        UPDATE board SET
+        TITLE = #{title},
+        CONTENT = #{content}
+
+        WHERE BOARD_NUM = #{boardNum}
+    </update>
+
+    <select id="page" resultMap="board">
+        select BOARD_NUM,TITLE,CONTENT,MEM_ID,CREATE_DATE
+        from board
+        where BOARD_NUM = #{boardNum}
+    </select>
+
+    <delete id="delete">
+        DELETE FROM board
+        WHERE BOARD_NUM = #{boardNum}
+    </delete>
+    <update id="updateBoard">
+        UPDATE BOARD SET
+        TITLE = #{title},
+        CONTENT = #{content},
+        MEM_ID = #{memId},
+        CREATE_DATE = #{createDate}
+    </update>
 </mapper>
 
 
