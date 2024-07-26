@@ -4,10 +4,7 @@ import com.green.Board.service.ReplyService;
 import com.green.Board.service.ReplyServiceImpl;
 import com.green.Board.vo.ReplyVO;
 import jakarta.annotation.Resource;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,4 +20,9 @@ public class ReplyController {
        return replyService.list(boardNum);
     }
 
+    //댓글 등록
+    @PostMapping("/insert")
+    public void getReply(@RequestBody ReplyVO replyVO){
+        replyService.replyInsert(replyVO);
+    }
 }

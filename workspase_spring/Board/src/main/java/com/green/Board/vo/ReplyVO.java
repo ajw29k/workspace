@@ -8,6 +8,6 @@ public class ReplyVO {
     private String replyContent;
     private String replyDate;
     private String memId;
-    private String boardNum;
+    private int boardNum;
 
 }

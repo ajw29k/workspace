@@ -17,7 +17,20 @@
         ,BOARD_NUM
         from BOARD_REPLY
         where board_num =#{boardNum}
+        ORDER BY REPLY_DATE DESC
     </select>
+    <insert id="replyInsert">
+        INSERT INTO BOARD_REPLY (
+        REPLY_CONTENT,
+        MEM_ID,
+        BOARD_NUM
+        )
+        VALUES(
+        #{replyContent},
+        #{memId},
+        #{boardNum}
+        )
+    </insert>
 </mapper>
 
 

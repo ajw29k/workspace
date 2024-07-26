@@ -6,4 +6,7 @@ import java.util.List;
 
 public interface ReplyService {
     List<ReplyVO> list(int boardNum);
+
+    //댓글 등록
+    void replyInsert(ReplyVO replyVO);
 }

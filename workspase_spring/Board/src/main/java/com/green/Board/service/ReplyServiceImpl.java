@@ -18,4 +18,10 @@ public class ReplyServiceImpl implements ReplyService{
     public List<ReplyVO> list(int boardNum) {
         return sqlSession.selectList("replyMapper.replyList",boardNum);
     }
+
+
+    @Override
+    public void replyInsert(ReplyVO replyVO) {
+        sqlSession.insert("replyMapper.replyInsert",replyVO);
+    }
 }

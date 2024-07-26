@@ -59,8 +59,6 @@ const Write = ({loginInfo}) => {
       </table>
       <button className='btn' type='button' onClick={() => {
         insert();
-console.log('')
-console.log(list)
       }}>글등록</button>
     </div>
   )
