@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DbScoreApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DbScoreApplication.class, args);
+		String[] a = {"aya", "yee", "u", "maa", "wyeoo"};
+		int b = a.length;
+		System.out.println(b);
 	}
 
 }
