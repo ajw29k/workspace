@@ -9,4 +9,10 @@ public interface ReplyService {
 
     //댓글 등록
     void replyInsert(ReplyVO replyVO);
+
+    //댓글 삭제
+    void replyDelete(int replyNum);
+
+    //삭제
+    void goDelete(int boardNum);
 }

@@ -5,19 +5,25 @@
 import axios from "axios"
 
 //게시글 목록 조회
-export const getBoardList = () => {
-  const response = axios.get('/board/list')
-  return response
+export const getBoardList = (data) => {
+  const response = axios.post('/board/list',data)
+  return response;
 }
 
 //게시글 등록
 export const insertBoard = (data) => {
   const response = axios.post('/board/insert', data)
-  return response
+  return response;
 }
 
 //게시글 상세 조회
 export const getBoardDetail = (boardNum) => {
   const response = axios.get(`/board/detail/${boardNum}`)
-  return response
+  return response;
 }
+
+export const updateBoard = (data,board) => {
+  const response = axios.post(`/board/update/${board}`, data)
+  return response;
+}
+

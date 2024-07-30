@@ -24,4 +24,14 @@ public class ReplyServiceImpl implements ReplyService{
     public void replyInsert(ReplyVO replyVO) {
         sqlSession.insert("replyMapper.replyInsert",replyVO);
     }
+
+    @Override
+    public void replyDelete(int replyNum) {
+        sqlSession.delete("replyMapper.replyDelete",replyNum);
+    }
+
+    @Override
+    public void goDelete(int boardNum) {
+        sqlSession.delete("replyMapper.goDelete",boardNum);
+    }
 }

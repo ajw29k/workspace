@@ -25,4 +25,15 @@ public class ReplyController {
     public void getReply(@RequestBody ReplyVO replyVO){
         replyService.replyInsert(replyVO);
     }
+
+    //댓글 삭제
+    @GetMapping("/delete/{replyNum}")
+    public void goDelete(@PathVariable("replyNum") int replyNum){
+        replyService.replyDelete(replyNum);
+    }
+
+    @GetMapping("/godelete/{boardNum}")
+    public void tdelete(@PathVariable("boardNum") int boardNum){
+        replyService.goDelete(boardNum);
+    }
 }

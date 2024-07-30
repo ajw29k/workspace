@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Navigate, useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+import * as boardApi from '../apis/boardApi'
 
 const Update = () => {
   const navigate = useNavigate()
@@ -11,8 +12,9 @@ const Update = () => {
   })
   const {boardNum} = useParams()
 
+  //상세 조회
   useEffect(() => {
-    axios.get(`/board/detail/${boardNum}`)
+    boardApi.getBoardDetail(boardNum)
     .then((res) => {
       setPost(res.data)
       console.log(res.data)
@@ -22,11 +24,12 @@ const Update = () => {
     })
   },[])
 
+  //수정 버튼
   function goUpdate(){
-    axios
-    .post(`/board/update/${boardNum}` ,post)
+    boardApi.updateBoard(post,boardNum)
     .then((res) => {
-      console.log(post.boardNum)
+      alert('수정 완료되었습니다.')
+      console.log(post)
       navigate(`/detail/${boardNum}`)
     })
     .catch((error) => {
@@ -34,6 +37,7 @@ const Update = () => {
     })
   }
 
+  //변환 데이터
   function rerere(e){
     setPost({
       ...post,
@@ -61,10 +65,64 @@ const Update = () => {
           </tr>
         </tbody>
       </table>
-      <button type='button' onClick={() => {goUpdate()}}>수정</button>
-      <button type='btuuon' onClick={() => {navigate(-1)}}>뒤로가기</button>
+      <button type='button' className='btn' onClick={() => {goUpdate()}}>수정</button>
+      <button type='btuuon' className='btn' onClick={() => {navigate(-1)}}>뒤로가기</button>
     </div>
   )
+
+/*
+
+// import * as BoardApi from '../apis/BoardApi'
+
+//게시글 상세정보를 저장할 state 변수
+const [boardDetail, setboardDetail] = useState({})
+//수정 쿼리 실행 시 빈 값을 채워줄 데이터
+const [updateData, setUpdateData] = useState({
+  boardNum : 0,
+  title : '',
+  content : ''
+});
+
+//게시글 상세 정보조회
+useEffect(() => {
+  BoardApi.getBoardDetail(boardNum)
+  .then((res) => {
+    setboardDetail(res.data)
+  })
+  .catch((error) => {errror})
+
+})
+
+//게시글 수정 쿼리 실행
+funcion getUpdate(){
+  setUpdateData({
+    ...updateData,
+    [e.target.name] : e.target.value
+  })
+}
+  <>
+    <div>제목</div>
+    <div><input type='text' name='title' value={updateData.title} onChange={(e) => {rerere(e)}}/></div>
+            
+    <div>내용</div>
+    <div><input type='text' value={updateData.content} name='content' onChange={(e) => {rerere(e)}}/></div>
+            
+          
+        
+    <button type='button' onClick={() => {goUpdate()}}>수정</button>
+  </>
+
+
+
+
+*/
+
+
+
+
+
+
+
 }
 
 export default Update

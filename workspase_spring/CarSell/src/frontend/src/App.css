@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+}
+
+.menu > ul{
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin: 40px auto;
+  
+}
+.menu > ul > li {
+  background-color: aliceblue;
+  width: 200px;
+  margin: 2px;
+}
+.menu > ul > li:hover{
+  cursor: pointer;
+}
+.h1{
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 10px;
+  
+}

@@ -21,3 +21,12 @@ body{
 .main tbody{
   background-color: rgb(202, 228, 250);
 }
+#cen{
+  display: inline-block;
+  text-align: center;
+  
+  
+}
+h1:hover{
+  cursor: pointer;
+}

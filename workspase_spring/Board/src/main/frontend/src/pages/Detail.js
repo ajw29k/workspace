@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
 const Detail = ({loginInfo}) => {
- 
   const navigate =useNavigate();
 const {boardNum} = useParams();
 const [use, setUse] = useState([])
@@ -37,18 +36,25 @@ useEffect(() => {
   axios.all([axios.get(`/board/detail/${boardNum}`)
             ,axios.get(`/reply/list/${boardNum}`)])
   .then(axios.spread((res1, res2) => {
-    console.log(res1.data);
     setUse(res1.data)
-    console.log(res2.data);
     setRepl(res2.data)
   }))
   .catch((error) => {
     console.log(error)
   })
 },[])
+// function tdelete(){
+  
+//   axios.get(`/reply/godelete/${boardNum}`)
+//   .then((res) => {})
+//   .catch((error) => {console.log(error)})
+// }
 
 function godelete(){
-  axios.get(`/board/delete/${boardNum}`)
+  axios.all
+  ([axios.get(`/board/delete/${boardNum}`),
+    axios.get(`/reply/godelete/${boardNum}`)
+  ])
   .then((res) => {
     console.log(res.data)
     navigate('/')
@@ -74,6 +80,10 @@ function replyChange(e){
 function replyInsert(){
   axios.post('/reply/insert', regReply)
   .then((res) => {
+    alert('댓글 등록 성공')
+    document.querySelector('input[type="text"]').value = ''
+    //추가된 댓글이 화면에 바로 보이게 코드 작성
+    
     console.log(res.data)
     window.location.reload(); // 페이지를 새로고침
   })
@@ -92,6 +102,17 @@ useEffect(() => {
   }
 }, []);
 
+function replyDelete(replyNum){
+  axios.get(`/reply/delete/${replyNum}`)
+  .then((res)=>{
+    console.log(res)
+    alert('삭제되었습니다.')
+    window.location.reload()
+  })
+  .catch((error) => {console.log(error)})
+  
+    
+}
   return (
     <div>
       <table>
@@ -108,7 +129,7 @@ useEffect(() => {
             
           </tr>
           <tr>
-            <td>작성일</td>
+            <td>내용</td>
             <td colSpan={3}>{use.content}</td>
             
           </tr>
@@ -117,15 +138,16 @@ useEffect(() => {
 
 
       <div>
-        <button type='button' onClick={() =>{navigate('/')}}>목록가기</button>
+        <button type='button' className='btn' onClick={() =>{navigate('/')}}>목록가기</button>
         
         {
-         loginInfo.memRole == "ADMIN" || loginInfo.memId == use.memId ?
+         loginInfo.memRole === "ADMIN" || loginInfo.memId === use.memId ?
         <>
-          <button type='button' onClick={() => {
+          <button type='button' className='btn' onClick={() => {
             navigate(`/update/${boardNum}`)
           }}>수정</button>
-          <button type='button' onClick={() => {
+          <button type='button' className='btn' onClick={() => {
+            // tdelete();
             godelete();
           }}>삭제</button>
         </>
@@ -141,7 +163,7 @@ useEffect(() => {
         <input type='text' name='replyContent' onChange={(e) => {
           replyChange(e)
         }} />
-        <button type='button' onClick={() =>{
+        <button type='button' className='btn' onClick={() =>{
           replyInsert()
          }}>등록</button>
       </div>
@@ -154,7 +176,16 @@ useEffect(() => {
           return(
           <div key={repl.length - i}>
           <div>{re.replyDate}
-            {loginInfo.memId == re.memId}
+            { loginInfo.memId === re.memId || loginInfo.memRole === 'ADMIN'? 
+
+              <button className='btn' type='button' onClick={() => {
+              replyDelete(re.replyNum)
+              
+              
+              
+            }}>
+              삭제
+            </button>:null}
           </div>
             <div>{re.memId}</div>
             <div>{re.replyContent}</div>

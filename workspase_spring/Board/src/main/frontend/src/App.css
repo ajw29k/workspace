@@ -3,6 +3,9 @@
   margin: 0 auto;
   margin-top: 20px;
 }
+.header{
+  text-align: end;
+}
 .header > div > ul{
   display: flex;
   justify-content: flex-end;

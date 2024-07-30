@@ -3,18 +3,25 @@
 
 <!-- 해당 파일에 모든 쿼리문을 작성 -->
 <mapper namespace="boardMapper">
-	<resultMap id="board" type="com.green.Board.vo.BoardVO">
+    <resultMap id="board" type="com.green.Board.vo.BoardVO">
         <result column="BOARD_NUM"  property="boardNum"/>
         <result column="TITLE"  property="title"/>
         <result column="CONTENT"  property="content"/>
         <result column="MEM_ID"  property="memId"/>
         <result column="CREATE_DATE"  property="createDate"/>
     </resultMap>
-        <select id="list" resultMap="board">
-                select BOARD_NUM,TITLE,CONTENT,MEM_ID,CREATE_DATE
-                from board
-                ORDER BY CREATE_DATE DESC;
-        </select>
+    <select id="list" resultMap="board">
+        SELECT BOARD_NUM
+        ,   TITLE
+        ,	MEM_ID
+        ,	CREATE_DATE
+        FROM board
+
+        <if test=' searchValue != null and !searchValue.equals("")'>
+            where ${searchType} LIKE CONCAT('%' , #{searchValue} , '%')
+        </if>
+        ORDER BY CREATE_DATE DESC
+    </select>
 
     <insert id="boardInsert">
         INSERT INTO board (

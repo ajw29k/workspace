@@ -15,6 +15,7 @@
         ,REPLY_DATE
         ,MEM_ID
         ,BOARD_NUM
+        ,REPLY_NUM
         from BOARD_REPLY
         where board_num =#{boardNum}
         ORDER BY REPLY_DATE DESC
@@ -31,6 +32,17 @@
         #{boardNum}
         )
     </insert>
+
+    <delete id="replyDelete">
+        DELETE FROM BOARD_REPLY
+        WHERE REPLY_NUM = #{replyNum}
+    </delete>
+
+    <delete id="goDelete">
+        DELETE FROM BOARD_REPLY
+        WHERE BOARD_NUM = #{boardNum}
+    </delete>
+
 </mapper>
 
 
