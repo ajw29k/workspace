@@ -17,10 +17,11 @@
         ,	CREATE_DATE
         FROM board
 
-        <if test=' searchValue != null and !searchValue.equals("")'>
+       <!-- <if test=' searchValue != null and !searchValue.equals("")'>
             where ${searchType} LIKE CONCAT('%' , #{searchValue} , '%')
-        </if>
-        ORDER BY CREATE_DATE DESC
+        </if>-->
+        ORDER BY BOARD_NUM DESC
+        LIMIT #{displayDataCnt} OFFSET #{displayDataCnt} * (#{nowPage} - 1);
     </select>
 
     <insert id="boardInsert">
@@ -60,6 +61,12 @@
         MEM_ID = #{memId},
         CREATE_DATE = #{createDate}
     </update>
+
+    <!--전체 게시글 수 조회-->
+    <select id="getBoardCnt" resultType="int">
+        select count(BOARD_NUM)
+        FROM BOARD
+    </select>
 </mapper>
 
 

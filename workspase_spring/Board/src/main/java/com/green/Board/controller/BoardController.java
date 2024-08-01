@@ -2,13 +2,16 @@ package com.green.Board.controller;
 
 import com.green.Board.service.BoardService;
 import com.green.Board.vo.BoardVO;
+import com.green.Board.vo.PageVO;
 import com.green.Board.vo.SearchVO;
 import jakarta.annotation.Resource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/board")
@@ -19,10 +22,28 @@ public class BoardController {
 
     //게시글 목록
     @PostMapping("/list")
-    public List<BoardVO> getBoardList(@RequestBody SearchVO searchVO){
-        log.info(searchVO.toString());
-        return boardService.getBoardList(searchVO);
+    public Map<String, Object> getBoardList(@RequestBody(required = false) SearchVO searchVO, PageVO pageVO){
+        log.info("=======넘어온 페이지 번호 : " + searchVO.getPageNo());
+
+        int totalDataCnt = boardService.getBoardCnt();
+
+        //페이지 정보를 담을 수 있는 PageVO 객체 생성
+        PageVO pageInfo =  new PageVO(totalDataCnt);
+
+        pageInfo.setNowPage(searchVO.getPageNo());
+
+        pageInfo.setPageInfo();
+
+        System.out.println(pageInfo);
+
+        //리액트로 가져갈 모든 데이터를 담을 변수
+        Map<String,Object> mapData = new HashMap<>();
+        //페이징 정보가 담긴 데이터
+        mapData.put("pageInfo",pageInfo);
+        mapData.put("boardList",boardService.getBoardList(pageVO));
+        return mapData;
     }
+
 
     //게시글 작성
     @PostMapping("/write")

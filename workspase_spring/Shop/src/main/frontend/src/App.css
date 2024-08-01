@@ -1,0 +1,67 @@
+.container{
+  width: 100vw;
+  
+}
+
+.login-div{
+  width: 100%;
+  color: white;
+  background-color: #BDE4A8;
+  text-align: end;
+  padding-right: 50px;
+  height: 50px;
+}
+
+.layout-div{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.btn{
+  background-color: #F09FA5;
+  border: none;
+  color: whitesmoke;
+  height: 25px;
+  margin-left: 10px;
+  width: 80px;
+  text-align: center;
+  cursor: pointer;
+}
+.banner{
+  position: relative;
+}
+
+.banner-img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+ 
+}
+.title-div{
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  font-size: 2.7rem;
+  font-style: italic;
+  letter-spacing: 10px;
+  transform: translate(30px, -50%);
+}
+
+.header-menu{
+  margin: 0 auto;
+  width: 70%;
+  height: 50px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.header-menu >li{
+  width: 100px;
+  text-align: center;
+}
+
+li>span{
+  cursor: pointer;
+}

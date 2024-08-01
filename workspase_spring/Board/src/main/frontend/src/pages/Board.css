@@ -22,11 +22,21 @@ body{
   background-color: rgb(202, 228, 250);
 }
 #cen{
-  display: inline-block;
   text-align: center;
+  
   
   
 }
 h1:hover{
+  cursor: pointer;
+}
+.aaaa{
+  text-align: center;
+}
+.page-span{
+  display: inline-block;
+  width: 10%;
+  margin: 0 10px;
+  text-align: center;
   cursor: pointer;
 }
