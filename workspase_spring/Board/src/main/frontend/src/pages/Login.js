@@ -26,25 +26,25 @@ import * as memberApi from '../apis/memberApi'
 const Login = ({setLoginInfo}) => {
 
   //sessionStorage에 데이터 입력
-  window.sessionStorage.setItem('name','kim');
-  window.sessionStorage.setItem('age',20);
-  const m ={
-    stuNum : 1,
-    stuName : 'kim',
-    score : 80
-  };
+  // window.sessionStorage.setItem('name','kim');
+  // window.sessionStorage.setItem('age',20);
+  // const m ={
+  //   stuNum : 1,
+  //   stuName : 'kim',
+  //   score : 80
+  // };
 
   //객체 -> json으로 변환(객체를 문자로 변환)
   // JSON.stringify();
   // json ->객체
   // JSON.parse();
-  window.sessionStorage.setItem('member', JSON.stringify(m) );
+  // window.sessionStorage.setItem('member', JSON.stringify(m) );
 
-  const data = window.sessionStorage.getItem('member');
-  console.log(data)
+  // const data = window.sessionStorage.getItem('member');
+  // console.log(data)
   
-  const result = JSON.parse(data)
-  console.log(result)
+  // const result = JSON.parse(data)
+  // console.log(result)
 
   //객체나 배열을 starage애 저장할 때 json 형태로 저장 할 수 있음.
   //json(javascript object notation) -> 자바스크립트의 객체를 문자화 시킨 것!

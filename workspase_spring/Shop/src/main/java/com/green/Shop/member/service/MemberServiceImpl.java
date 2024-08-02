@@ -14,4 +14,17 @@ public class MemberServiceImpl implements MemberService{
     public void memberInsert(MemeberVO memeberVO) {
         sqlSession.insert("memberMapper.memberInsert",memeberVO);
     }
+
+    @Override
+    public boolean checkId(String memId) {
+        String id = sqlSession.selectOne("memberMapper.checkId",memId);
+
+        return  id !=null;
+    }
+
+    @Override
+    public MemeberVO memberLogin(MemeberVO memeberVO) {
+        return sqlSession.selectOne("memberMapper.login",memeberVO);
+
+    }
 }

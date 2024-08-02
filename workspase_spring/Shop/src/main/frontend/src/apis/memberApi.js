@@ -12,3 +12,9 @@ import axios from "axios"
     const response = axios.get(`/member/check/${data}`)
     return response;
   }
+
+//로그인
+  export const login = (data) => {
+    const response = axios.post('/member/login',data)
+    return response;
+  }

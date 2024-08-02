@@ -1,5 +1,5 @@
 body{
-  background-color: #76BC75;
+  background-color: #519873;
 }
 .join{
   margin: auto;
@@ -45,4 +45,10 @@ select{
 }
 .button-div{
   text-align: center;
+}
+
+button:disabled{
+  background-color: aliceblue;
+  color: black;
+  cursor: auto;
 }

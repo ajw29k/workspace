@@ -21,7 +21,7 @@ public class MemberServiceImpl implements MemberService{
     public boolean isDuplicateId(String memId) {
         //id가 null이면 회원가입 가능
         //id가 조회되면(null 아니면) 회원가입 불가능
-        String id =sqlSession.selectOne("memberMapper.isDuplicate",memId);
+        String id = sqlSession.selectOne("memberMapper.isDuplicate",memId);
         return id != null;
     }
 
