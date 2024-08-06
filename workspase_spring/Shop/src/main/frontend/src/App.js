@@ -7,6 +7,7 @@ import Join from './pages/user/Join';
 import Login from './pages/user/Login';
 import { useEffect, useState } from 'react';
 import { login } from './apis/memberApi';
+import Novel1 from './pages/user/Novel1';
 
 
 function App() {
@@ -21,14 +22,16 @@ function App() {
     }
   },[])
   function remove(){
-    window.sessionStorage.removeItem(logInfo)
+    window.sessionStorage.removeItem('logInfo')
     setLogInfo({})
   }
   return (
     <div className="container">
       <div className='login-div'>
         <div>
-          {logInfo.memId !=null ? <>
+          {logInfo.memId !=null 
+          ?
+           <>
           <div className='c'>{logInfo.memName}님 반갑습니다.<button type='button' className='btn2' onClick={() => {remove()}}>로그아웃</button>
           </div>
           <div>
@@ -57,7 +60,7 @@ function App() {
           {logInfo.memRole =='USER'? 
             <Route path='/' element ={<UserLayout />}>
             {/* 상품 목록 화면 */}
-              <Route path='test1'element={<div>1번화면</div>}/>
+              <Route path='novel'element={<Novel1 />}/>
               <Route path='test2'element={<div>2번화면</div>}/>
             </Route>
           : 

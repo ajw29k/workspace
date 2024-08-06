@@ -1,0 +1,16 @@
+.imgs{
+  width: 150px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+button{
+  border: none;
+  margin: 10px auto;
+  margin-right: 15px;
+  background-color: white
+}
+.novel1{
+  display: flex;
+  margin: 20px auto;
+  font-size: 0.8;
+}

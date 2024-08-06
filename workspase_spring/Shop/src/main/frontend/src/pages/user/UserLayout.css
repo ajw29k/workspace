@@ -1,0 +1,15 @@
+.layout > ul{
+}
+
+.ul{
+  display: flex;
+  margin:  30px;
+  
+}
+li{
+  margin: 0 20px;
+  cursor: pointer;
+}
+li:active{
+  color: blueviolet;
+}
