@@ -7,13 +7,12 @@ const UserLayout = () => {
     <>
     <div className='layout'>
       <ul className='ul'>
+        <li><span>전체상품</span></li>
+        <li><span >인터넷/IT</span></li>
         <li><span onClick={() => {
           navigate('novel')
-        }}>소설</span></li>
-        <li><span >에세이</span></li>
-        <li><span >시</span></li>
+        }} >소설</span></li>
         <li><span >자기계발</span></li>
-        <li><span >만화</span></li>
       </ul>
     </div>
     <Outlet />

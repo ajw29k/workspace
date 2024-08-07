@@ -62,7 +62,7 @@ const Login = ({setLogInfo}) => {
       //세션스토리지에 로그인한 데이터 저장(아이디,이름, 유저냐 관리자냐)
       window.sessionStorage.setItem('logInfo',JSON.stringify(logInfo))
 
-      //
+      //App에다 로그인정보를 전달
       setLogInfo(logInfo)
       //로그인성공시 모달 실행
       setIsLoginSuccess(true)
@@ -100,7 +100,7 @@ const Login = ({setLogInfo}) => {
       // 로그인 성공시 상품 목록 페이지로 이동
       const logInfo =JSON.parse(window.sessionStorage.getItem('logInfo'))
       console.log(logInfo);
-      logInfo.memRole=='USER'? navigate('/'):navigate('/admin')
+      logInfo.memRole=='USER'? navigate('/'):navigate('/admin/regItem')
     }
     
   }
