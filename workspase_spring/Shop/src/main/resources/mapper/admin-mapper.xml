@@ -23,18 +23,45 @@
     </select>
     <insert id="insertItem" parameterType="com.green.Shop.item.vo.ItemVO">
         INSERT INTO SHOP_ITEM(
-        ITEM_NAME
+        ITEM_CODE
+        ,ITEM_NAME
         ,ITEM_PRICE
         ,ITEM_INTRO
         ,CATE_CODE
         ) VALUES(
-        #{itemName}
+        #{itemCode}
+        ,#{itemName}
         ,#{itemPrice}
         ,#{itemIntro}
         ,#{cateCode}
         )
-
+        ORDER BY CATE_CODE ASC
     </insert>
+
+    <!--상품 이미지 등록-->
+    <insert id="insertImg">
+        INSERT INTO ITEM_IMG (
+            ORIGIN_FILE_NAME
+            , ATTACHED_FILE_NAME
+            , IS_NAME
+            , ITEM_CODE
+        ) VALUES
+        <foreach collection="imgList" item="img" separator=",">
+        (
+              #{img.originFileName}
+            , #{img.attachedFileName}
+            , #{img.isName}
+            , #{itemCode}
+
+        )
+        </foreach>
+    </insert>
+    <!--다음에 들어갈 item-code 조회-->
+    <select id="getNextItemCode" resultType="int">
+        SELECT MAX(ITEM_CODE) + 1
+        FROM SHOP_ITEM
+
+    </select>
 </mapper>
 
 

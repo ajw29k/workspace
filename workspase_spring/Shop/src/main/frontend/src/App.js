@@ -75,7 +75,7 @@ function App() {
               <Route path='novel'element={<Novel1 />}/>
               <Route path='test2'element={<div>2번화면</div>}/>
             </Route>
-            {logInfo.memRole =='USER'?<></>
+            {logInfo.memRole =='USER'||logInfo.memRole == ''?<></>
           : 
           // 관리자용 페이지
             <Route path='/admin' element = {<AdminLayout />} >

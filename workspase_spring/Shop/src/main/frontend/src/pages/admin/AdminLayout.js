@@ -31,13 +31,11 @@ const AdminLayout = () => {
         
       </div>
       <div className='aaa'>
-        <div >
           <ul  >
             <li onClick={() => {
               navigate('/admin/regitem')
             }}>상품관리</li>
           </ul>
-        </div>
         <div>
           <Outlet />
         </div>
