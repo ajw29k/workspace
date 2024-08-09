@@ -14,6 +14,7 @@ const UserLayout = () => {
         }} >소설</span></li>
         <li><span >자기계발</span></li>
       </ul>
+      
     </div>
     <Outlet />
     </>

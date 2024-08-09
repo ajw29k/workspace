@@ -1,0 +1,24 @@
+.item-list-div{
+  width: 90%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+  
+}
+
+
+.item-list-div > .item-div{
+}
+
+.item-list-div > .item-div > img{
+  width: 100%;
+  height: 250px;
+}
+.item-list-div > .item-div > h4{
+padding: 5px 3px;
+}
+.item-list-div > .item-div > p{
+padding: 3px;
+}

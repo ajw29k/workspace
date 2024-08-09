@@ -12,6 +12,8 @@ import RegItem from './pages/admin/RegItem';
 import Stock from './pages/admin/Stock';
 import Sales from './pages/admin/Sales';
 import Revenue from './pages/user/Revenue';
+import ItemList from './pages/user/ItemList';
+import ItemDetail from './pages/user/ItemDetail';
 
 //새로고침하면 state 변수의 값이 전부 초기화 된다
 //재랜더링하면 state 변수의 값은 보존된다
@@ -72,8 +74,9 @@ function App() {
            
             <Route path='/' element ={<UserLayout />}>
             {/* 상품 목록 화면 */}
+              <Route path='' element={<ItemList />}/>
               <Route path='novel'element={<Novel1 />}/>
-              <Route path='test2'element={<div>2번화면</div>}/>
+              <Route path='detail/:itemNum'element={<ItemDetail />}/>
             </Route>
             {logInfo.memRole =='USER'||logInfo.memRole == ''?<></>
           : 

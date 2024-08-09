@@ -55,8 +55,6 @@ const RegItem = () => {
     const itemForm = new FormData();
 
     //2. form 객체에 데이터 추가
-    itemForm.append('itemName', '상품1' );
-    itemForm.append('itemPirce', 10000 );
 
     itemForm.append('itemName', itemCategory.itemName );
     itemForm.append('itemPrice', itemCategory.itemPrice );

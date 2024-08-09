@@ -17,4 +17,5 @@ public interface AdminService {
 
     //다음에 들어갈 item-code 조회
     int getNextItemCode();
+
 }
