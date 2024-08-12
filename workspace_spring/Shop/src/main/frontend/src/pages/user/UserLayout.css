@@ -1,0 +1,14 @@
+
+.ul{
+  display: flex;
+  margin:  30px;
+  
+}
+li{
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.layout{
+  
+}

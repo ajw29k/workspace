@@ -1,0 +1,23 @@
+.btnbb{
+  font-size: 1.2rem;
+  background-color: unset;
+}
+.ulflax{
+  display: flex;
+  justify-content: center;
+}
+
+.btnbb.selected {
+  color: rgb(59, 21, 197); /* 클릭 시 텍스트 색상 */
+  border-color: #4caf50;
+}
+
+.admin01{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.abc{
+  display: flex;
+  margin: 0 auto;
+}
