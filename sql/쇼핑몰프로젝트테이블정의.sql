@@ -1,0 +1,118 @@
+-- 쇼핑몰 프로젝트 테이블 정의
+-- 테이블 종류 --
+-- 1. 회원 정보 테이블
+-- 2. 상품 카테고리 테이블
+-- 3. 상품 정보 테이블
+-- 4. 상품 이미지 정보 테이블
+-- 5. 장바구니
+-- 6.
+
+
+
+-- 1. 회원 정보 테이블
+
+-- 권한 : USER, ADMIN
+CREATE TABLE SHOP_MEMBER (
+	MEM_ID VARCHAR(50) PRIMARY KEY
+	, MEM_PW VARCHAR(100) NOT NULL
+	, MEM_NAME VARCHAR(50) NOT NULL
+	, MEM_TEL VARCHAR(30) UNIQUE
+	, POST VARCHAR(10)
+	, MEM_ADDR VARCHAR(50)
+	, ADDR_DETAIL VARCHAR(100)
+	, MEM_EMAIL VARCHAR(100)
+	, MEM_ROLE VARCHAR(30) DEFAULT 'USER'
+);
+
+INSERT INTO shop_member (
+	MEM_ID
+	, MEM_PW
+	, MEM_NAME
+	, MEM_TEL
+	, POST
+	, MEM_ADDR
+	, ADDR_DETAIL
+	, MEM_EMAIL
+	, MEM_ROLE
+	) VALUES(
+	'admin'
+	, 1
+	, '관리자'
+	, '000-0000-0000'
+	, '20'
+	, '울산'
+	, '동구'
+	, 'ADMIN@naver.com'
+	, 'ADMIN'
+	);
+
+
+SELECT * FROM shop_member;
+DELETE FROM shop_member
+WHERE post = '';
+
+-- 2. 상품 카테고리
+CREATE TABLE ITEM_CATEGORY(
+	CATE_CODE INT AUTO_INCREMENT PRIMARY KEY
+	, CATE_NAME VARCHAR(50) NOT NULL UNIQUE
+);
+
+-- 카테고리 데이터
+INSERT INTO item_category VALUES(1, '인터넷/IT');
+INSERT INTO item_category VALUES(2, '소설/에세이');
+INSERT INTO item_category VALUES(3 ,'자기계발');
+INSERT INTO item_category VALUES(4 ,'34341');
+
+SELECT * FROM item_category
+ORDER BY cate_code ASC;
+DROP TABLE item_category;
+DELETE FROM item_category
+WHERE CATE_CODE = 4;
+
+
+-- 3. 상품 정보 테이블
+-- ITEM_STATUS(상품상태) : (FOR_SALE)판매중, (SOLD_OUT)매진
+CREATE TABLE SHOP_ITEM(
+	ITEM_CODE INT AUTO_INCREMENT PRIMARY KEY
+	, ITEM_NAME VARCHAR(50) NOT NULL UNIQUE
+	, ITEM_PRICE INT NOT NULL
+	, ITEM_INTRO VARCHAR(100)
+	, ITEM_STOCK INT DEFAULT 20
+	, ITEM_STATUS VARCHAR(10) DEFAULT 'FOR_SALE'
+	, CATE_CODE INT REFERENCES ITEM_CATEGORY (CATE_CODE)
+);
+DROP TABLE shop_item;
+SELECT * FROM shop_item;
+
+-- 4. 상품 이미지 정보 테이블
+-- ORIGIN_FILE_NAME : 원본 파일명
+-- ATTACHED_FIRL_NAME : 첨부 파일명
+-- IS_NAME : 대표 이미지 여부
+CREATE TABLE item_img (
+	IMG_CODE INT AUTO_INCREMENT PRIMARY KEY
+	, ORIGIN_FILE_NAME VARCHAR(100) NOT NULL
+	, ATTACHED_FILE_NAME VARCHAR(100) NOT NULL
+	, IS_NAME VARCHAR(5) NOT NULL
+	, ITEM_CODE INT REFERENCES shop_item (ITEM_CODE) ON DELETE CASCADE
+);
+INSERT INTO item_img (ORIGIN_FILE_NAME,ATTACHED_FILE_NAME,IS_NAME,ITEM_CODE)
+VALUES ('abc.jpg','aaa.jpg', 'Y', 1 );
+SELECT * FROM ITEM_IMG;
+DROP TABLE ITEM_IMG;
+SELECT MAX(ITEM_CODE) + 1
+        FROM shop_item;
+
+SELECT * FROM shop_item;
+SELECT * FROM item_img;
+UPDATE shop_item SET item_name = '마인크래프트'
+WHERE item_code = 5;
+DELETE FROM shop_item
+WHERE item_code = 8;
+SELECT I.ITEM_CODE
+		,ITEM_NAME
+		,ITEM_PRICE
+		,ATTACHED_FILE_NAME 
+FROM shop_item s ,item_img i
+WHERE s.item_code = i.item_code
+AND IS_NAME = 'Y'
+ORDER BY ITEM_CODE DESC;

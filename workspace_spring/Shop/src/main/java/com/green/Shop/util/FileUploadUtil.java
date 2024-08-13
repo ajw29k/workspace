@@ -21,7 +21,7 @@ public class FileUploadUtil {
             //imgVO 객체 생성
             imgVO = new ImgVO();
             //업로드 될 경로
-            String uploadPath = "D:\\01-STUDY\\dev\\workspace\\workspase_spring\\Shop\\src\\main\\resources\\static\\upload\\";
+            String uploadPath = "D:\\01-STUDY\\dev\\workspace\\workspace_spring\\Shop\\src\\main\\resources\\static\\upload\\";
 
             //내가 선택한 원본 파일명
             String originFileName = uploadFile.getOriginalFilename();

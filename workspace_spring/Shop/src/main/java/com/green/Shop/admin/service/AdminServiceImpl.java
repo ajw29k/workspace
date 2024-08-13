@@ -26,6 +26,7 @@ public class AdminServiceImpl implements AdminService{
         sqlSession.insert("adminMapper.insertItem",itemVO);
     }
 
+    //상품 이미지 등록
     @Override
     public void insertImg(ItemVO itemVO) {
         sqlSession.insert("adminMapper.insertImg",itemVO);

@@ -4,16 +4,47 @@ import '../admin/AdminLayout.css'
 const AdminLayout = () => {
   //사이드메뉴 정보를 관리하는 state변수
   const [sideMenu, setSideMenu] = useState('itemManage')
-
+  const [arrow, setArrow] = useState(null)
+  function arrowa(arrow,navi){
+    setArrow(arrow)
+    navigate(navi)
+  }
   //사이드메뉴를 화면에 그리는 함수
   function drawSideMenu(){
     if(sideMenu == 'itemManage'){
       return(
         <>
         <ul className='side-menu-ul'>
-          <li onClick={() => {navigate('/admin/itemManage')}}><span >상품관리</span><span><i className="bi bi-chevron-right"></i></span></li>
-          <li onClick={() => {navigate('/admin/regitem')}}><span >상품등록</span><span><i className="bi bi-chevron-right"></i></span></li>
-          <li onClick={() => {navigate('/admin/categoryManage')}}><span>카테고리관리</span><span><i className="bi bi-chevron-right"></i></span></li>
+          <li onClick={() => {
+            const newArrow = arrow == 'right' ? 'down' : 'right'
+            arrowa(newArrow,'/admin/itemManage')
+            }}>
+            <span >상품관리</span>
+            <span>
+              {arrow === 'right' ?
+                <i className="bi bi-chevron-right arrow"></i>
+                :
+                <i class="bi bi-chevron-compact-down down"></i>
+              }
+            </span>
+          </li>
+          <li onClick={() => {navigate('/admin/regitem')}}>
+            <span >상품등록</span>
+            <span><i className="bi bi-chevron-right"></i>
+            </span>
+          </li>
+          <li onClick={() => {arrowa('categoryManage','/admin/categoryManage')}}>
+            <span>카테고리관리</span>
+            <span>
+            {
+              arrow === 'categoryManage' ? 
+              <i className="bi bi-chevron-compact-down down"></i> 
+              : 
+              <i className="bi bi-chevron-right arrow"></i>
+            }
+
+            </span>
+          </li>
         </ul>
       </>
       )
@@ -31,7 +62,7 @@ const AdminLayout = () => {
       return(
         <>
           <ul className='side-menu-ul'>
-            <li>유저검색</li>
+            <li onClick={() => {navigate('/admin/SearchUser')}}>유저검색</li>
             <li>유저정보변경</li>
             <li>유저탈퇴유저관리</li>
           </ul>
@@ -43,7 +74,7 @@ const AdminLayout = () => {
       return(
         <>
           <ul className='side-menu-ul'>
-            <li>이달의 매출</li>
+            <li onClick={() => {navigate('/admin/recordOfMonth')}}>이달의 매출</li>
             <li>월별 매출</li>
             <li>카테고리별 매출</li>
           </ul>

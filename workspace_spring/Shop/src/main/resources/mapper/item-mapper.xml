@@ -46,13 +46,22 @@
 	</select>
 
 	<select id="item" resultMap="item">
-		SELECT *
-		FROM SHOP_ITEM S , ITEM_IMG I
-		WHERE  S.ITEM_CODE = I.ITEM_CODE
-		AND I.ITEM_CODE = #{itemCode}
+		SELECT S.ITEM_CODE
+			,ITEM_NAME
+			,ITEM_PRICE
+			,ITEM_INTRO
+			,ITEM_STOCK
+			,ITEM_STATUS
+			,CATE_CODE
+			,IMG_CODE
+			,ORIGIN_FILE_NAME
+			,ATTACHED_FILE_NAME
+			,IS_NAME
+		FROM SHOP_ITEM S, ITEM_IMG I
+		WHERE S.ITEM_CODE = #{itemCode}
+		AND S.ITEM_CODE = I.ITEM_CODE
 	</select>
 </mapper>
-
 
 
 

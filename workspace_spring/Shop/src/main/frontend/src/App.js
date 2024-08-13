@@ -15,6 +15,7 @@ import CategoryManage from './pages/admin/CategoryManage';
 import SaleHistoryOfMonth from './pages/admin/SaleHistoryOfMonth';
 import RecodeOfMonth from './pages/admin/RecodeOfMonth';
 import SearchUser from './pages/admin/SearchUser';
+import CartList from './pages/user/CartList';
 
 //새로고침하면 state 변수의 값이 전부 초기화 된다
 //재랜더링하면 state 변수의 값은 보존된다
@@ -81,9 +82,9 @@ function App() {
               <Route path='novel'element={<Novel1 />}/>
               {/* 상품 상세 정보 */}
               <Route path='detail/:itemNum'element={<ItemDetail />}/>
+              <Route path='cartList/:memId'element={<CartList setLogInfo = {setLogInfo}/>}/>
             </Route>
-            {logInfo.memRole =='USER'||logInfo.memRole == ''?<></>
-          : 
+            {logInfo.memRole =='ADMIN'?
           // 관리자용 페이지
             <Route path='/admin' element = {<AdminLayout />} >
               <Route path='test1' element ={ <div>상품등록 페이지</div>}/>
@@ -102,6 +103,8 @@ function App() {
               {/* 매출 관리 */}
               <Route path='recordOfMonth' element ={ <RecodeOfMonth />}/>
             </Route>
+            :
+            <></>
         }
           
 

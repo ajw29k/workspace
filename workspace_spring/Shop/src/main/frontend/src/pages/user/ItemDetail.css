@@ -1,3 +1,42 @@
 .con{
-  border: 1px solid black;
+  width: 100%;
 }
+.con >div:first-child{
+  display: flex;
+  justify-content: center;
+  
+
+}
+.mainImg{
+  width: 50%;
+  margin: auto;
+}
+.imgDetail{
+  width: 100%;
+  
+}
+
+.b3{
+  width: auto;
+}
+.detail-div{
+  width: 50%;
+}
+
+.detail-div > div{
+  margin: 15px;
+}
+
+.detail-img{
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+.footter{
+  margin: auto;
+}
+.cartCnt{
+  width: 120px;
+}
+
+/* .detail-div > div : */
