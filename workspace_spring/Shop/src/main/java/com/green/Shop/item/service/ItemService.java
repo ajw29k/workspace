@@ -1,5 +1,6 @@
 package com.green.Shop.item.service;
 
+import com.green.Shop.item.vo.CartVO;
 import com.green.Shop.item.vo.ItemVO;
 
 import java.util.List;
@@ -10,4 +11,7 @@ public interface ItemService {
 
     //책 상세정보
     ItemVO itemDetail(int itemCode);
+
+    //장바구니
+    void insertCart(CartVO cartVO);
 }

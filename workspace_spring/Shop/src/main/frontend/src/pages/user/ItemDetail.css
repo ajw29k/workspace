@@ -1,5 +1,6 @@
 .con{
-  width: 100%;
+  width: 50%;
+  margin: 0 auto;
 }
 .con >div:first-child{
   display: flex;
@@ -8,7 +9,7 @@
 
 }
 .mainImg{
-  width: 50%;
+  width: 60%;
   margin: auto;
 }
 .imgDetail{
@@ -20,16 +21,16 @@
   width: auto;
 }
 .detail-div{
-  width: 50%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.detail-div > div{
-  margin: 15px;
-}
 
 .detail-img{
-  margin: auto;
   width: 50%;
+  margin: auto;
   text-align: center;
 }
 .footter{
@@ -39,4 +40,7 @@
   width: 120px;
 }
 
-/* .detail-div > div : */
+.intro{
+  text-align: center;
+  margin: 20px;
+}

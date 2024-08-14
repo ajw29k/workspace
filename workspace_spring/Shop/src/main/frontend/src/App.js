@@ -81,8 +81,9 @@ function App() {
               <Route path='' element={<ItemList />}/>
               <Route path='novel'element={<Novel1 />}/>
               {/* 상품 상세 정보 */}
-              <Route path='detail/:itemNum'element={<ItemDetail />}/>
-              <Route path='cartList/:memId'element={<CartList setLogInfo = {setLogInfo}/>}/>
+              <Route path='detail/:itemNum'element={<ItemDetail logInfo = {logInfo}/>}/>
+              {/* 장바구니 */}
+              <Route path='cartList/:memId'element={<CartList logInfo = {logInfo}/>}/>
             </Route>
             {logInfo.memRole =='ADMIN'?
           // 관리자용 페이지
