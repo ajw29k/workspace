@@ -1,0 +1,12 @@
+.listTable{
+  border: 1px solid;
+  margin: auto;
+}
+.listTable td{
+  
+  vertical-align: middle;
+}
+.img-td{
+  width: 60px;
+}
+

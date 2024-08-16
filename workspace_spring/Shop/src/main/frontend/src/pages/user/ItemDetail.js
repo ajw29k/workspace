@@ -45,7 +45,7 @@ const ItemDetail = ({logInfo}) => {
       setCart({
         ...cart,
         itemCode : res.data.itemCode,
-        memId : logInfo.memId
+        
       })
       console.log(item)
       
@@ -63,23 +63,30 @@ const ItemDetail = ({logInfo}) => {
       alert('수량은 최대 10개, 최소 1개 가능합니다')
       setItemCnt(1)
       setCnt(item.itemPrice)
+      setCart({
+        ...cart,
+        cartCnt : 1
+      })
     }
     else{
       setItemCnt(e.target.value)
       //총 가격 계산 : 단가 * 수량
       setCnt(item.itemPrice * Number(e.target.value))
+      setCart({
+        ...cart,
+        cartCnt : num
+      })
     }
-    setCart({
-      ...cart,
-      cartCnt : num
-    })
 
     console.log(cart);
   }
+  //세션스토리지에 있는 데이터를 받아옴
+  
+  
   //장바구니에 담을 변수
   const [cart, setCart] = useState(
     {
-      memId : '',
+      memId : JSON.parse(window.sessionStorage.getItem('logInfo')).memId,
       itemCode : 0,
       cartCnt : itemCnt
     }
@@ -87,9 +94,14 @@ const ItemDetail = ({logInfo}) => {
   //장바구니 담기
   function isertCart(){
     console.log(cart)
-    axios.post(`/item/insertCart`,cart)
+    axios.post(`/cart/insertCart`,cart)
     .then((res)=>{
+      const restul = window.confirm('장바구니에 상품을 담았습니다.\n계속 쇼핑하겠습니까?')
+      //취소를 선택하면 장바구니 목록 페이지 이동
+      !restul ?
       navigate(`/cartList/${logInfo.memId}`)
+      :<></>
+      
     })
     .catch((error) =>{
       console.log(error)

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+<mapper namespace="cartMapper">
+
+
+	<!--상품이미지-->
+
+
+	<!--장바구니-->
+	<resultMap id="cart" type="com.green.Shop.cart.vo.CartVO">
+		<result column="CART_CODE" property="cartCode" />
+		<result column="ITEM_CODE" property="itemCode" />
+		<result column="CART_CNT" property="cartCnt" />
+		<result column="MEM_ID" property="memId" />
+		<result column="CART_DATE" property="cartDate" />
+		<!--다른 파일일경우 매퍼.아이디-->
+		<association property="item" resultMap="categoryMapper.item" />
+	</resultMap>
+	<!--장바구니에 상품 등록-->
+	<insert id="insertCart">
+		INSERT INTO SHOP_CART(
+			ITEM_CODE
+			, CART_CNT
+			, MEM_ID
+		) VALUES(
+			#{itemCode}
+			, #{cartCnt}
+			, #{memId}
+		)
+	</insert>
+
+	<!--장바구니 리스트 조회-->
+	<select id="cartList" resultMap="cart">
+		SELECT cart.ITEM_CODE
+			, ITEM_NAME
+			, ITEM_PRICE
+			, ATTACHED_FILE_NAME
+			, CART_CNT
+			, cart.MEM_ID
+			, CART_CODE
+			, DATE_FORMAT(CART_DATE, '%Y-%m-%d %H:%i') AS CART_DATE
+		FROM SHOP_CART cart
+			, SHOP_ITEM item
+			, ITEM_IMG img
+			, SHOP_MEMBER member
+		WHERE cart.MEM_ID = member.MEM_ID
+		AND cart.ITEM_CODE = item.ITEM_CODE
+		AND item.ITEM_CODE = img.ITEM_CODE
+		AND cart.MEM_ID = #{memId}
+		AND img.IS_NAME = 'Y'
+		ORDER BY CART_CODE DESC
+	</select>
+
+	<!--장바구니에 있는 아이템삭제-->
+	<delete id="itemDelete" >
+		DELETE FROM SHOP_CART
+		WHERE CART_CODE = #{cartCode}
+	</delete>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

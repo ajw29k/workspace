@@ -19,7 +19,13 @@ import CartList from './pages/user/CartList';
 
 //새로고침하면 state 변수의 값이 전부 초기화 된다
 //재랜더링하면 state 변수의 값은 보존된다
+//새로고침과 재랜더링은 다르다
+//state 변경함수는 모든 코드 가 실행 된 후 일괄적으로 한 번에 처리
+//state 변경함수는 비동기 방식이므로 주의!
 function App() {
+  const[data,setData] =useState('react')
+  const[data2,setData_2] =useState('20')
+
   const navigate = useNavigate();
   //로그인 정보를 저장할수 있는 state 변수
   const [logInfo, setLogInfo] = useState({})
@@ -48,7 +54,9 @@ function App() {
           {logInfo.memId !=null 
           ?
            <>
-          <div className='c'>{logInfo.memName}님 반갑습니다.<button type='button' className='btn2' onClick={() => {remove()}}>로그아웃</button>
+          <div className='c'>{logInfo.memName}님 반갑습니다.
+            {/* <button type='button' className='btn2' onClick={() => {navigate('/')}} */}
+            <button type='button' className='btn2' onClick={() => {remove()}}>로그아웃</button>
           </div>
           <div>
             
