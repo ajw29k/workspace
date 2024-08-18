@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import './Sales.css'
 const Sales = () => {
   const navigate = useNavigate()
   const [carList , setCarList] =useState([])
@@ -42,32 +42,56 @@ const Sales = () => {
   alert('구매자명을 입력하세요')
   }
   return (
-    <div>
+    <div className='salesMain'>
       <div>
-        구매자명 <input type='text' name='buyer' onChange={(e) => {gochange(e)}}/>
+        <table className='salesTable'>
+          <tbody>
+            <tr>
+              <td>
+              구매자명 <input type='text' name='buyer' onChange={(e) => {gochange(e)}}/>
+              </td>
+              <td>
+
+              </td>
+            </tr>
+            <tr>
+              <td>
+                색상
+
+              </td>
+              <td>
+                <select name='color' onChange={(e) => {gochange(e)}} >
+                  <option value='블랙'>블랙</option>
+                  <option value='화이트'>화이트</option>
+                  <option value='실버'>실버</option>
+                  <option value='레드'>레드</option>
+                </select>
+              </td>
+              <td>
+                모델 
+                <select name='modelNum' onChange={(e) => {gochange(e)}}>
+                  {
+                    carList.map((car,i) => {
+                      return(
+                        <option value={car.modelNum} key={i}>{car.modelName}</option>
+                      )
+                    })
+                  }
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                연락처
+              </td>
+              <td>
+                연락처 <input type='text' name='tell' onChange={(e) => {gochange(e)}} />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div><button type='button' onClick={() => {insertSal()}} >등록</button></div>
       </div>
-      <div>
-        색상
-        <select name='color' onChange={(e) => {gochange(e)}} >
-          <option value='블랙'>블랙</option>
-          <option value='화이트'>화이트</option>
-          <option value='실버'>실버</option>
-          <option value='레드'>레드</option>
-        </select>
-        모델 
-        <select name='modelNum' onChange={(e) => {gochange(e)}}>
-          {
-            carList.map((car,i) => {
-              return(
-                <option value={car.modelNum} key={i}>{car.modelName}</option>
-              )
-            })
-          }
-        </select>
-        
-      </div>
-      <div>연락처 <input type='text' name='tell' onChange={(e) => {gochange(e)}} /></div>
-      <div><button type='button' onClick={() => {insertSal()}} >등록</button></div>
     </div>
   )
 }

@@ -1,18 +1,20 @@
-.App {
-  text-align: center;
+.App{
+  width: 100%;
+  margin: auto;
+  
 }
-
 .menu > ul{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   width: 70%;
   margin: 40px auto;
   
 }
 .menu > ul > li {
   background-color: aliceblue;
-  width: 200px;
-  margin: 2px;
+  width: 150px;
+  margin: 4px;
+  font-size: 1.5rem;
 }
 .menu > ul > li:hover{
   cursor: pointer;
@@ -21,5 +23,6 @@
   font-size: 3rem;
   font-weight: bold;
   margin-top: 10px;
+  text-align: center;
   
 }
