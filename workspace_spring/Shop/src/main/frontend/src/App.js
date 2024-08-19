@@ -55,7 +55,7 @@ function App() {
           ?
            <>
           <div className='c'>{logInfo.memName}님 반갑습니다.
-            {/* <button type='button' className='btn2' onClick={() => {navigate('/')}} */}
+            <button type='button' className='btn2' onClick={() => {navigate(`/cartList/${logInfo.memId}`)}}>장바구니</button>
             <button type='button' className='btn2' onClick={() => {remove()}}>로그아웃</button>
           </div>
           <div>
