@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f627797e-6ea5-4128-9f52-a68287193ce2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/exam/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exam/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exam/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exam/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exam/exam.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exam/src/test/Test1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exam/src/test/Test2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../7.9일 시험문제/자바스크립트/test1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../7.9일 시험문제/자바스크립트/test1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../7.9일 시험문제/자바스크립트/test1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../7.9일 시험문제/자바스크립트/test1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../7.9일 시험문제/자바스크립트/test2.js" beforeDir="false" afterPath="$PROJECT_DIR$/../7.9일 시험문제/자바스크립트/test2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace_htmlcss/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_htmlcss/css/blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace_htmlcss/css/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_htmlcss/css/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace_htmlcss/css/blogLog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace_htmlcss/css/화면구현_회원가입.html" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_htmlcss/css/화면구현_회원가입.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam/src/test/Test3.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam/src/test/Test3.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2hfzsvL0naxIkYnnefxQglVhgEk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/01-STUDY/dev/workspace/workspase_java&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f627797e-6ea5-4128-9f52-a68287193ce2" name="Changes" comment="" />
+      <created>1718000129844</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718000129844</updated>
+    </task>
+    <servers />
+  </component>
+</project>

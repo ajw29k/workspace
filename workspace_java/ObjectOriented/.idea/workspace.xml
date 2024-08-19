@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0017661f-deb0-4155-b7c1-437d89873a4d" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2hXYi1N41gL3MBBU2zGvKgQITVh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AccTest.executor": "Run",
+    "Application.AccountTest.executor": "Run",
+    "Application.Animal_1.executor": "Run",
+    "Application.Animal_2.executor": "Run",
+    "Application.BookTest.executor": "Run",
+    "Application.CalculatorTest.executor": "Run",
+    "Application.CarTest.executor": "Run",
+    "Application.CntTest.executor": "Run",
+    "Application.EmpTest.executor": "Run",
+    "Application.Exception.executor": "Run",
+    "Application.Exception_1.executor": "Run",
+    "Application.Exception_2.executor": "Run",
+    "Application.Exception_3.executor": "Run",
+    "Application.InitTest.executor": "Run",
+    "Application.ManTest.executor": "Run",
+    "Application.MathTest.executor": "Run",
+    "Application.MemberServiceExample.executor": "Run",
+    "Application.MemberTest.executor": "Run",
+    "Application.Member_1Test.executor": "Run",
+    "Application.MonitoeTest.executor": "Run",
+    "Application.ObjectTest.executor": "Run",
+    "Application.PhoneTest.executor": "Run",
+    "Application.RectTest.executor": "Run",
+    "Application.SchoolTest.executor": "Run",
+    "Application.SongTest.executor": "Run",
+    "Application.String_1.executor": "Run",
+    "Application.String_2.executor": "Run",
+    "Application.String_3.executor": "Run",
+    "Application.String_4.executor": "Run",
+    "Application.StuTest.executor": "Run",
+    "Application.StudentTest.executor": "Run",
+    "Application.Test2.executor": "Run",
+    "Application.TvUser.executor": "Run",
+    "Application.Tvtest.executor": "Run",
+    "Application.Work (1).executor": "Run",
+    "Application.Work.executor": "Run",
+    "Application.Work1 (1).executor": "Run",
+    "Application.Work1.executor": "Run",
+    "Application.dfdsfsdf.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/01-STUDY/dev/workspace/시험/20240709_OMOS개발_민정흠",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.EmpTest">
+    <configuration name="EmpTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="collection.list.문제.EmpTest" />
+      <module name="ObjectOriented" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="collection.list.문제.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exception_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exception.Exception_1" />
+      <module name="ObjectOriented" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exception.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exception_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exception.Exception_2" />
+      <module name="ObjectOriented" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exception.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exception_3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exception.Exception_3" />
+      <module name="ObjectOriented" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exception.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SchoolTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="collection.list.문제.SchoolTest" />
+      <module name="ObjectOriented" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="collection.list.문제.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Exception_3" />
+        <item itemvalue="Application.Exception_2" />
+        <item itemvalue="Application.Exception_1" />
+        <item itemvalue="Application.SchoolTest" />
+        <item itemvalue="Application.EmpTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0017661f-deb0-4155-b7c1-437d89873a4d" name="Changes" comment="" />
+      <created>1717742099965</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717742099965</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/상속/Work.java</url>
+          <line>42</line>
+          <properties class="상속.B">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

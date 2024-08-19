@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f2c15ccc-9353-4afb-b836-6b6b8e457ec9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../workspase_spring/Shop/src/main/java/com/green/Shop/member/service/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../workspase_spring/Shop/src/main/java/com/green/Shop/member/service/MemberServiceImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2h7yT62M3ZJeg0hOQ2K4CsIaJ73" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Break_Continue.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CalTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Case_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exam1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exam2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exam3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.For_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.IF문제_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.IF문제_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.If_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.If_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.If_3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.If_4.executor&quot;: &quot;Run&quot;,
+    &quot;Application.If문.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MemberTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Switch_예제_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Switch_예제_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test11.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test13.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test15.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test1_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test1_13.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test1_16.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test4.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test5.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test6.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test7.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test8.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test9.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_1_10.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_1_10_12.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_1_11.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_1_12.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_1_13_15.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_1_1_3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_1_4_6.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_1_7.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_1_7_9.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_1_9.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_2_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_2_1_3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_2_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_2_3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_2_4_6.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_2_5.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_2_6.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test_3_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.While_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.While_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.While_3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.기본자료형의_형변환.executor&quot;: &quot;Run&quot;,
+    &quot;Application.다섯_반복문.For.Test3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.랜덤.executor&quot;: &quot;Run&quot;,
+    &quot;Application.로또번호.executor&quot;: &quot;Run&quot;,
+    &quot;Application.매서드_4.executor&quot;: &quot;Run&quot;,
+    &quot;Application.메서드_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.메서드_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.메서드_3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.메서드_5.executor&quot;: &quot;Run&quot;,
+    &quot;Application.메서드오버로딩.executor&quot;: &quot;Run&quot;,
+    &quot;Application.무한루프.executor&quot;: &quot;Run&quot;,
+    &quot;Application.문자열비교.executor&quot;: &quot;Run&quot;,
+    &quot;Application.배열_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.배열_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.배열_3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.배열_4.executor&quot;: &quot;Run&quot;,
+    &quot;Application.배열과기본자료형의차이.executor&quot;: &quot;Run&quot;,
+    &quot;Application.변수_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.변수_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.변수_3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.변수_4.executor&quot;: &quot;Run&quot;,
+    &quot;Application.숫자연산.executor&quot;: &quot;Run&quot;,
+    &quot;Application.신화_1_8_12.executor&quot;: &quot;Run&quot;,
+    &quot;Application.심화_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.연산자_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.연산자_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.연산자_3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.연습문제.executor&quot;: &quot;Run&quot;,
+    &quot;Application.예제_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.예제_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.예제_3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.자료형_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.초등산수문제.executor&quot;: &quot;Run&quot;,
+    &quot;Application.키보드연산_3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.키보드입력_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.키보드입력_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.향상된Fpr.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/01-STUDY/dev/workspace/workspase_java/JavaBasic&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="변수와자료형" />
+      <recent name="출력문" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Test2">
+    <configuration name="랜덤" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="여섯_배열.랜덤" />
+      <module name="JavaBasic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="여섯_배열.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="자바시험.CalTest" />
+      <module name="JavaBasic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="자바시험.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="자바시험.MemberTest" />
+      <module name="JavaBasic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="자바시험.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="자바시험.Test2" />
+      <module name="JavaBasic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="자바시험.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="로또번호" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="여섯_배열.문제.로또번호" />
+      <module name="JavaBasic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="여섯_배열.문제.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="배열_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="여섯_배열.배열_1" />
+      <module name="JavaBasic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="여섯_배열.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="배열_2" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="여섯_배열.배열_2" />
+      <module name="JavaBasic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="여섯_배열.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test2" />
+        <item itemvalue="Application.랜덤" />
+        <item itemvalue="Application.배열_1" />
+        <item itemvalue="Application.MemberTest" />
+        <item itemvalue="Application.CalTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f2c15ccc-9353-4afb-b836-6b6b8e457ec9" name="Changes" comment="" />
+      <created>1716959418318</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716959418318</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/변수와자료형/자료형_1.java</url>
+          <line>3</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/변수와자료형/자료형_1.java</url>
+          <line>4</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/변수와자료형/자료형_1.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/변수와자료형/자료형_1.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/변수와자료형/자료형_1.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/변수와자료형/자료형_1.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/변수와자료형/자료형_1.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/변수와자료형/자료형_1.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/변수와자료형/자료형_1.java</url>
+          <line>1</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/여섯_배열/문제/Test_2_1.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
