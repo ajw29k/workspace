@@ -3,3 +3,5 @@ npx create-react-app .
 
 npm start
 control + c 프로그램 종료
+
+각 프로젝트마다 npm install 을 해줘야 한다

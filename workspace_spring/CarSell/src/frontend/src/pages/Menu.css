@@ -1,0 +1,35 @@
+.carMenu{
+  width: 60%;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.insertCaR{
+  margin: auto;
+  width: ;
+}
+.insertCaR div:first-child{
+  margin: 20px;
+}
+.insertCaR div:nth-child(2){
+  margin: 20px;
+}
+.insertCaR div:nth-child(2) > input{
+  margin: 20px;
+}
+.insertCaR div:last-child{
+  text-align: right;
+}
+
+.tableCar{
+  border: 1px solid;
+  margin: auto;
+  width: 90%;
+}
+.tableCar{
+  text-align: center;
+}
+
+.carList{
+  margin-left: 20px;
+}

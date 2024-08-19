@@ -1,0 +1,15 @@
+.salesMain{
+  width: 60%;
+  border: 1px solid;
+  margin: auto;
+}
+.salesMain >div > div:last-child{
+  text-align: center;
+  margin-top: 15px;
+}
+
+.salesTable{
+  border: 1px solid;
+  margin: auto;
+}
+
