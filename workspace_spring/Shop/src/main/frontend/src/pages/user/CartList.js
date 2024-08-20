@@ -65,7 +65,10 @@ const CartList = () => {
     })
     .catch((error) => {console.log(error)})
   }
-  
+  const changeCnt = (e) => {
+    const num = Number(e.target.value)
+    setCartList()
+  }
   return (
     <div className='cartListMain'>
       <table className='listTable'>
@@ -120,10 +123,10 @@ const CartList = () => {
                     ￦{(cart.item.itemPrice).toLocaleString()} 원
                   </td>
                   <td><input type='number' defaultValue={cart.cartCnt} onChange={(e) => {
-
+                    changeCnt(e)
                   }}/></td>
                   <td>
-                    {cart.item.itemPrice * cart.cartCnt}
+                    {(cart.item.itemPrice * cart.cartCnt).toLocaleString()}
                   </td>
                   <td>{cart.cartDate}</td>
                   <td><button type='button' className='btn' onClick={() => {

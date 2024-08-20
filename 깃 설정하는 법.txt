@@ -29,5 +29,38 @@ git 설치 후 최초 1회 pc세팅하는 명령어(어떤폴더에서 해도 �
   모든 파일을 올리고 싶다 : git add .
 7. 커밋, 푸쉬진행
   commit : git commit -m "(커밋메세지)"  (commit한다고 원격 저장소에 올라가지 않음
-  push : git push -u origin main
+  push : git push origin main
 8. 파일 수정 및 추가, 삭제 시에 6~7번 반복
+
+* git add . 명령어 실행시 LF------ 경고가 뜨면
+ git config --global core.autocrlf true 명령어 실행 후 
+ 다시 git add . 실행
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+깃허브에 올린 파일 내려받기
+1. 팀자의 프로젝트와 동일한 경로에 프로젝트명으로 폴더 생성
+2. 생성한 폴더 안에서 git bash를 실행
+1. 팀장(본인)의 원격저장소에 있는 파일 내려받기
+  git clone 원격저장소 url
+
+*팀원이 올린 파일 내려받기
+git pull origin main
+
+-- 브랜치 관련 명령어
+ 1)현재 브랜치의 목록 확인
+  git branch
+ 2) 새로운 브랜치 생성
+  git branch 브랜치명
+ 3) 브랜치 이동
+  git checkout 이동할 브랜치명
+ 4) 본인의 브랜치에서 작업한 내용을 main 브랜치로 합치기
+ 4-1) main 브랜치로 이동
+ 4-2) git merge 병합할 브랜치명
+
+
+
+
+git add .
+git commit -m " 오케이 "
+git push origin main
+
