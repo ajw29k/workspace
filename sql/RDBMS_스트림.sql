@@ -31,6 +31,69 @@ FROM emp
 WHERE ENAME LIKE '%기' OR ENAME LIKE '%김%';
 SELECT * FROM dept;
 -- 6. 
-SELECT EMPNO, ENAME, E.deptNO, DNAME
+SELECT EMPNO
+	,ENAME
+	,deptNO 
+	,CASE
+		WHEN DEPTNO = 10 THEN '인사부'
+		WHEN DEPTNO = 20 THEN '영업부'
+		WHEN DEPTNO = 30 THEN '개발부'
+		ELSE '생산부'
+		END AS DNAME
+FROM emp; 
+
+-- 7. 입사일이 1월이고 커미션이 null값이면 0으로 조회
+SELECT empno
+		,ename
+		,hiredate
+		,IFNULL(comm,0)
+FROM emp
+WHERE month(hiredate) = 1;
+
+SELECT * FROM EMP;
+-- 8. 
+SELECT deptno
+		,SUM(sal)
+		, ROUND(AVG(sal),2)
+		,ROUND(AVG(IFNULL(comm,0)),2)
+FROM emp
+GROUP BY deptno;
+
+-- 9. 
+SELECT 
+	E.EMPNO
+	,E.ENAME
+	,E.HIREDATE
+	,E.SAL
+	,E.DEPTNO
+	,(SELECT DNAME 
+	FROM dept D 
+	WHERE E.DEPTNO = D.DEPTNO) AS DNAME
+FROM emp E
+WHERE E.DEPTNO = (SELECT D.DEPTNO FROM dept D WHERE DNAME='인사부');
+
+
+-- 10.
+SELECT 
+	EMPNO
+	,ENAME
+	,HIREDATE
+	,SAL
+	,E.DEPTNO
+	,DNAME
 FROM emp E, dept D
-WHERE E.deptNO = D.deptNO;
+WHERE D.DNAME != '인사부' AND SAL >= 500
+AND E.DEPTNO = D.DEPTNO
+ORDER BY EMPNO DESC, ENAME;
+
+
+
+
+
+
+
+
+
+
+
+
