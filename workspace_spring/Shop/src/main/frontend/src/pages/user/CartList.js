@@ -58,16 +58,18 @@ const CartList = () => {
     setAllChk(!allChk)
   }
   
-  const deleteBook = () => {
+  const deleteBook = (e) => {
     axios
-    .get('/deleteBook').then((res)=>{
+    .get(`/deleteBook`).then((res)=>{
 
     })
     .catch((error) => {console.log(error)})
   }
   const changeCnt = (e) => {
-    const num = Number(e.target.value)
-    setCartList()
+    
+    // if(){
+    //   alert(1)
+    // }
   }
   return (
     <div className='cartListMain'>

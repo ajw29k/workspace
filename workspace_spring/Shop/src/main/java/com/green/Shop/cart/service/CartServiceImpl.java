@@ -12,9 +12,19 @@ public class CartServiceImpl implements CartService{
     @Autowired
     private SqlSessionTemplate sqlSession;
 
+    //상품 담기할때 실행 코드
     @Override
     public void insertCart(CartVO cartVO) {
-        sqlSession.insert("cartMapper.insertCart",cartVO);
+        // 내 장바구니에 상품존재 여부 확인
+        CartVO vo = sqlSession.selectOne("cartMapper.checkCart", cartVO);
+
+        // 없으면 insert 있으면 update
+        if (vo == null){
+            sqlSession.insert("cartMapper.insertCart",cartVO);
+        }
+        else {
+            sqlSession.update("cartMapper.updateCartCntWhenReg",cartVO);
+        }
     }
 
     @Override
@@ -22,6 +32,7 @@ public class CartServiceImpl implements CartService{
         return sqlSession.selectList("cartMapper.cartList",memId);
     }
 
+    //장바구니 삭제
     @Override
     public void itemDelete(int cartCode) {
         sqlSession.delete("cartMapper.itemDelete",cartCode);

@@ -72,9 +72,9 @@ INSERT INTO board_reply (REPLY_CONTENT, MEM_ID, BOARD_NUM)
 VALUES ('댓글5', 'admin', 2);
 
 SELECT * FROM board_member;
-SELECT * FROM BOARD;
+SELECT * FROM board;
 SELECT * FROM BOARD_REPLY;
-
+DELETE FROM board WHERE board_num = 2;
 -- 데이터 조회 연습
 -- 회원의 이름이 '김자바'인 회원이 작성한 게시글의
 -- 글번호, 제목, 작성자를 조회, 작성일 기준 최신글부터 조회(내림차순)
@@ -94,3 +94,117 @@ SELECT B.BOARD_NUM, TITLE, B.MEM_ID ,
 FROM BOARD_REPLY R, BOARD B
 WHERE B.BOARD_NUM = R.BOARD_NUM
 ORDER BY CREATE_DATE DESC ,REPLY_DATE DESC;
+
+-- 아이디 중복 여부를 확인하는 쿼리
+SELECT mem_id
+FROM board_member
+WHERE mem_id ='java';
+
+SELECT * FROM board_member;
+DELETE FROM board
+WHERE TITLE = '7';
+SELECT * FROM BOARD;
+
+INSERT INTO board (TITLE,CONTENT, MEM_ID)
+VALUE ('1번글', '1번내용' );
+
+SELECT * FROM board, board_reply
+WHERE board.BOARD_NUM = board_reply.BOARD_NUM; 
+
+-- 아이디가 'java'인 회원이 작성한 게시글의 
+-- 글제목, 내용, 작성자ID, 작성자명, 작성자 권한을 조회
+SELECT TITLE, CONTENT, B.MEM_ID, MEM_NAME ,MEM_ROLE
+FROM board B, board_member M
+WHERE B.MEM_ID = 'java' AND
+B.MEM_ID = M.MEM_ID;
+
+-- 글번호가 5번 이하인 게시글의
+-- 글번호, 제목, 글 작성자를 조회하되
+SELECT board_num, TITLE,MEM_NAME
+FROM board B ,board_member M
+WHERE B.MEM_ID = M.MEM_ID
+AND B.BOARD_NUM <5
+ORDER BY BOARD_NUM;
+
+-- 1번 게시글의 게시글 제목, 작성자 ID 및
+-- 1번 게시글에 작성된 댓글내용,댓글 작성자ID를 조회
+SELECT TITLE,B.MEM_ID,REPLY_CONTENT,R.MEM_ID
+FROM board B, board_reply R
+WHERE B.BOARD_NUM = 1 AND
+B.BOARD_NUM =R.BOARD_NUM;
+
+-- 1번 게시글의 게시글 제목, 작성자 ID 및
+-- 1번 게시글에 작성된 댓글내용,댓글 작성자ID, 댓글 작성자 이름을 조회
+SELECT TITLE,B.MEM_ID,REPLY_CONTENT,R.MEM_ID,MEM_NAME
+FROM board B, board_reply R , board_member M
+WHERE B.BOARD_NUM = 1 AND
+B.BOARD_NUM =R.BOARD_NUM
+AND R.MEM_ID = M.MEM_ID;
+
+SELECT BOARD_NUM, TITLE, B.MEM_ID, MEM_NAME, MEM_ROLE
+		FROM BOARD B, BOARD_MEMBER M
+		WHERE B.MEM_ID = M.MEM_ID;
+		
+		
+		-- 게시글 번호, 게시글 제목, 게시글 작성자
+		-- 게시글작성일, 게시글 내용
+		-- 댓글 달린날짜, 댓글 작성자ID, 댓글내용
+		SELECT B.BOARD_NUM,TITLE, B.MEM_ID
+				,CREATE_DATE,CONTENT
+				, REPLY_DATE,R.MEM_ID, react_board
+		FROM board B, board_reply R ;
+		
+CREATE TABLE TEST_ITEM(
+	ITEM_CODE INT AUTO_INCREMENT PRIMARY KEY
+	, ITEM_NAME VARCHAR(30) NOT NULL
+);
+
+INSERT INTO TEST_ITEM VALUES (1, '상품1');
+INSERT INTO TEST_ITEM VALUES (2, '상품2');
+INSERT INTO TEST_ITEM VALUES (3, '상품3');
+SELECT * FROM TEST_ITEM;
+
+CREATE TABLE TEST_ORDER(
+	ORDER_NUM INT PRIMARY KEY AUTO_INCREMENT
+	, BUYER VARCHAR(50) NOT NULL
+	, ITEM_CODE INT NOT NULL REFERENCES TEST_ITEM (ITEM_CODE) ON DELETE CASCADE
+);
+
+INSERT INTO TEST_ORDER VALUES (1, '김자바', 1);
+INSERT INTO TEST_ORDER VALUES (2, '김자바', 1);
+INSERT INTO TEST_ORDER VALUES (3, '김자바', 2);
+INSERT INTO TEST_ORDER VALUES (4, '김자바', NULL);
+SELECT * FROM TEST_ORDER;
+DROP TABLE TEST_ITEM;
+DROP TABLE TEST_ORDER;
+
+DELETE FROM TEST_ITEM
+WHERE ITEM_CODE = 1;
+
+SELECT BOARD_NUM
+	,	TITLE
+	,	MEM_ID
+	,	CREATE_DATE
+FROM board
+WHERE ${searchType} LIKE CONCAT('%',${searchValue},'%')
+
+INSERT INTO board (
+		TITLE
+		,CONTENT
+		,MEM_ID
+		) VALUES (
+		'33',
+		'333',
+		'java'
+		);
+		SELECT BOARD_NUM
+        ,   TITLE
+        ,	MEM_ID
+        ,	CREATE_DATE
+        FROM board
+        ORDER BY BOARD_NUM DESC
+        LIMIT 5 OFFSET 5;
+
+-- 테이블에 존재하는 데이터 갯수 조회
+SELECT COUNT(BOARD_NUM)
+FROM board;
