@@ -1,0 +1,5 @@
+npm install -g create-react-app
+npx create-react-app .
+
+npm start
+control + c 프로그램 종료
