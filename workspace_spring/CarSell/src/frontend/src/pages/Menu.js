@@ -35,6 +35,21 @@ const Menu = () => {
       console.log(error)
     })
   }
+  const [inputValue,setInputValue] = useState([])
+  const handlePress = (e) => {
+    const regex = /^[0-9\b -]{0,13}$/;
+    if (regex.test(e.target.value)) {
+      setInputValue(e.target.value);
+    }
+  }
+  useEffect(() => {
+    if (inputValue.length === 10) {
+      setInputValue(inputValue.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3'));
+    }
+    if (inputValue.length === 13) {
+      setInputValue(inputValue.replace(/-/g, '').replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3'));
+    }
+  }, [inputValue]);
   return (
     <div className='carMenu'>
       <div className='insertCaR'>
@@ -54,7 +69,7 @@ const Menu = () => {
             changeCar(e)
           }}/>
         </div>
-        <div><button className='btn' type='button' onClick={() => {
+        <div><button className='btn' type='button' value={inputValue} onClick={() => {
           insertCar()
           setCar([])
         }}>차량등록</button></div>
@@ -89,6 +104,7 @@ const Menu = () => {
               }
             </tbody>
           </table>
+          <input type='text' value={inputValue} onChange={(e) => {handlePress(e)}}/>
         </div>
       </div>
     </div>
