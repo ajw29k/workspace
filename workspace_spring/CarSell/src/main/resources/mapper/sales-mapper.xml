@@ -32,7 +32,10 @@
             ,#{modelNum}
             )
     </insert>
-
+    <select id="salesList" resultMap="sales">
+        SELECT *
+        FROM SALES_INFO
+    </select>
 </mapper>
 
 

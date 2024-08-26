@@ -54,7 +54,7 @@ const Menu = () => {
             changeCar(e)
           }}/>
         </div>
-        <div><button type='button' onClick={() => {
+        <div><button className='btn' type='button' onClick={() => {
           insertCar()
           setCar([])
         }}>차량등록</button></div>
