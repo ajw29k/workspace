@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60fc113b-9be2-4fee-96ee-eb0fb298cd04" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/JavaBasic/src/출력문/Exam2.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasic/src/출력문/Exam2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../8월시험/라즈베리파이 사물 제어 IOT 평가.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../8월시험/라즈베리파이 사물 제어 IOT 평가.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace_python/리스트.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_python/리스트.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace_python/판다스/01.DataFrame.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_python/판다스/01.DataFrame.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,21 +26,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Test8.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/민정흠/OneDrive/바탕 화면/program cording/workspace/workspase_java/ObjectOriented",
-    "settings.editor.selected.configurable": "preferences.editor.code.editing",
-    "애플리케이션.Test8.executor": "Run",
-    "애플리케이션.Test_1_13_15.executor": "Run",
-    "애플리케이션.Test_3_1.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Test8.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/01-STUDY/dev/workspace/workspase_java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor.code.editing&quot;,
+    &quot;애플리케이션.Test8.executor&quot;: &quot;Run&quot;,
+    &quot;애플리케이션.Test_1_13_15.executor&quot;: &quot;Run&quot;,
+    &quot;애플리케이션.Test_3_1.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="애플리케이션.Test_1_13_15">
+}</component>
+  <component name="RunManager" selected="Application.Test_1_13_15">
     <configuration name="Test_1_13_15" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="일곱_메서드.Test_1_13_15" />
       <module name="workspase_java" />
@@ -64,12 +67,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="애플리케이션.Test_1_13_15" />
-        <item itemvalue="애플리케이션.Test_3_1" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
