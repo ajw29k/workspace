@@ -1,0 +1,10 @@
+.list-table{
+  border: 1px solid;
+  margin: auto;
+  width: 60%;
+  text-align: center;
+}
+
+.list-table tr,td{
+  border: 1px solid;
+}

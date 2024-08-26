@@ -6,14 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="60fc113b-9be2-4fee-96ee-eb0fb298cd04" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../8월시험/라즈베리파이 사물 제어 IOT 평가.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../8월시험/라즈베리파이 사물 제어 IOT 평가.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../workspace_python/리스트.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_python/리스트.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../workspace_python/판다스/01.DataFrame.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_python/판다스/01.DataFrame.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../8월시험/라즈베리파이활용 데이터 분석 및 시각화.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../8월시험/라즈베리파이활용 데이터 분석 및 시각화.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace_java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_java/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace_python/딕셔너리.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_python/딕셔너리.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace_python/판다스/04.데이터확인.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_python/판다스/04.데이터확인.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />

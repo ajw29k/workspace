@@ -39,7 +39,7 @@ const Sales = () => {
     })
     .catch((error) => {console.log(error)})
   }
-  alert('구매자명을 입력하세요')
+  
   }
   return (
     <div className='salesMain'>

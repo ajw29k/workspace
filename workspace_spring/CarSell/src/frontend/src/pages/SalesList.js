@@ -1,8 +1,12 @@
+import './SalesList.css'
 
 const SalesList = () => {
+
+
+
   return (
     <div>
-      <table>
+      <table className="list-table">
         <thead>
           <tr>
             <td rowSpan={2}>No.</td>
