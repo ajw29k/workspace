@@ -8,5 +8,6 @@ public interface SalesService {
 
     void salInsert(SalesInfoVO salesInfoVO);
 
+    //구매자 리스트
     List<SalesInfoVO> salesList();
 }

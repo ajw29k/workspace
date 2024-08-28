@@ -24,6 +24,7 @@
         LIMIT #{displayDataCnt} OFFSET #{displayDataCnt} * (#{nowPage} - 1);
     </select>
 
+
     <insert id="boardInsert">
         INSERT INTO board (
         TITLE

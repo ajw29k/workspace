@@ -1,0 +1,35 @@
+.App{
+  width: 100%;
+  margin: auto;
+  
+}
+.menu > ul{
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin: 40px auto;
+  
+}
+.menu > ul > li {
+  background-color: aliceblue;
+  width: 150px;
+  margin: 4px;
+  font-size: 1.5rem;
+}
+.menu > ul > li:hover{
+  cursor: pointer;
+}
+.h1{
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+  
+}
+.text-li{
+  text-align: center;
+}
+.text-li:hover{
+  color: red;
+ background-color: bisque; 
+}

@@ -44,6 +44,7 @@ public class BoardServiceImpl implements BoardService{
         sqlSession.update("boardMapper.updateBoard",boardVO);
     }
 
+    //전체 게시글 수
     @Override
     public int getBoardCnt() {
         return sqlSession.selectOne("boardMapper.getBoardCnt");

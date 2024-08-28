@@ -25,13 +25,16 @@ public class BoardController {
     public Map<String, Object> getBoardList(@RequestBody(required = false) SearchVO searchVO, PageVO pageVO){
         log.info("=======넘어온 페이지 번호 : " + searchVO.getPageNo());
 
+        // 전체 게시글 수
         int totalDataCnt = boardService.getBoardCnt();
 
         //페이지 정보를 담을 수 있는 PageVO 객체 생성
         PageVO pageInfo =  new PageVO(totalDataCnt);
 
+        // 현재 페이지 번호 설정
         pageInfo.setNowPage(searchVO.getPageNo());
 
+        // 페이지 정보 설정
         pageInfo.setPageInfo();
 
         System.out.println(pageInfo);

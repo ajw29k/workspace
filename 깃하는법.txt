@@ -8,7 +8,7 @@
 4. 세팅된 프로젝트를 깃허브에 등록
   1)git init
   2)git branch -M main
-  3)git remote origin 원격저장소url(깃허브에 저장되어 있는 주소)
+  3)git remote add origin 원격저장소url(깃허브에 저장되어 있는 주소)
   4)git config --global core.autocrlf true (최초 1회 실행)
   5)git add .
   6)git commit -m " 커밋메세지 "

@@ -38,6 +38,8 @@ const RegItem = () => {
   const [subImg , setSubImg] = useState(null)
   //상품등록 버튼
   function insertItem(){
+    axios.post('/',이동할데이터)
+    .then().catch()\
     // if(itemCategory.itemName == ''|| itemCategory.itemPrice == 0 || itemCategory.itemIntro == ''){
     //   alert('입력하세요')
     //   return;

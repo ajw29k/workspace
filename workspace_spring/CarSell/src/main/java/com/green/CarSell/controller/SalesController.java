@@ -19,8 +19,9 @@ public class SalesController {
         salesService.salInsert(salesInfoVO);
     }
 
-//    @GetMapping("/salesList")
-//    public List<SalesInfoVO> salesList(){
-////        return ;
-//    }
+    //구매자리스트
+    @GetMapping("/salesList")
+    public List<SalesInfoVO> salesList(){
+        return salesService.salesList();
+    }
 }

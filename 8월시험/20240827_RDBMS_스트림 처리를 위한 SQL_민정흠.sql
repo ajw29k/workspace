@@ -1,0 +1,99 @@
+-- 1. 테이블 생성
+CREATE TABLE MY_MEMBER (
+	MEM_NUM INT PRIMARY KEY
+	,MEM_ID VARCHAR(50) NOT NULL
+	,MEM_PW VARCHAR(50) NOT NULL
+	,MEM_NAME VARCHAR(50) NOT NULL
+	,MEM_AGE INT
+	,MEM_EMAIL VARCHAR(50)
+);
+-- 2. 데이터 삽입/삭제
+INSERT INTO MY_MEMBER 
+VALUES (1,'1','2','3',42,'2');
+DELETE FROM MY_MEMBER;
+
+-- 3. 데이터 수정
+UPDATE MY_MEMBER SET 
+MEM_NAME = '김자바',MEM_ID = 'KIMJAVA'
+WHERE MEM_NUM = 1;
+
+-- 4. 오지호,강우성
+SELECT * FROM emp;
+SELECT EMPNO, ENAME,SAL,COMM
+FROM emp
+WHERE SAL <= 3000 
+AND SAL >= 500 
+AND COMM IS NOT NULL;
+
+-- 5.기로 끝나거나 김이 들어가는 사원들
+SELECT EMPNO,ENAME,HIREDATE
+FROM emp
+WHERE ENAME LIKE '%기' OR ENAME LIKE '%김%';
+SELECT * FROM dept;
+-- 6. 
+SELECT EMPNO
+	,ENAME
+	,deptNO 
+	,CASE
+		WHEN DEPTNO = 10 THEN '인사부'
+		WHEN DEPTNO = 20 THEN '영업부'
+		WHEN DEPTNO = 30 THEN '개발부'
+		ELSE '생산부'
+		END AS DNAME
+FROM emp; 
+
+-- 7. 입사일이 1월이고 커미션이 null값이면 0으로 조회
+SELECT empno
+		,ename
+		,hiredate
+		,IFNULL(comm,0)
+FROM emp
+WHERE month(hiredate) = 1;
+
+SELECT * FROM EMP;
+-- 8. 
+SELECT deptno
+		,SUM(sal)
+		, ROUND(AVG(sal),2)
+		,ROUND(AVG(IFNULL(comm,0)),2)
+FROM emp
+GROUP BY deptno;
+
+-- 9. 
+SELECT 
+	E.EMPNO
+	,E.ENAME
+	,E.HIREDATE
+	,E.SAL
+	,E.DEPTNO
+	,(SELECT DNAME 
+	FROM dept D 
+	WHERE E.DEPTNO = D.DEPTNO) AS DNAME
+FROM emp E
+WHERE E.DEPTNO = (SELECT D.DEPTNO FROM dept D WHERE DNAME='인사부');
+
+
+-- 10.
+SELECT 
+	EMPNO
+	,ENAME
+	,HIREDATE
+	,SAL
+	,E.DEPTNO
+	,DNAME
+FROM emp E, dept D
+WHERE D.DNAME != '인사부' AND SAL >= 500
+AND E.DEPTNO = D.DEPTNO
+ORDER BY EMPNO DESC, ENAME;
+
+
+
+
+
+
+
+
+
+
+
+

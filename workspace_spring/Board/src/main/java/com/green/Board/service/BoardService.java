@@ -22,8 +22,9 @@ public interface BoardService {
     //게시글 삭제
     void delete(int boardNum);
 
+    //게시글 수정
     void update(BoardVO boardVO);
 
-    //
+    //전체 게시글 갯수 조회
     int getBoardCnt();
 }
