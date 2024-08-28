@@ -49,7 +49,7 @@
         )
         ORDER BY CATE_CODE ASC
     </insert>
-
+<!--아무거나-->
     <!--상품 이미지 등록-->
     <insert id="insertImg">
         INSERT INTO ITEM_IMG (
