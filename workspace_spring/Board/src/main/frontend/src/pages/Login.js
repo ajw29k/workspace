@@ -105,6 +105,54 @@ function login(){
 }
 
 
+
+
+
+
+
+
+  // 날짜를 계산
+  const minDate = new Date(); // 현재 날짜
+  minDate.setDate(minDate.getDate()+1) // 내일 날짜 
+  const maxDate = new Date();
+  maxDate.setMonth(maxDate.getMonth() + 3); // 3개월 후
+  // 선택한 날짜 update
+  const [value, onChange] = useState(minDate) //초기값은 내일 날짜
+
+
+  //예약 내용 저장할 변수
+  const [appo, setAppo] = useState({
+    docNum :'',
+    memNum: loginInfo ? loginInfo.memNum : "", //로그인 회원 정보
+    deptNum :1 , //진료과 테이블 오름차순기준으로 초기값 설정
+    schDate: moment(value).format("YYYY-MM-DD"), //다음날을 기준일로 초기값
+    schTime : '',
+    detail:'',
+    deptName:''
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <div className='container'>
       
