@@ -26,7 +26,6 @@ const Write = ({loginInfo}) => {
   function insert(){
   axios.post('/board/write',list)
     .then((res) => {
-      console.log(res)
         navigate('/')
 
     })

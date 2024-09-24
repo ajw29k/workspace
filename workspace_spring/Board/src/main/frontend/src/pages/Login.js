@@ -121,15 +121,15 @@ function login(){
 
 
   //예약 내용 저장할 변수
-  const [appo, setAppo] = useState({
-    docNum :'',
-    memNum: loginInfo ? loginInfo.memNum : "", //로그인 회원 정보
-    deptNum :1 , //진료과 테이블 오름차순기준으로 초기값 설정
-    schDate: moment(value).format("YYYY-MM-DD"), //다음날을 기준일로 초기값
-    schTime : '',
-    detail:'',
-    deptName:''
-  })
+  // const [appo, setAppo] = useState({
+  //   docNum :'',
+  //   memNum: loginInfo ? loginInfo.memNum : "", //로그인 회원 정보
+  //   deptNum :1 , //진료과 테이블 오름차순기준으로 초기값 설정
+  //   schDate: moment(value).format("YYYY-MM-DD"), //다음날을 기준일로 초기값
+  //   schTime : '',
+  //   detail:'',
+  //   deptName:''
+  // })
 
 
 
