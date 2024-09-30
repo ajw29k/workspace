@@ -9,7 +9,7 @@ const Board = ({loginInfo}) => {
   
   const navigate = useNavigate();
   
-  //검색 조건을 저장할 변수,
+  //검색 조건을 저장할 변수,  ///
   const [searchDatam, setSearchData] = useState({
     searchType : 'TITLE',
     searchValue : ''
@@ -19,7 +19,7 @@ const Board = ({loginInfo}) => {
   
   })
 
-  //게시글 목록 조회
+  //게시글 목록 조회  //
   useEffect(() => {
     boardApi.getBoardList(1)
     .then((res) => {
@@ -34,7 +34,7 @@ const Board = ({loginInfo}) => {
     })
   },[])
   
-  //검색 버튼 클릭 시 실행 함수
+  //검색 버튼 클릭 시 실행 함수  //
   function searchBoard(){
     boardApi.getBoardList()
     .then((res) => {
@@ -83,6 +83,7 @@ const Board = ({loginInfo}) => {
     <div className='main'>
       <h1 onClick={() => {window.location.reload()  }}>자유게시판</h1>
       <div className='option'>
+        {/*  */}
         <select name='searchType' onChange={(e) => {search(e)}}>
           <option value={'TITLE'}>제목</option>
           <option value={'MEM_ID'}>작성자</option>
@@ -94,6 +95,7 @@ const Board = ({loginInfo}) => {
           searchBoard()
         }}>검색</button>
       </div>
+      {/*  */}
       <table>
         <colgroup>
           <col width='10%'/>
