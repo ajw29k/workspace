@@ -1,15 +1,25 @@
 package com.green.SecurityTest.config;
 
+import com.green.SecurityTest.service.MemberServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 //이 클래스에서 시큐리티의 인증 및 인가에 대한 설정
 @Configuration // 클래스에 대한 객체 생성 어노테이션
 @EnableWebSecurity // 해당 클래스가 Security 설정 클래스임을 인지
 public class SecurityConfig {
+
+    //비밀번호를 암호화 시켜줄수 있는 객체 생성 메서드
+    @Bean
+    public PasswordEncoder getPasswordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
 
     /*
      인증 및 인가에 대한 설정을 진행하는 메서드
@@ -33,9 +43,24 @@ public class SecurityConfig {
         // jwt 로그인은 csrf 공격에 상대적으로 안전하기 때문에 사용 안 함
         httpSecurity.csrf(auth -> auth.disable());//csrf(auth -> auth.disable())방어기재 기능 끔
 
+        //form 로그인 방식을 미사용으로 지정
+        //react를 제외한 나머지 전통적인 프론트 (thymeleaf, jsp)를 만드는 기술을 사욜할때 form방식의 로그인을 채택한다
+        //form  방식의 로그인 채택
+        httpSecurity.formLogin(auth -> auth.disable());
+
+        //http basic 인증 방식 미사용
+        //http basic : 요청 헤더 id,pw 값을 담아서 백서버에 전달하는 방식
+        //보안에 취약하기 때문에 요즘은 안 씀
+        //http basic 방식을 사용하면 로그인 정보를 백서버에 세션에 저장
+        httpSecurity.httpBasic(auth -> auth.disable());
+
+        //백서버의 세션 사용을 비활성화
+        httpSecurity.sessionManagement(
+                session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+        );
         // 인증 및 인가 설정
         httpSecurity.authorizeHttpRequests(
-            auth -> auth.requestMatchers("/","/member/loginForm","/member/joinForm").permitAll().anyRequest().authenticated()
+            auth -> auth.requestMatchers("/","/member/loginForm","/member/joinForm","/member/join").permitAll().anyRequest().authenticated()
                 // "/" 요천은 누구나 접근 가능하다.
                 // 나머지 요청은 인증 받아야 접근 가능(액세스 거부됨403)
         );

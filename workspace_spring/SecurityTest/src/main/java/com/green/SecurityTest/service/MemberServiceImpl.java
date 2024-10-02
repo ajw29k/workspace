@@ -1,5 +1,6 @@
 package com.green.SecurityTest.service;
 
+import com.green.SecurityTest.vo.MemberVO;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -35,6 +36,11 @@ public class MemberServiceImpl implements MemberService{
     @Override
     public void test1() {
         System.out.println(111);
+    }
+
+    @Override
+    public void join(MemberVO memberVO) {
+        sqlSession.insert("memberMapper.join",memberVO);
     }
 }
 /*
