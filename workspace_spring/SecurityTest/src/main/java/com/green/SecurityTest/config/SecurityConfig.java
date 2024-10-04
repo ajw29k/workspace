@@ -1,19 +1,25 @@
 package com.green.SecurityTest.config;
 
-import com.green.SecurityTest.service.MemberServiceImpl;
+import com.green.SecurityTest.jwt.LoginFilter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 //이 클래스에서 시큐리티의 인증 및 인가에 대한 설정
 @Configuration // 클래스에 대한 객체 생성 어노테이션
 @EnableWebSecurity // 해당 클래스가 Security 설정 클래스임을 인지
+@RequiredArgsConstructor
 public class SecurityConfig {
+    private final AuthenticationConfiguration configuration;
 
     //비밀번호를 암호화 시켜줄수 있는 객체 생성 메서드
     @Bean
@@ -21,6 +27,11 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
+    //AuthenticationManager 객체 생성 메서드
+    @Bean
+    public AuthenticationManager getAuthenticationManager(AuthenticationConfiguration configuration) throws Exception{
+        return configuration.getAuthenticationManager();
+    }
     /*
      인증 및 인가에 대한 설정을 진행하는 메서드
      이러한 메서드는 공식문서에 가이드에 설명된 내용을 토대로 구현
@@ -58,9 +69,13 @@ public class SecurityConfig {
         httpSecurity.sessionManagement(
                 session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
         );
+
+        //loginFilter 클래스를 Filter에 추가
+        httpSecurity.addFilterAt(new LoginFilter(getAuthenticationManager(configuration)), UsernamePasswordAuthenticationFilter.class);
+
         // 인증 및 인가 설정
         httpSecurity.authorizeHttpRequests(
-            auth -> auth.requestMatchers("/","/member/loginForm","/member/joinForm","/member/join").permitAll().anyRequest().authenticated()
+            auth -> auth.requestMatchers("/","/member/loginForm","/member/joinForm","/member/join","/login").permitAll().anyRequest().authenticated()
                 // "/" 요천은 누구나 접근 가능하다.
                 // 나머지 요청은 인증 받아야 접근 가능(액세스 거부됨403)
         );
