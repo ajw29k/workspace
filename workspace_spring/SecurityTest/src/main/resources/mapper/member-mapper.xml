@@ -23,6 +23,15 @@
             ,#{memRole}
         )
     </insert>
+
+    <!--로그인 하려는 회원의 정보 조회-->
+    <select id="getMemberForLogin" resultMap="member">
+        SELECT MEM_ID
+            , MEM_PW
+            , MEM_ROLE
+        FROM SECURITY_MEMBER
+        WHERE MEM_ID = #{memId}
+    </select>
 </mapper>
 
 
