@@ -74,13 +74,14 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
 
     /*
     로그인 성공 시 실행되는 메서드
-
-
     */
 
     @Override
     protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authResult) throws IOException, ServletException {
         log.info("로그인 성공");
+
+        //jwt 토큰 생성
+
     }
 
     //로그인 실패 시 실행되는 메서드
