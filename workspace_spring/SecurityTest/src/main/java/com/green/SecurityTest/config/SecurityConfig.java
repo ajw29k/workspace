@@ -1,5 +1,6 @@
 package com.green.SecurityTest.config;
 
+import com.green.SecurityTest.jwt.JwtUtil;
 import com.green.SecurityTest.jwt.LoginFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -20,6 +21,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @RequiredArgsConstructor
 public class SecurityConfig {
     private final AuthenticationConfiguration configuration;
+    private final JwtUtil jwtUtil;
 
     //비밀번호를 암호화 시켜줄수 있는 객체 생성 메서드
     @Bean
@@ -71,7 +73,7 @@ public class SecurityConfig {
         );
 
         //loginFilter 클래스를 Filter에 추가
-        httpSecurity.addFilterAt(new LoginFilter(getAuthenticationManager(configuration)), UsernamePasswordAuthenticationFilter.class);
+        httpSecurity.addFilterAt(new LoginFilter(getAuthenticationManager(configuration),jwtUtil), UsernamePasswordAuthenticationFilter.class);
 
         // 인증 및 인가 설정
         httpSecurity.authorizeHttpRequests(
