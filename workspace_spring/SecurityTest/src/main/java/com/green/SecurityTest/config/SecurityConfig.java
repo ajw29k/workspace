@@ -1,5 +1,6 @@
 package com.green.SecurityTest.config;
 
+import com.green.SecurityTest.jwt.JwtConfirmFilter;
 import com.green.SecurityTest.jwt.JwtUtil;
 import com.green.SecurityTest.jwt.LoginFilter;
 import lombok.RequiredArgsConstructor;
@@ -34,6 +35,7 @@ public class SecurityConfig {
     public AuthenticationManager getAuthenticationManager(AuthenticationConfiguration configuration) throws Exception{
         return configuration.getAuthenticationManager();
     }
+
     /*
      인증 및 인가에 대한 설정을 진행하는 메서드
      이러한 메서드는 공식문서에 가이드에 설명된 내용을 토대로 구현
@@ -47,7 +49,7 @@ public class SecurityConfig {
 
     @Bean 어노테이션은 지금까지와의 어노테이션과 다르게 메서드 위에 작성한다.
     이 어노테이션은 메서드의 리턴 데이터를 객체로
-     */
+    */
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception{
@@ -72,13 +74,29 @@ public class SecurityConfig {
                 session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
         );
 
+        //loginFilter 앞에 JwtConfirmFilter를 추가
+        httpSecurity.addFilterBefore(new JwtConfirmFilter(jwtUtil), LoginFilter.class);
+
         //loginFilter 클래스를 Filter에 추가
         httpSecurity.addFilterAt(new LoginFilter(getAuthenticationManager(configuration),jwtUtil), UsernamePasswordAuthenticationFilter.class);
 
         // 인증 및 인가 설정
         httpSecurity.authorizeHttpRequests(
-            auth -> auth.requestMatchers("/","/member/loginForm","/member/joinForm","/member/join","/login").permitAll().anyRequest().authenticated()
-                // "/" 요천은 누구나 접근 가능하다.
+            auth -> auth
+                    .requestMatchers(
+                        "/"
+                        ,"/member/loginForm"
+                        ,"/member/joinForm"
+                        ,"/member/join"
+                        ,"/login"
+                        ,"/test1"
+                    )
+                    .permitAll()
+                    .requestMatchers("/test3").hasRole("USER")
+                    .requestMatchers("/test4").hasRole("ADMIN")
+                    .requestMatchers("/test5").hasAnyRole("MANAGER","ADMIN")
+                    .anyRequest().authenticated()
+                // "/" 요청은 누구나 접근 가능하다.
                 // 나머지 요청은 인증 받아야 접근 가능(액세스 거부됨403)
         );
         return httpSecurity.build();

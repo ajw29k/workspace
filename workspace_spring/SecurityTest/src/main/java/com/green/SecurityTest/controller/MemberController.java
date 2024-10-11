@@ -19,6 +19,18 @@ public class MemberController {
 //
     private final MemberService memberService;
     private final PasswordEncoder passwordEncoder;
+
+    //인증받지 않은 사람도 접근할 수 있는 요청
+
+    //인증받은 사람만 접근할 수 있는 요청
+
+    //인증 + 일반회원만 접근가능
+
+    //인증 + 관리자 권한이 있는 사람만 접근 가능
+
+    //인증 + 매니저 or 관리자만 접근가능
+
+
 //    // 생성자 주입 방식
 //    @Autowired
 //    public MemberController(MemberService memberService){
@@ -34,6 +46,7 @@ public class MemberController {
         //name 변수의 값을 암호화
         String encodedName =passwordEncoder.encode(name);
         System.out.println(encodedName);
+
         String encodedName1 =passwordEncoder.encode(name);
         System.out.println(encodedName1);
 
@@ -45,7 +58,8 @@ public class MemberController {
         System.out.println(result1);
         System.out.println(result2);
         System.out.println(result3);
-        return encodedName;
+
+        return "로그인 페이지로 이동";
     }
 
     //회원가입 페이지로 이동

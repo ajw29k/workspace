@@ -1,23 +1,30 @@
-import axios from 'axios'
+
+import axios from 'axios';
 import React, { useState } from 'react'
 
 const Login = () => {
+  //입력한 로그인 정보를 저장할 state 변수
   const [loginData, setLoginData] = useState({
     memId : '',
     memPw : ''
-  })
+  });
 
-  const changeLoginData = (e) => {
-    setLoginData({...loginData,[e.target.name]: e.target.value})
+  //입력한 정보로 로그인데이터 변경하는 함수
+  const changeLoginData= (e) => {
+    setLoginData({
+      ...loginData,
+      [e.target.name] : e.target.value
+    });
   }
 
-  const loginButton = () => {
-    axios.post('/membe/login',loginData)
-    .then((res) => {
-      console.log('로그인 성공')
-      console.log(res)
+  //로그인 버튼 클릭 시 실행 함수
+  const login= () => {
+    axios.post('/member/login', loginData)
+    .then(res => {
+      console.log('로그인 성공');
+      console.log(res);
     })
-    .catch((error) => {console.log(error)})
+    .catch(error => console.log(error));
   }
 
   //아이디와 비번 input 태그의 name 속성은 반드시
@@ -25,13 +32,15 @@ const Login = () => {
   return (
     <div>
       <div>
-        아이디 : <input type='text' name='memId' onChange={(e) => {changeLoginData(e)}}/>
+        아이디 : <input type='text' name='memId' onChange={
+          (e) => {changeLoginData(e)}} />
       </div>
       <div>
-        비번 : <input type='password' name='memPw' onChange={(e) => {changeLoginData(e)}}/>
+        비번 : <input type='password' name='memPw' onChange={
+          (e) => {changeLoginData(e)}}/>
       </div>
       <div>
-      <button type='button' onClick={() => {loginButton()}}>로그인</button>
+        <button type='button' onClick={() => {login()}}>로그인</button>
       </div>
     </div>
   )

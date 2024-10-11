@@ -40,7 +40,10 @@ jwt를 사용한 로그인에서는 filter가 실행되지 않는다.
 public class LoginFilter extends UsernamePasswordAuthenticationFilter {
     // 실제 로그인 검증을 실행하는 객체
     private final AuthenticationManager authenticationManager;
+
+    //JwtUtil 의존성 주입
     private final JwtUtil jwtUtil;
+
     public LoginFilter(AuthenticationManager authenticationManager, JwtUtil jwtUtil){
         this.authenticationManager = authenticationManager;
         this.jwtUtil = jwtUtil;
@@ -68,6 +71,7 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
         //우리가 입력한 아이디, 비번 가져오기(임시)
         //리액트에서 전달되는 데이터는 json 타입으로 자바로 가져옴
         //json 타입 : 자바스크립트의 객체를 문자열화 시킨 것.
+
         //1. json 타입의 데이터를 자바의 클래스 형태로 변환시켜줄 객체 생성
         ObjectMapper objectMapper = new ObjectMapper();
 
@@ -77,26 +81,25 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
             ServletInputStream inputStream = request.getInputStream();
             String messageBody = StreamUtils.copyToString(inputStream, StandardCharsets.UTF_8);
 
-            //3. json 데이터를 MemberVO 형태로 변환
+            //3. json 데이터를 MemberVO 형태로 변환   "{"memId" : "admin" , "memPw":"1111"}"
             vo = objectMapper.readValue(messageBody, MemberVO.class);
-            log.info("우리가 입력 받은 아이디 : " + vo.getMemId());
-            log.info("우리가 입력 받은 비밀번호 : {}",vo.getMemPw());
-
         }catch (IOException e){
-            System.out.println("attemptAuthentication 메소드에서 json으로 넘어오는 로그인 정보 받기 실패");
+            System.out.println("attemptAuthentication() 메서드에서 json으로 넘어오는 로그인 정보 받기 실패");
             e.printStackTrace();
-        }catch (Exception e){
+        }catch(Exception e){
             System.out.println("json타입으로 넘어온 로그인 정보를 MemberVO 객체로 변환 중 예외 발생");
             e.printStackTrace();
         }
 
 
 
+        log.info("우리가 입력 받은 아이디 : " + vo.getMemId());
+        log.info("우리가 입력 받은 비밀번호 : {}",vo.getMemPw());
         log.info("아이디는 {}이고, 비번은 {}입니다.",vo.getMemId(),vo.getMemPw());
         //아래의 클래스느느 아이디와 비밀번호를 AuthenticationManager 클래스에
         //아이디와 비번을 전달하는 보안이 좋은 통
         //이 통에 아이디와 비번을 담아서 AuthenticationManager에 전달.
-        UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(vo.getMemId(),vo.getMemPw() ,null);
+        UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(vo.getMemId(), vo.getMemPw(), null);
 
         return authenticationManager.authenticate(authToken);
     }
@@ -127,8 +130,8 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
         //응답헤더에는 key : value 의 형태로 데이터를 추가
         //Bearer : 뒤에 오는 문자열이 jwt 토큰 형태임을 알려줌
         //"Authorization" : "Bearer 토큰"     키 : 값
-        response.setHeader("Authorization" , "Bearer " + token);
-        response.setStatus(HttpStatus.OK.value()); // 200
+        response.setHeader("Authorization", "Bearer " + token);
+        response.setStatus(HttpStatus.OK.value()); //200
 
     }
 
