@@ -1,5 +1,3 @@
-package test;
-
 import javax.sound.midi.Soundbank;
 
 public class Member {

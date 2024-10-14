@@ -5,6 +5,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MainController {
+    //프론트에서 토큰 가져오는지 확인하는 메서드
+    @GetMapping("/getToken")
+    public String getTokenTest(){
+        return "토큰 받음";
+    }
+
     //인증받지 않은 사람도 접근할 수 있는 요청
     @GetMapping("/test1")
     public String test1(){

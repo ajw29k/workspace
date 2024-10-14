@@ -23,8 +23,21 @@ const Login = () => {
     .then(res => {
       console.log('로그인 성공');
       console.log(res);
+
+      //응답 헤더에 담긴
+      localStorage.setItem('Authorization',res.headers.authorization)
     })
-    .catch(error => console.log(error));
+    .catch(error => {
+      console.log(error)
+      //오류코드가 401이면 다시 로그인
+      if(error.response.status == 401){
+        alert('아이디,비번 확인~')
+      }
+      //오류코드가 401 아니면
+      else{
+        alert('알수 없는 오류 발생')
+      }
+    });
   }
 
   //아이디와 비번 input 태그의 name 속성은 반드시

@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f627797e-6ea5-4128-9f52-a68287193ce2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../8월시험/라즈베리파이 사물 제어 IOT 평가.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../8월시험/라즈베리파이 사물 제어 IOT 평가.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../8월시험/라즈베리파이활용 데이터 분석 및 시각화.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../8월시험/라즈베리파이활용 데이터 분석 및 시각화.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../workspace_python/판다스/04.데이터확인.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_python/판다스/04.데이터확인.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace_spring/SecurityTest/src/main/frontend/src/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_spring/SecurityTest/src/main/frontend/src/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace_spring/SecurityTest/src/main/frontend/src/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_spring/SecurityTest/src/main/frontend/src/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace_spring/SecurityTest/src/main/java/com/green/SecurityTest/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_spring/SecurityTest/src/main/java/com/green/SecurityTest/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace_spring/SecurityTest/src/main/java/com/green/SecurityTest/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_spring/SecurityTest/src/main/java/com/green/SecurityTest/controller/MainController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +33,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/01-STUDY/dev/workspace/workspace_java"
+    "last_opened_file_path": "D:/01-STUDY/dev/workspace/workspace_java/ArrayStudy"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -44,5 +46,15 @@
       <updated>1718000129844</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MapTest/out/production/MapTest/Map_1.class</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

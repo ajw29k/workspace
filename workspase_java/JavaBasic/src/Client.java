@@ -1,4 +1,5 @@
-package test;
+
+import Static.Account;
 
 //고객 정보
 public class Client {
