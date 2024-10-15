@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f627797e-6ea5-4128-9f52-a68287193ce2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../workspace_spring/SecurityTest/src/main/frontend/src/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_spring/SecurityTest/src/main/frontend/src/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../workspace_spring/SecurityTest/src/main/frontend/src/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_spring/SecurityTest/src/main/frontend/src/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../workspace_spring/SecurityTest/src/main/java/com/green/SecurityTest/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_spring/SecurityTest/src/main/java/com/green/SecurityTest/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../workspace_spring/SecurityTest/src/main/java/com/green/SecurityTest/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_spring/SecurityTest/src/main/java/com/green/SecurityTest/controller/MainController.java" afterDir="false" />
-    </list>
+    <list default="true" id="2bf826b4-5130-41f0-b194-55641ae1efd2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,41 +14,35 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2hfzsvL0naxIkYnnefxQglVhgEk" />
+  <component name="ProjectId" id="2nQ4tnehGzeE4yQLpOxaXLYZwFc" />
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/01-STUDY/dev/workspace/workspace_java/ArrayStudy"
+    "last_opened_file_path": "D:/01-STUDY/dev/workspace/workspace_java"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f627797e-6ea5-4128-9f52-a68287193ce2" name="Changes" comment="" />
-      <created>1718000129844</created>
+      <changelist id="2bf826b4-5130-41f0-b194-55641ae1efd2" name="Changes" comment="" />
+      <created>1728892182651</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1718000129844</updated>
+      <updated>1728892182651</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/MapTest/out/production/MapTest/Map_1.class</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
