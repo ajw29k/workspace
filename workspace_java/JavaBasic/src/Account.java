@@ -1,4 +1,3 @@
-package test;
 
 //계좌정보
 public class Account {

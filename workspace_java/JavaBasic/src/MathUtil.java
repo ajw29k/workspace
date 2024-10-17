@@ -1,4 +1,3 @@
-package test;
 
 //해당 인터페이스 안에 요구사항에 맞는 메소드를 정의하시오.
 public interface MathUtil {

@@ -1,9 +1,7 @@
-package test;
 
-import java.sql.ClientInfoStatus;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 //은행
 public class Bank {

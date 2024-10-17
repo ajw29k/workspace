@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bf826b4-5130-41f0-b194-55641ae1efd2" name="Changes" comment="" />
+    <list default="true" id="2bf826b4-5130-41f0-b194-55641ae1efd2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/Apple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/BeforeBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/BeforeBoxTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/Box.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/BoxTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/DoubleBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/GenericMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/Orange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/Phone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/PhoneBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/PhoneTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaBasic/src/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasic/src/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaBasic/src/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasic/src/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaBasic/src/CalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasic/src/CalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaBasic/src/Calcaulate.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasic/src/Calcaulate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaBasic/src/MathUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasic/src/MathUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaBasic/src/MathUtilImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasic/src/MathUtilImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../자소서 관련/자소서112.hwp" beforeDir="false" afterPath="$PROJECT_DIR$/../자소서 관련/자소서112.hwp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,14 +46,29 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/01-STUDY/dev/workspace/workspace_java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/01-STUDY/dev/workspace/workspace_java&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="workspace_java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="workspace_java" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
