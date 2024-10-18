@@ -25,7 +25,7 @@ public class BoxTest {
 
         //MemberVO를 저장할 수 있는 BOX 생성
         Box<MemberVO> box4 = new Box<>();
-
+        List<MemberVO> list = new ArrayList<>();
 
     }
 }
