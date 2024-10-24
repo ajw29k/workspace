@@ -4,8 +4,8 @@
 -- 2. 상품 카테고리 테이블
 -- 3. 상품 정보 테이블
 -- 4. 상품 이미지 정보 테이블
--- 5. 장바구니
--- 6.
+-- 5. 장바구니 정보 테이블
+-- 6.	구매 정보 테이블
 
 
 
@@ -95,6 +95,19 @@ CREATE TABLE item_img (
 	, IS_NAME VARCHAR(5) NOT NULL
 	, ITEM_CODE INT REFERENCES shop_item (ITEM_CODE) ON DELETE CASCADE
 );
+
+-- 5. 장바구니 정보 테이블
+CREATE TABLE SHOP_CART(
+	CART_CODE INT AUTO_INCREMENT PRIMARY KEY
+	, ITEM_CODE INT NOT NULL REFERENCES shop_item (ITEM_CODE)
+	, CART_CNT INT NOT NULL
+	, MEM_ID VARCHAR(50) NOT NULL REFERENCES shop_member (MEM_ID)
+	, CART_DATE DATETIME DEFAULT CURRENT_TIMESTAMP()
+);
+
+DROP TABLE shop_cart;
+SELECT * FROM shop_cart;
+SELECT 
 INSERT INTO item_img (ORIGIN_FILE_NAME,ATTACHED_FILE_NAME,IS_NAME,ITEM_CODE)
 VALUES ('abc.jpg','aaa.jpg', 'Y', 1 );
 SELECT * FROM ITEM_IMG;
@@ -116,3 +129,37 @@ FROM shop_item s ,item_img i
 WHERE s.item_code = i.item_code
 AND IS_NAME = 'Y'
 ORDER BY ITEM_CODE DESC;
+
+-- 현재 저장된 ITEM_CODE의 가장 큰 값을 조회
+SELECT MAX(ITEM_CODE) +1 FROM shop_item;
+
+CREATE TABLE test_SHOP_item(
+	ITEM_CODE INT AUTO_INCREMENT PRIMARY KEY
+	, ITEM_NAME VARCHAR(50)
+	);
+
+SELECT * FROM TEST_SHOP_ITEM;	
+INSERT INTO TEST_SHOP_ITEM (ITEM_NAME) VALUES ('AAA');
+DELETE FROM TEST_SHOP_ITEM;	
+INSERT INTO TEST_SHOP_ITEM (ITEM_CODE,ITEM_NAME)
+VALUES (3,'AAA');
+
+-- 다음에 ISERT 할때 들어갈 ITEM_CODE 조회
+-- 데이터가 하나도 없다면 1을 조회
+-- IFNULL(컬럼에 있는 데이터가 NULL일경우, 바꿔주는값)
+SELECT IFNULL(MAX(ITEM_CODE),0) + 1 FROM test_shop_item;
+
+-- 내 장바구니에 현재 선택한 상품이 있는지 확인하는 쿼리
+SELECT cart_code
+FROM shop_cart
+WHERE item_code = 1
+AND mem_id = '1';
+
+-- 장바구니 상품의 수량 및 
+UPDATE shop_cart
+SET 
+	cart_cnt = ?,
+	cart_date = NOW()
+WHERE item_code = ?
+AND mem_id = ?;
+DELETE from shop_cart;
