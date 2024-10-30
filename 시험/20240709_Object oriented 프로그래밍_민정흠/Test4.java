@@ -9,9 +9,9 @@ public class Test4 {
         int bb = 0;
         System.out.print("1~999 정수입력 : ");
         aa = sc.nextInt();
-        int c = aa % 10;       //1의자리수
+        int c = aa % 100 %10;       //1의자리수
         int d = aa % 100 /10;        //10의자리수
-        int e = aa % 1000 /100;   //100의자리수
+        int e = aa % 100;   //100의자리수
         System.out.println(e+"+"+d + " + "+c);
         System.out.println();
         if (aa < 10){
