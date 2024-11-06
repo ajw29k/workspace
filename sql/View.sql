@@ -1,0 +1,50 @@
+-- VIEW
+-- 가상 테이블
+/* VIEW 사용이유
+	1. 민감한 데이터를 보안하기 위해서(숨기기 위해서)
+	2. 잦은 조인, 서브쿼리 작성에 대한 피로감을 줄이기 위해
+*/
+SELECT * FROM emp;
+
+-- VIEW(가상 테이블 - 테이블처럼 사용)
+-- VIEW 생성
+CREATE VIEW EMP_VIEW AS
+SELECT EMPNO, ENAME, JOB, HIREDATE
+FROM emp;
+
+-- VIEW 생성 후 조회문은 테이블과 동일
+SELECT * FROM emp_view;
+
+CREATE VIEW stu_view AS
+SELECT stu_num, STU_NAME
+FROM join_stu;
+
+DELETE FROM join_stu WHERE STU_NUM = 6;
+
+SELECT * FROM STU_VIEW;
+
+CREATE VIEW stu_view_1 AS
+SELECT stu_num, STU_NAME
+FROM join_stu
+WHERE STU_NUM < 2;
+
+CREATE VIEW STU_VIEW_2 AS
+SELECT STU_NUM S_NUM, STU_NAME S_NAME
+FROM join_stu
+WHERE STU_NUM < 4;
+
+SELECT * FROM STU_VIEW_2;
+
+-- 조인으로 생성해버리면
+CREATE VIEW STU_SCORE_VIEW AS
+SELECT STU.STU_NUM, STU_NAME, SCORE
+FROM join_stu STU JOIN join_score SCORE
+ON STU.STU_NUM = SCORE.STU_NUM;
+
+SELECT * FROM STU_SCORE_VIEW;
+
+SELECT * FROM STU_SCORE_VIEW
+WHERE SCORE > 70;
+
+-- VIEW 삭제 방법
+DROP VIEW STU_SCORE_VIEW;
