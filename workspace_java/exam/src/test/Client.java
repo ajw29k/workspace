@@ -1,5 +1,4 @@
-
-import Static.Account;
+package test;
 
 //고객 정보
 public class Client {
@@ -17,9 +16,6 @@ public class Client {
         this.clientNumber = clientNumber;
         this.name = name;
         this.accInfo = accInfo;
-    }
-
-    public Client(int clientNumber, String 신사임당, Account account) {
     }
 
     //각 필드의 gettet, setter

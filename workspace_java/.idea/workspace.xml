@@ -4,79 +4,117 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bf826b4-5130-41f0-b194-55641ae1efd2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/Apple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/BeforeBox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/BeforeBoxTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/Box.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/BoxTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/DoubleBox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/GenericMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/Orange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/Phone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/PhoneBox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GenericStudy/src/basic/PhoneTest.java" afterDir="false" />
+    <list default="true" id="60fc113b-9be2-4fee-96ee-eb0fb298cd04" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace_java.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PagingAndSearch/.idea/PagingAndSearch.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PagingAndSearch/PageVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PagingAndSearch/SearchVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/untitled/untitled.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspace_react/.idea/workspace_react.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspase_java/ArrayStudy/ArrayStudy.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspase_java/JavaBasic/JavaBasic.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspase_java/ObjectOriented/ObjectOriented.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspase_java/exam/exam.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspase_java/exam/src/exam.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspase_java/out/.idea/out.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspase_java/workspase_java.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspase_react/shop/.idea/shop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspase_spring/.idea/workspase_spring.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaBasic/src/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasic/src/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaBasic/src/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasic/src/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaBasic/src/CalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasic/src/CalTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaBasic/src/Calcaulate.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasic/src/Calcaulate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaBasic/src/MathUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasic/src/MathUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaBasic/src/MathUtilImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasic/src/MathUtilImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../자소서 관련/자소서112.hwp" beforeDir="false" afterPath="$PROJECT_DIR$/../자소서 관련/자소서112.hwp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArrayStudy/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasic/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenericStudy/src/basic/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasic/src/Box.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenericStudy/src/basic/Toy.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasic/src/Toy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaBasic/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasic/src/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjectOriented/src/Interface/BoxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjectOriented/src/Interface/BoxTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjectOriented/src/Static/InitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjectOriented/src/Static/InitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspase_java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/workspase_java.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace_spring/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace_spring/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2nQ4tnehGzeE4yQLpOxaXLYZwFc" />
+  <component name="ProjectId" id="2hGJbbRzbZNEnJXV6J21CENmwzm" />
   <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="true" />
-    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
-    <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/01-STUDY/dev/workspace/workspace_java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Test8.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ajw29/Desktop/program cording/workspace/workspace_java/ObjectOriented",
+    "project.structure.last.edited": "프로젝트",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.editor.code.editing",
+    "애플리케이션.Test8.executor": "Run",
+    "애플리케이션.Test_1_13_15.executor": "Run",
+    "애플리케이션.Test_3_1.executor": "Run"
   }
-}</component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="workspace_java" />
+}]]></component>
+  <component name="RunManager" selected="애플리케이션.Test_1_13_15">
+    <configuration name="Test_1_13_15" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="일곱_메서드.Test_1_13_15" />
+      <module name="workspase_java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="일곱_메서드.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="workspace_java" />
-      <option name="filePath" />
+    <configuration name="Test_3_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="여섯_배열.문제.Test_3_1" />
+      <module name="workspase_java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="여섯_배열.문제.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="애플리케이션.Test_1_13_15" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2bf826b4-5130-41f0-b194-55641ae1efd2" name="Changes" comment="" />
-      <created>1728892182651</created>
+      <changelist id="60fc113b-9be2-4fee-96ee-eb0fb298cd04" name="Changes" comment="" />
+      <created>1717214553048</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1728892182651</updated>
+      <updated>1717214553048</updated>
     </task>
     <servers />
   </component>

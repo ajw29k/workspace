@@ -1,5 +1,6 @@
 package Static;
 
+import 상속.Man;
 
 public class InitTest {
     public static void main(String[] args) {
